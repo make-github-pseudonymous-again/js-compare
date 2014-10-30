@@ -1,1 +1,1 @@
-{"version":3,"file":"js/dist//compare.js.map","sources":["js/dist//compare.js"],"names":["exports","this"],"mappings":"CAAA,WAEC,cAKqB,mBAAZA,SAA0BC,KAAc,WAASD"}
+{"version":3,"file":"js/dist//compare.js.map","sources":["js/dist//compare.js"],"names":["exports","decreasing","a","b","increasing","this"],"mappings":"CAAA,SAAUA,GAET,YAMD,IAAIC,GAAa,SAAWC,EAAGC,GAE9B,MAASD,GAAIC,EAAM,GAASD,IAAMC,EAAM,EAAI,EAI7CH,GAAQC,WAAaA,CAKrB,IAAIG,GAAa,SAAWF,EAAGC,GAE9B,MAAaA,GAAJD,EAAU,GAASA,IAAMC,EAAM,EAAI,EAI7CH,GAAQI,WAAaA,GAEC,mBAAZJ,SAA0BK,KAAc,WAASL"}
