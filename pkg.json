@@ -1,0 +1,17 @@
+{
+	"ns": "compare",
+	"out": "js/dist/",
+	"debug": false,
+	"code": {
+		"test": [
+			"test",
+			"js"
+		],
+		"main": [
+			"js",
+			"dist",
+			"compare.js"
+		]
+	},
+	"src": "js/src/"
+}
