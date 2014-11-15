@@ -13,3 +13,7 @@ comparison code bricks for JavaScript
 [![Code Climate](http://img.shields.io/codeclimate/github/aureooms/js-compare.svg?style=flat)](https://codeclimate.com/github/aureooms/js-compare)
 [![NPM downloads per month](http://img.shields.io/npm/dm/aureooms-js-compare.svg?style=flat)](https://www.npmjs.org/package/aureooms-js-compare)
 [![GitHub issues](http://img.shields.io/github/issues/aureooms/js-compare.svg?style=flat)](https://github.com/aureooms/js-compare/issues)
+
+reference :
+
+  - https://en.wikipedia.org/wiki/Lexicographical_order

@@ -30,7 +30,7 @@ var lexicographical = function ( compare ) {
 
 			d = compare( a[i], b[i] );
 
-			if ( d < 0 || d > 0 ) {
+			if ( d !== 0 ) {
 				return d;
 			}
 
