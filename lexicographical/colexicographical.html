@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"><head><title>lexicographical/colexicographical</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="lexicographical/colexicographical"><meta name="groc-project-path" content="js/src/lexicographical/colexicographical.js"><meta name="groc-github-url" content="https://github.com/aureooms/js-compare"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/aureooms/js-compare/blob/master/js/src/lexicographical/colexicographical.js">js/src/lexicographical/colexicographical.js</a></div></div><div id="document"><div class="segment"></div><div class="segment"><div class="comments "><div class="wrapper"><p>Generates a binary colexicographical comparator
+from a binary comparator.</p>
+<p><a href="https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order">https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order</a></p>
+<p>compare( a, b ) should always return</p>
+<ul>
+<li>a negative value if a &lt; b</li>
+<li>a positive value if a &gt; b</li>
+<li>zero if a === b</li>
+</ul>
+<p>compare should express an increasing ordering</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">var</span> colexicographical = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">( compare )</span> {</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Compares 2 arrays a and b colexicographically.</p></div></div><div class="code"><div class="wrapper">	<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">( a, b )</span> {</span>
+
+		<span class="hljs-keyword">var</span> i, m, n, len, d;
+
+		m = a.length;
+		n = b.length;
+
+		len = <span class="hljs-built_in">Math</span>.min( m, n );
+
+		<span class="hljs-keyword">for</span> ( i = <span class="hljs-number">1</span> ; i &lt;= len ; ++i ) {
+
+			d = compare( a[m-i], b[n-i] );
+
+			<span class="hljs-keyword">if</span> ( d !== <span class="hljs-number">0</span> ) {
+				<span class="hljs-keyword">return</span> d;
+			}
+
+		}
+
+		<span class="hljs-keyword">return</span> m - n;
+
+	};
+
+};
+
+exports.colexicographical = colexicographical;</div></div></div></div></body></html>
