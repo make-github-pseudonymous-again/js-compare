@@ -163,11 +163,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "foldPrefix": "^",
           "name": "JavaScript"
         },
-        "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/negate.js",
-        "projectPath": "js/src/negate.js",
-        "targetPath": "negate",
-        "pageTitle": "negate",
-        "title": "negate"
+        "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/reverse.js",
+        "projectPath": "js/src/reverse.js",
+        "targetPath": "reverse",
+        "pageTitle": "reverse",
+        "title": "reverse"
       },
       "depth": 1,
       "outline": []
