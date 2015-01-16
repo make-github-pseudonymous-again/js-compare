@@ -6,24 +6,24 @@
 /* js/src/decreasing.js */
 
 
-var decreasing = function ( a, b ) {
+var decreasing = function ( a , b ) {
 
-	return ( a > b ) ? -1 : ( ( a === b ) ? 0 : 1 );
+	return ( a > b ) ? -1 : ( a === b ) ? 0 : 1 ;
 
-};
+} ;
 
-exports.decreasing = decreasing;
+exports.decreasing = decreasing ;
 
 /* js/src/increasing.js */
 
 
-var increasing = function ( a, b ) {
+var increasing = function ( a , b ) {
 
-	return ( a < b ) ? -1 : ( ( a === b ) ? 0 : 1 );
+	return ( a < b ) ? -1 : ( a === b ) ? 0 : 1 ;
 
-};
+} ;
 
-exports.increasing = increasing;
+exports.increasing = increasing ;
 
 /* js/src/lexicographical */
 /* js/src/lexicographical/colexicographical.js */
