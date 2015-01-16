@@ -5,7 +5,7 @@ var util, increasing, decreasing, one;
 util = require( "util" );
 
 increasing = compare.quasilexicographical( compare.increasing );
-decreasing = compare.negate( increasing );
+decreasing = compare.reverse( increasing );
 
 
 one = function ( a, b, z ) {

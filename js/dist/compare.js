@@ -229,18 +229,20 @@ var quasilexicographical = function ( compare ) {
 
 exports.quasilexicographical = quasilexicographical;
 
-/* js/src/negate.js */
+/* js/src/reverse.js */
 
 
-var negate = function ( compare ) {
+var reverse = function ( compare ) {
 
-	return function ( a, b ) {
-		return compare ( b, a );
-	};
+	return function ( a , b ) {
 
-};
+		return compare( b , a ) ;
 
-exports.negate = negate;
+	} ;
+
+} ;
+
+exports.reverse = reverse ;
 
 /* js/src/sign.js */
 

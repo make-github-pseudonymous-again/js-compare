@@ -6,8 +6,8 @@ util = require( "util" );
 
 increasing = compare.increasing;
 decreasing = compare.decreasing;
-increasing2 = compare.negate( decreasing );
-decreasing2 = compare.negate( increasing );
+increasing2 = compare.reverse( decreasing );
+decreasing2 = compare.reverse( increasing );
 
 one = function ( a, b ) {
 
@@ -33,7 +33,7 @@ one = function ( a, b ) {
 };
 
 
-test( "negate", function () {
+test( "reverse", function () {
 
 	var n;
 
