@@ -1,5 +1,4 @@
 
-
 var reverse = function ( compare ) {
 
 	return function ( a , b ) {

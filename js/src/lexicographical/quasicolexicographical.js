@@ -1,24 +1,24 @@
 
 /**
-* Generates a binary quasicolexicographical comparator
-* from a binary comparator.
-*
-* https://en.wikipedia.org/wiki/Lexicographical_order#Quasi-lexicographic_order
-* https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order
-*
-* compare( a, b ) should always return
-*   - a negative value if a < b
-*   - a positive value if a > b
-*   - zero if a === b
-*
-* compare should express an increasing ordering
-*/
+ * Generates a binary quasicolexicographical comparator
+ * from a binary comparator.
+ *
+ * https://en.wikipedia.org/wiki/Lexicographical_order#Quasi-lexicographic_order
+ * https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order
+ *
+ * compare( a, b ) should always return
+ *   - a negative value if a < b
+ *   - a positive value if a > b
+ *   - zero if a === b
+ *
+ * compare should express an increasing ordering
+ */
 
 var quasicolexicographical = function ( compare ) {
 
 	/**
-	* Compares 2 arrays a and b quasicolexicographically.
-	*/
+	 * Compares 2 arrays a and b quasicolexicographically.
+	 */
 
 	return function ( a, b ) {
 

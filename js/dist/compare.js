@@ -3,8 +3,37 @@
 	'use strict';
 
 
-/* js/src/decreasing.js */
+/* js/src/attr */
+/* js/src/attr/attr.js */
 
+var attr = function ( compare , key ) {
+
+	return function ( a , b ) {
+
+		return compare( a[key] , b[key] ) ;
+
+	} ;
+
+} ;
+
+exports.attr = attr ;
+
+
+/* js/src/attr/len.js */
+
+var len = function ( compare ) {
+
+	return function ( a , b ) {
+
+		return compare( a.length , b.length ) ;
+
+	} ;
+
+} ;
+
+exports.len = len ;
+
+/* js/src/decreasing.js */
 
 var decreasing = function ( a , b ) {
 
@@ -15,7 +44,6 @@ var decreasing = function ( a , b ) {
 exports.decreasing = decreasing ;
 
 /* js/src/increasing.js */
-
 
 var increasing = function ( a , b ) {
 
@@ -29,24 +57,24 @@ exports.increasing = increasing ;
 /* js/src/lexicographical/colexicographical.js */
 
 /**
-* Generates a binary colexicographical comparator
-* from a binary comparator.
-*
-* https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order
-*
-* compare( a, b ) should always return
-*   - a negative value if a < b
-*   - a positive value if a > b
-*   - zero if a === b
-*
-* compare should express an increasing ordering
-*/
+ * Generates a binary colexicographical comparator
+ * from a binary comparator.
+ *
+ * https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order
+ *
+ * compare( a, b ) should always return
+ *   - a negative value if a < b
+ *   - a positive value if a > b
+ *   - zero if a === b
+ *
+ * compare should express an increasing ordering
+ */
 
 var colexicographical = function ( compare ) {
 
 	/**
-	* Compares 2 arrays a and b colexicographically.
-	*/
+	 * Compares 2 arrays a and b colexicographically.
+	 */
 
 	return function ( a, b ) {
 
@@ -125,25 +153,25 @@ exports.lexicographical = lexicographical;
 /* js/src/lexicographical/quasicolexicographical.js */
 
 /**
-* Generates a binary quasicolexicographical comparator
-* from a binary comparator.
-*
-* https://en.wikipedia.org/wiki/Lexicographical_order#Quasi-lexicographic_order
-* https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order
-*
-* compare( a, b ) should always return
-*   - a negative value if a < b
-*   - a positive value if a > b
-*   - zero if a === b
-*
-* compare should express an increasing ordering
-*/
+ * Generates a binary quasicolexicographical comparator
+ * from a binary comparator.
+ *
+ * https://en.wikipedia.org/wiki/Lexicographical_order#Quasi-lexicographic_order
+ * https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order
+ *
+ * compare( a, b ) should always return
+ *   - a negative value if a < b
+ *   - a positive value if a > b
+ *   - zero if a === b
+ *
+ * compare should express an increasing ordering
+ */
 
 var quasicolexicographical = function ( compare ) {
 
 	/**
-	* Compares 2 arrays a and b quasicolexicographically.
-	*/
+	 * Compares 2 arrays a and b quasicolexicographically.
+	 */
 
 	return function ( a, b ) {
 
@@ -179,24 +207,24 @@ exports.quasicolexicographical = quasicolexicographical;
 /* js/src/lexicographical/quasilexicographical.js */
 
 /**
-* Generates a binary quasilexicographical comparator
-* from a binary comparator.
-*
-* https://en.wikipedia.org/wiki/Lexicographical_order#Quasi-lexicographic_order
-*
-* compare( a, b ) should always return
-*   - a negative value if a < b
-*   - a positive value if a > b
-*   - zero if a === b
-*
-* compare should express an increasing ordering
-*/
+ * Generates a binary quasilexicographical comparator
+ * from a binary comparator.
+ *
+ * https://en.wikipedia.org/wiki/Lexicographical_order#Quasi-lexicographic_order
+ *
+ * compare( a, b ) should always return
+ *   - a negative value if a < b
+ *   - a positive value if a > b
+ *   - zero if a === b
+ *
+ * compare should express an increasing ordering
+ */
 
 var quasilexicographical = function ( compare ) {
 
 	/**
-	* Compares 2 arrays a and b quasilexicographically.
-	*/
+	 * Compares 2 arrays a and b quasilexicographically.
+	 */
 
 	return function ( a, b ) {
 
@@ -230,7 +258,6 @@ var quasilexicographical = function ( compare ) {
 exports.quasilexicographical = quasilexicographical;
 
 /* js/src/reverse.js */
-
 
 var reverse = function ( compare ) {
 
