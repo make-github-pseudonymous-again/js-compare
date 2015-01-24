@@ -43,6 +43,20 @@ var decreasing = function ( a , b ) {
 
 exports.decreasing = decreasing ;
 
+/* js/src/fn.js */
+
+var fn = function ( compare , callable ) {
+
+	return function ( a , b ) {
+
+		return compare( callable( a ) , callable( b ) ) ;
+
+	} ;
+
+} ;
+
+exports.fn = fn ;
+
 /* js/src/increasing.js */
 
 var increasing = function ( a , b ) {
