@@ -22,6 +22,56 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
       "depth": 1,
       "outline": []
     }, {
+      "type": "folder",
+      "data": {
+        "path": "attr",
+        "title": "attr"
+      },
+      "depth": 1,
+      "children": [
+        {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".js"],
+              "pygmentsLexer": "javascript",
+              "multiLineComment": ["/*", "*", "*/"],
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "JavaScript"
+            },
+            "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/attr/attr.js",
+            "projectPath": "js/src/attr/attr.js",
+            "targetPath": "attr/attr",
+            "pageTitle": "attr/attr",
+            "title": "attr"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".js"],
+              "pygmentsLexer": "javascript",
+              "multiLineComment": ["/*", "*", "*/"],
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "JavaScript"
+            },
+            "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/attr/len.js",
+            "projectPath": "js/src/attr/len.js",
+            "targetPath": "attr/len",
+            "pageTitle": "attr/len",
+            "title": "len"
+          },
+          "depth": 2,
+          "outline": []
+        }
+      ]
+    }, {
       "type": "file",
       "data": {
         "language": {
