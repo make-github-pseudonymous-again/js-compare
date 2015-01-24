@@ -1,5 +1,5 @@
 {
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"name": "aureooms-js-compare",
 	"bugs": {
 		"url": "https://github.com/aureooms/js-compare/issues"
@@ -11,7 +11,7 @@
 		"test": "./node_modules/.bin/aureooms-node-package-test"
 	},
 	"devDependencies": {
-		"aureooms-node-package": "^1.2.0" ,
+		"aureooms-node-package": "^1.2.0",
 		"aureooms-js-operator": "^1.0.0"
 	},
 	"author": "aureooms",
