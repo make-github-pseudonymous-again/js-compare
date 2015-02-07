@@ -1,7 +1,7 @@
 [js-compare](http://aureooms.github.io/js-compare)
 ==
 
-comparison code bricks for JavaScript
+Comparison code bricks for JavaScript.
 
 [![NPM license](http://img.shields.io/npm/l/aureooms-js-compare.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-compare/master/LICENSE)
 [![NPM version](http://img.shields.io/npm/v/aureooms-js-compare.svg?style=flat)](https://www.npmjs.org/package/aureooms-js-compare)
