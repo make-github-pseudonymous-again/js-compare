@@ -58,13 +58,17 @@ reverselexicographical( [ 1 , 1 , 1 ] , [ 2 , 1 ] ) > 0 ; // true
 /** compare backwards, if identical compare length */
 increasing = compare.colexicographical( compare.increasing ) ;
 /** compare length first, if identical compare forwards */
-increasing = compare.quasilexicographical( compare.increasing ) ; 
+increasing = compare.quasilexicographical( compare.increasing ) ;
 /** compare length first, if identical compare backwards */
-increasing = compare.quasicolexicographical( compare.increasing ) ; 
+increasing = compare.quasicolexicographical( compare.increasing ) ;
 /** compare components in range [0, 3[, forwards */
-increasing = compare.fixedlexicographical( compare.increasing , 3 ) ; 
+increasing = compare.fixedlexicographical( compare.increasing , 3 ) ;
 /** compare components in range [0, 3[, backwards */
-increasing = compare.fixedcolexicographical( compare.increasing , 3 ) ; 
+increasing = compare.fixedcolexicographical( compare.increasing , 3 ) ;
+/** compare components in range [1, 4[, forwards */
+increasing = compare.rangedlexicographical( compare.increasing , 1 , 4 ) ;
+/** compare components in range [1, 4[, backwards */
+increasing = compare.rangedcolexicographical( compare.increasing , 1 , 4 ) ;
 
 // Also includes comparison function creation tools, Hereunder, all versions are equivalent.
 increasing = compare.fn( compare.increasing , function ( item ) { return item.length ; } )
@@ -75,8 +79,6 @@ increasing = compare.len( compare.increasing )
 compare.sign( -2378 ) === -1 ; // true
 compare.sign(     0 ) ===  0 ; // true
 compare.sign(  2378 ) ===  1 ; // true
-
-
 ```
 
 References:
