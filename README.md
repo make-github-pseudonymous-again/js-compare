@@ -14,6 +14,66 @@ comparison code bricks for JavaScript
 [![NPM downloads per month](http://img.shields.io/npm/dm/aureooms-js-compare.svg?style=flat)](https://www.npmjs.org/package/aureooms-js-compare)
 [![GitHub issues](http://img.shields.io/github/issues/aureooms/js-compare.svg?style=flat)](https://github.com/aureooms/js-compare/issues)
 
-reference :
+Example usage:
+
+```javascript
+var compare , increasing , decreasing , lexicographical , reverselexicographical ;
+
+compare = require( "aureooms-js-compare" ) ;
+
+increasing = compare.increasing ;
+decreasing = compare.decreasing ;
+
+increasing( 1 , 1 ) === 0 ; // true
+increasing( 1 , 2 )  <  0 ; // true
+increasing( 2 , 1 )  >  0 ; // true
+decreasing( 1 , 1 ) === 0 ; // true
+decreasing( 1 , 2 )  >  0 ; // true
+decreasing( 2 , 1 )  <  0 ; // true
+
+lexicographical = compare.lexicographical( increasing ) ;
+
+lexicographical( [ 1 , 1 ] , [ 1 , 1 ] ) === 0 ; // true
+lexicographical( [ 1 , 1 ] , [ 1 , 2 ] )  <  0 ; // true
+lexicographical( [ 1 , 2 ] , [ 1 , 1 ] )  >  0 ; // true
+
+lexicographical( [ 1 , 1 ] , [ 1 , 1 , 1 ] ) < 0 ; // true
+lexicographical( [ 1 , 1 , 1 ] , [ 1 , 1 ] ) > 0 ; // true
+lexicographical( [ 2 , 1 ] , [ 1 , 1 , 1 ] ) > 0 ; // true
+lexicographical( [ 1 , 1 , 1 ] , [ 2 , 1 ] ) < 0 ; // true
+
+reverselexicographical = compare.reverse( lexicographical ) ;
+
+reverselexicographical( [ 1 , 1 ] , [ 1 , 1 ] ) === 0 ; // true
+reverselexicographical( [ 1 , 1 ] , [ 1 , 2 ] )  >  0 ; // true
+reverselexicographical( [ 1 , 2 ] , [ 1 , 1 ] )  <  0 ; // true
+
+reverselexicographical( [ 1 , 1 ] , [ 1 , 1 , 1 ] ) > 0 ; // true
+reverselexicographical( [ 1 , 1 , 1 ] , [ 1 , 1 ] ) < 0 ; // true
+reverselexicographical( [ 2 , 1 ] , [ 1 , 1 , 1 ] ) < 0 ; // true
+reverselexicographical( [ 1 , 1 , 1 ] , [ 2 , 1 ] ) > 0 ; // true
+
+// ... and many more variants
+increasing = compare.colexicographical( compare.increasing ) ; // compare backwards, if identical compare length
+increasing = compare.quasilexicographical( compare.increasing ) ; // compare length first, if identical compare forwards
+increasing = compare.quasicolexicographical( compare.increasing ) ; // compare length first, if identical compare backwards
+increasing = compare.fixedlexicographical( compare.increasing , 3 ) ; // compare components in range [0, 3[, forwards
+increasing = compare.fixedcolexicographical( compare.increasing , 3 ) ; // compare components in range [0, 3[, backwards
+
+
+// comparison function creation tools, all versions are equivalent
+increasing = compare.fn( compare.increasing , function ( item ) { return item.length ; } )
+increasing = compare.attr( compare.increasing , "length" )
+increasing = compare.len( compare.increasing )
+
+// + an additional useful tool
+compare.sign( -2378 ) === -1 ; // true
+compare.sign(     0 ) ===  0 ; // true
+compare.sign(  2378 ) ===  1 ; // true
+
+
+```
+
+References:
 
   - https://en.wikipedia.org/wiki/Lexicographical_order
