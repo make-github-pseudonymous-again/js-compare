@@ -11,7 +11,7 @@
 		"test": "./node_modules/.bin/aureooms-node-package-test"
 	},
 	"devDependencies": {
-		"aureooms-node-package": "^1.2.0",
+		"aureooms-node-package": "^4.0.1",
 		"aureooms-js-operator": "^1.0.0"
 	},
 	"author": "aureooms",
