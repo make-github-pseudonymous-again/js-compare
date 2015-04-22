@@ -13,6 +13,7 @@ Comparison code bricks for JavaScript.
 [![Code Climate](http://img.shields.io/codeclimate/github/aureooms/js-compare.svg?style=flat)](https://codeclimate.com/github/aureooms/js-compare)
 [![NPM downloads per month](http://img.shields.io/npm/dm/aureooms-js-compare.svg?style=flat)](https://www.npmjs.org/package/aureooms-js-compare)
 [![GitHub issues](http://img.shields.io/github/issues/aureooms/js-compare.svg?style=flat)](https://github.com/aureooms/js-compare/issues)
+[![Inline docs](http://inch-ci.org/github/aureooms/js-compare.svg?branch=master&style=shields)](http://inch-ci.org/github/aureooms/js-compare)
 
 Can be managed through [duo](https://github.com/duojs/duo),
 [component](https://github.com/componentjs/component),
