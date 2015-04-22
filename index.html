@@ -9,14 +9,16 @@
 <a href="https://david-dm.org/aureooms/js-compare#info=devDependencies"><img src="http://img.shields.io/david/dev/aureooms/js-compare.svg?style=flat" alt="devDependencies Status"></a>
 <a href="https://codeclimate.com/github/aureooms/js-compare"><img src="http://img.shields.io/codeclimate/github/aureooms/js-compare.svg?style=flat" alt="Code Climate"></a>
 <a href="https://www.npmjs.org/package/aureooms-js-compare"><img src="http://img.shields.io/npm/dm/aureooms-js-compare.svg?style=flat" alt="NPM downloads per month"></a>
-<a href="https://github.com/aureooms/js-compare/issues"><img src="http://img.shields.io/github/issues/aureooms/js-compare.svg?style=flat" alt="GitHub issues"></a></p>
+<a href="https://github.com/aureooms/js-compare/issues"><img src="http://img.shields.io/github/issues/aureooms/js-compare.svg?style=flat" alt="GitHub issues"></a>
+<a href="http://inch-ci.org/github/aureooms/js-compare"><img src="http://inch-ci.org/github/aureooms/js-compare.svg?branch=master&amp;style=shields" alt="Inline docs"></a></p>
+<p>Can be managed through <a href="https://github.com/duojs/duo">duo</a>,
+<a href="https://github.com/componentjs/component">component</a>,
+<a href="https://github.com/bower/bower">bower</a>, or
+<a href="https://github.com/npm/npm">npm</a>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> compare = <span class="hljs-built_in">require</span>( <span class="hljs-string">"aureooms-js-compare"</span> ) ;</code></pre>
 <p>Example usage:</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> compare , increasing , decreasing , lexicographical , reverselexicographical ;
-
-compare = <span class="hljs-built_in">require</span>( <span class="hljs-string">"aureooms-js-compare"</span> ) ;
-
-increasing = compare.increasing ;
-decreasing = compare.decreasing ;
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> increasing = compare.increasing ;
+<span class="hljs-keyword">let</span> decreasing = compare.decreasing ;
 
 increasing( <span class="hljs-number">1</span> , <span class="hljs-number">1</span> ) === <span class="hljs-number">0</span> ; <span class="hljs-comment">// true</span>
 increasing( <span class="hljs-number">1</span> , <span class="hljs-number">2</span> )  &lt;  <span class="hljs-number">0</span> ; <span class="hljs-comment">// true</span>
@@ -25,7 +27,7 @@ decreasing( <span class="hljs-number">1</span> , <span class="hljs-number">1</sp
 decreasing( <span class="hljs-number">1</span> , <span class="hljs-number">2</span> )  &gt;  <span class="hljs-number">0</span> ; <span class="hljs-comment">// true</span>
 decreasing( <span class="hljs-number">2</span> , <span class="hljs-number">1</span> )  &lt;  <span class="hljs-number">0</span> ; <span class="hljs-comment">// true</span>
 
-lexicographical = compare.lexicographical( increasing ) ;
+<span class="hljs-keyword">let</span> lexicographical = compare.lexicographical( increasing ) ;
 
 lexicographical( [ <span class="hljs-number">1</span> , <span class="hljs-number">1</span> ] , [ <span class="hljs-number">1</span> , <span class="hljs-number">1</span> ] ) === <span class="hljs-number">0</span> ; <span class="hljs-comment">// true</span>
 lexicographical( [ <span class="hljs-number">1</span> , <span class="hljs-number">1</span> ] , [ <span class="hljs-number">1</span> , <span class="hljs-number">2</span> ] )  &lt;  <span class="hljs-number">0</span> ; <span class="hljs-comment">// true</span>
@@ -36,7 +38,7 @@ lexicographical( [ <span class="hljs-number">1</span> , <span class="hljs-number
 lexicographical( [ <span class="hljs-number">2</span> , <span class="hljs-number">1</span> ] , [ <span class="hljs-number">1</span> , <span class="hljs-number">1</span> , <span class="hljs-number">1</span> ] ) &gt; <span class="hljs-number">0</span> ; <span class="hljs-comment">// true</span>
 lexicographical( [ <span class="hljs-number">1</span> , <span class="hljs-number">1</span> , <span class="hljs-number">1</span> ] , [ <span class="hljs-number">2</span> , <span class="hljs-number">1</span> ] ) &lt; <span class="hljs-number">0</span> ; <span class="hljs-comment">// true</span>
 
-reverselexicographical = compare.reverse( lexicographical ) ;
+<span class="hljs-keyword">let</span> reverselexicographical = compare.reverse( lexicographical ) ;
 
 reverselexicographical( [ <span class="hljs-number">1</span> , <span class="hljs-number">1</span> ] , [ <span class="hljs-number">1</span> , <span class="hljs-number">1</span> ] ) === <span class="hljs-number">0</span> ; <span class="hljs-comment">// true</span>
 reverselexicographical( [ <span class="hljs-number">1</span> , <span class="hljs-number">1</span> ] , [ <span class="hljs-number">1</span> , <span class="hljs-number">2</span> ] )  &gt;  <span class="hljs-number">0</span> ; <span class="hljs-comment">// true</span>
@@ -50,24 +52,25 @@ reverselexicographical( [ <span class="hljs-number">1</span> , <span class="hljs
 <span class="hljs-comment">// ... and many more variants.</span>
 
 <span class="hljs-comment">/** compare backwards, if identical compare length */</span>
-increasing = compare.colexicographical( compare.increasing ) ;
+<span class="hljs-keyword">let</span> increasing = compare.colexicographical( compare.increasing ) ;
 <span class="hljs-comment">/** compare length first, if identical compare forwards */</span>
-increasing = compare.quasilexicographical( compare.increasing ) ;
+<span class="hljs-keyword">let</span> increasing = compare.quasilexicographical( compare.increasing ) ;
 <span class="hljs-comment">/** compare length first, if identical compare backwards */</span>
-increasing = compare.quasicolexicographical( compare.increasing ) ;
+<span class="hljs-keyword">let</span> increasing = compare.quasicolexicographical( compare.increasing ) ;
 <span class="hljs-comment">/** compare components in range [0, 3[, forwards */</span>
-increasing = compare.fixedlexicographical( compare.increasing , <span class="hljs-number">3</span> ) ;
+<span class="hljs-keyword">let</span> increasing = compare.fixedlexicographical( compare.increasing , <span class="hljs-number">3</span> ) ;
 <span class="hljs-comment">/** compare components in range [0, 3[, backwards */</span>
-increasing = compare.fixedcolexicographical( compare.increasing , <span class="hljs-number">3</span> ) ;
+<span class="hljs-keyword">let</span> increasing = compare.fixedcolexicographical( compare.increasing , <span class="hljs-number">3</span> ) ;
 <span class="hljs-comment">/** compare components in range [1, 4[, forwards */</span>
-increasing = compare.rangedlexicographical( compare.increasing , <span class="hljs-number">1</span> , <span class="hljs-number">4</span> ) ;
+<span class="hljs-keyword">let</span> increasing = compare.rangedlexicographical( compare.increasing , <span class="hljs-number">1</span> , <span class="hljs-number">4</span> ) ;
 <span class="hljs-comment">/** compare components in range [1, 4[, backwards */</span>
-increasing = compare.rangedcolexicographical( compare.increasing , <span class="hljs-number">1</span> , <span class="hljs-number">4</span> ) ;
+<span class="hljs-keyword">let</span> increasing = compare.rangedcolexicographical( compare.increasing , <span class="hljs-number">1</span> , <span class="hljs-number">4</span> ) ;
 
-<span class="hljs-comment">// Also includes comparison function creation tools, Hereunder, all versions are equivalent.</span>
-increasing = compare.fn( compare.increasing , <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">( item )</span> {</span> <span class="hljs-keyword">return</span> item.length ; } )
-increasing = compare.attr( compare.increasing , <span class="hljs-string">"length"</span> )
-increasing = compare.len( compare.increasing )
+<span class="hljs-comment">// Also includes comparison function creation tools. Hereunder, all versions are equivalent.</span>
+<span class="hljs-keyword">let</span> operator = <span class="hljs-built_in">require</span>( <span class="hljs-string">"aureooms-js-operator"</span> ) ;
+<span class="hljs-keyword">let</span> increasing = compare.fn( compare.increasing , operator.len ) ;
+<span class="hljs-keyword">let</span> increasing = compare.attr( compare.increasing , <span class="hljs-string">"length"</span> ) ;
+<span class="hljs-keyword">let</span> increasing = compare.len( compare.increasing ) ;
 
 <span class="hljs-comment">// Plus an additional useful tool.</span>
 compare.sign( -<span class="hljs-number">2378</span> ) === -<span class="hljs-number">1</span> ; <span class="hljs-comment">// true</span>
