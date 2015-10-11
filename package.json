@@ -11,7 +11,7 @@
 		"test": "./node_modules/.bin/aureooms-node-package-test"
 	},
 	"devDependencies": {
-		"aureooms-node-package": "^4.2.5",
+		"aureooms-node-package": "^5.0.2",
 		"aureooms-js-operator": "^1.0.2"
 	},
 	"author": "aureooms",
@@ -26,9 +26,13 @@
 		"javascript",
 		"js",
 		"order",
-		"sort"
+		"sort",
+		"ender"
 	],
 	"homepage": "http://aureooms.github.io/js-compare/",
 	"description": "comparison code bricks for JavaScript",
-	"dependencies": {}
+	"dependencies": {},
+	"spm":{
+		"main": "js/dist/compare.js"
+	}
 }

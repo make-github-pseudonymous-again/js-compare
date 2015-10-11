@@ -13,5 +13,6 @@
 			"compare.js"
 		]
 	},
-	"src": "js/src/"
+	"src": "js/src/",
+	"babel": true
 }

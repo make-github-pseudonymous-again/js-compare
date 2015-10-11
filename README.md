@@ -3,6 +3,11 @@
 
 Comparison code bricks for JavaScript.
 
+```js
+let compare = reverse( lexicographical( increasing ) ) ;
+compare( [ 1 , 1 ] , [ 1 , 2 ] )  >  0 ; // true
+```
+
 [![NPM license](http://img.shields.io/npm/l/aureooms-js-compare.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-compare/master/LICENSE)
 [![NPM version](http://img.shields.io/npm/v/aureooms-js-compare.svg?style=flat)](https://www.npmjs.org/package/aureooms-js-compare)
 [![Bower version](http://img.shields.io/bower/v/aureooms-js-compare.svg?style=flat)](http://bower.io/search/?q=aureooms-js-compare)
@@ -15,16 +20,86 @@ Comparison code bricks for JavaScript.
 [![GitHub issues](http://img.shields.io/github/issues/aureooms/js-compare.svg?style=flat)](https://github.com/aureooms/js-compare/issues)
 [![Inline docs](http://inch-ci.org/github/aureooms/js-compare.svg?branch=master&style=shields)](http://inch-ci.org/github/aureooms/js-compare)
 
-Can be managed through [duo](https://github.com/duojs/duo),
+Can be managed through [jspm](https://github.com/jspm/jspm-cli),
+[duo](https://github.com/duojs/duo),
 [component](https://github.com/componentjs/component),
-[bower](https://github.com/bower/bower), or
-[npm](https://github.com/npm/npm).
+[bower](https://github.com/bower/bower),
+[ender](https://github.com/ender-js/Ender),
+[jam](https://github.com/caolan/jam),
+[spm](https://github.com/spmjs/spm),
+and [npm](https://github.com/npm/npm).
 
+## Install
+
+### jspm
+```terminal
+jspm install github:aureooms/js-compare
+# or
+jspm install npm:aureooms-js-compare
+```
+### duo
+No install step needed for duo!
+
+### component
+```terminal
+component install aureooms/js-compare
+```
+
+### bower
+```terminal
+bower install aureooms-js-compare
+```
+
+### ender
+```terminal
+ender add aureooms-js-compare
+```
+
+### jam
+```terminal
+jam install aureooms-js-compare
+```
+
+### spm
+```terminal
+spm install aureooms-js-compare --save
+```
+
+### npm
+```terminal
+npm install aureooms-js-compare --save
+```
+
+## Require
+### jspm
+```js
+let compare = require( "github:aureooms/js-compare" ) ;
+// or
+import compare from 'aureooms-js-compare' ;
+```
+### duo
+```js
+let compare = require( "aureooms/js-compare" ) ;
+```
+
+### component, ender, spm, npm
 ```js
 let compare = require( "aureooms-js-compare" ) ;
 ```
 
-Example usage:
+### bower
+The script tag exposes the global variable `compare`.
+```html
+<script src="bower_components/aureooms-js-compare/js/dist/compare.min.js"></script>
+```
+Alternatively, you can use any tool mentioned [here](http://bower.io/docs/tools/).
+
+### jam
+```js
+require( [ "aureooms-js-compare" ] , function ( compare ) { ... } ) ;
+```
+
+## Use
 
 ```js
 let increasing = compare.increasing ;
@@ -88,6 +163,6 @@ compare.sign(     0 ) ===  0 ; // true
 compare.sign(  2378 ) ===  1 ; // true
 ```
 
-References:
+## References
 
   - https://en.wikipedia.org/wiki/Lexicographical_order
