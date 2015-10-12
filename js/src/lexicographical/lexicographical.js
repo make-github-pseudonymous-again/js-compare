@@ -13,35 +13,31 @@
  * compare should express an increasing ordering
  */
 
-var lexicographical = function ( compare ) {
+const lexicographical = function ( compare ) {
 
 	/**
 	 * Compares 2 arrays a and b lexicographically.
 	 */
 
-	return function ( a, b ) {
+	return function ( a , b ) {
 
-		var i, m, n, len, d;
+		const m = a.length ;
+		const n = b.length ;
 
-		m = a.length;
-		n = b.length;
+		const len = Math.min( m , n ) ;
 
-		len = Math.min( m, n );
+		for ( let i = 0 ; i < len ; ++i ) {
 
-		for ( i = 0 ; i < len ; ++i ) {
+			const d = compare( a[i] , b[i] ) ;
 
-			d = compare( a[i], b[i] );
-
-			if ( d !== 0 ) {
-				return d;
-			}
+			if ( d !== 0 ) return d ;
 
 		}
 
-		return m - n;
+		return m - n ;
 
-	};
+	} ;
 
-};
+} ;
 
-exports.lexicographical = lexicographical;
+exports.lexicographical = lexicographical ;

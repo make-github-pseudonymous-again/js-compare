@@ -11,7 +11,7 @@
  *
  */
 
-var rangedlexicographical = function ( compare , begin , end ) {
+const rangedlexicographical = function ( compare , begin , end ) {
 
 	/**
 	 * Compares the range [begin, end[ of 2 arrays a and b lexicographically.
@@ -19,15 +19,11 @@ var rangedlexicographical = function ( compare , begin , end ) {
 
 	return function ( a , b ) {
 
-		var i , d ;
+		for ( let i = begin ; i < end ; ++i ) {
 
-		for ( i = begin ; i < end ; ++i ) {
+			const d = compare( a[i] , b[i] );
 
-			d = compare( a[i] , b[i] );
-
-			if ( d !== 0 ) {
-				return d ;
-			}
+			if ( d !== 0 ) return d ;
 
 		}
 

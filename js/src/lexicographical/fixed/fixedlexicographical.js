@@ -11,7 +11,7 @@
  *
  */
 
-var fixedlexicographical = function ( compare , len ) {
+const fixedlexicographical = function ( compare , len ) {
 
 	/**
 	 * Compares 2 fixed size arrays a and b of size len lexicographically.
@@ -19,15 +19,11 @@ var fixedlexicographical = function ( compare , len ) {
 
 	return function ( a , b ) {
 
-		var i , d ;
+		for ( let i = 0 ; i < len ; ++i ) {
 
-		for ( i = 0 ; i < len ; ++i ) {
+			const d = compare( a[i] , b[i] ) ;
 
-			d = compare( a[i] , b[i] ) ;
-
-			if ( d !== 0 ) {
-				return d ;
-			}
+			if ( d !== 0 ) return d ;
 
 		}
 

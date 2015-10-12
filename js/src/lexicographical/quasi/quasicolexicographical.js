@@ -14,39 +14,33 @@
  * compare should express an increasing ordering
  */
 
-var quasicolexicographical = function ( compare ) {
+const quasicolexicographical = function ( compare ) {
 
 	/**
 	 * Compares 2 arrays a and b quasicolexicographically.
 	 */
 
-	return function ( a, b ) {
+	return function ( a , b ) {
 
-		var i, m, n, len, d;
+		const m = a.length ;
+		const n = b.length ;
 
-		m = a.length;
-		n = b.length;
+		if ( m !== n ) return m - n ;
 
-		if ( m !== n ) {
-			return m - n;
-		}
+		const len = Math.min( m , n ) ;
 
-		len = Math.min( m, n );
+		for ( let i = 1 ; i <= len ; ++i ) {
 
-		for ( i = 1 ; i <= len ; ++i ) {
+			const d = compare( a[m-i] , b[n-i] ) ;
 
-			d = compare( a[m-i], b[n-i] );
-
-			if ( d !== 0 ) {
-				return d;
-			}
+			if ( d !== 0 ) return d ;
 
 		}
 
-		return 0;
+		return 0 ;
 
-	};
+	} ;
 
-};
+} ;
 
-exports.quasicolexicographical = quasicolexicographical;
+exports.quasicolexicographical = quasicolexicographical ;
