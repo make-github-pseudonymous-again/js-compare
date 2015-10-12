@@ -1,5 +1,5 @@
 {
-	"version": "1.4.4",
+	"version": "1.4.5",
 	"name": "aureooms-js-compare",
 	"bugs": {
 		"url": "https://github.com/aureooms/js-compare/issues"
@@ -32,7 +32,7 @@
 	"homepage": "http://aureooms.github.io/js-compare/",
 	"description": "comparison code bricks for JavaScript",
 	"dependencies": {},
-	"spm":{
+	"spm": {
 		"main": "js/dist/compare.js"
 	}
 }
