@@ -20,117 +20,151 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
         "title": "index"
       },
       "depth": 1,
-      "outline": []
-    }, {
-      "type": "folder",
-      "data": {
-        "path": "attr",
-        "title": "attr"
-      },
-      "depth": 1,
-      "children": [
+      "outline": [
         {
-          "type": "file",
+          "type": "heading",
           "data": {
-            "language": {
-              "nameMatchers": [".js"],
-              "pygmentsLexer": "javascript",
-              "multiLineComment": ["/*", "*", "*/"],
-              "singleLineComment": ["//"],
-              "ignorePrefix": "}",
-              "foldPrefix": "^",
-              "name": "JavaScript"
-            },
-            "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/attr/attr.js",
-            "projectPath": "js/src/attr/attr.js",
-            "targetPath": "attr/attr",
-            "pageTitle": "attr/attr",
-            "title": "attr"
+            "level": 2,
+            "title": "Install",
+            "slug": "install"
           },
           "depth": 2,
-          "outline": []
+          "children": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "jspm",
+                "slug": "jspm"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "duo",
+                "slug": "duo"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "component",
+                "slug": "component"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "bower",
+                "slug": "bower"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "ender",
+                "slug": "ender"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "jam",
+                "slug": "jam"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "spm",
+                "slug": "spm"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "npm",
+                "slug": "npm"
+              },
+              "depth": 3
+            }
+          ]
         }, {
-          "type": "file",
+          "type": "heading",
           "data": {
-            "language": {
-              "nameMatchers": [".js"],
-              "pygmentsLexer": "javascript",
-              "multiLineComment": ["/*", "*", "*/"],
-              "singleLineComment": ["//"],
-              "ignorePrefix": "}",
-              "foldPrefix": "^",
-              "name": "JavaScript"
-            },
-            "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/attr/len.js",
-            "projectPath": "js/src/attr/len.js",
-            "targetPath": "attr/len",
-            "pageTitle": "attr/len",
-            "title": "len"
+            "level": 2,
+            "title": "Require",
+            "slug": "require"
           },
           "depth": 2,
-          "outline": []
+          "children": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "jspm",
+                "slug": "jspm"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "duo",
+                "slug": "duo"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "component, ender, spm, npm",
+                "slug": "component-ender-spm-npm"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "bower",
+                "slug": "bower"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "jam",
+                "slug": "jam"
+              },
+              "depth": 3
+            }
+          ]
+        }, {
+          "type": "heading",
+          "data": {
+            "level": 2,
+            "title": "Use",
+            "slug": "use"
+          },
+          "depth": 2
+        }, {
+          "type": "heading",
+          "data": {
+            "level": 2,
+            "title": "References",
+            "slug": "references"
+          },
+          "depth": 2
         }
       ]
-    }, {
-      "type": "file",
-      "data": {
-        "language": {
-          "nameMatchers": [".js"],
-          "pygmentsLexer": "javascript",
-          "multiLineComment": ["/*", "*", "*/"],
-          "singleLineComment": ["//"],
-          "ignorePrefix": "}",
-          "foldPrefix": "^",
-          "name": "JavaScript"
-        },
-        "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/decreasing.js",
-        "projectPath": "js/src/decreasing.js",
-        "targetPath": "decreasing",
-        "pageTitle": "decreasing",
-        "title": "decreasing"
-      },
-      "depth": 1,
-      "outline": []
-    }, {
-      "type": "file",
-      "data": {
-        "language": {
-          "nameMatchers": [".js"],
-          "pygmentsLexer": "javascript",
-          "multiLineComment": ["/*", "*", "*/"],
-          "singleLineComment": ["//"],
-          "ignorePrefix": "}",
-          "foldPrefix": "^",
-          "name": "JavaScript"
-        },
-        "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/fn.js",
-        "projectPath": "js/src/fn.js",
-        "targetPath": "fn",
-        "pageTitle": "fn",
-        "title": "fn"
-      },
-      "depth": 1,
-      "outline": []
-    }, {
-      "type": "file",
-      "data": {
-        "language": {
-          "nameMatchers": [".js"],
-          "pygmentsLexer": "javascript",
-          "multiLineComment": ["/*", "*", "*/"],
-          "singleLineComment": ["//"],
-          "ignorePrefix": "}",
-          "foldPrefix": "^",
-          "name": "JavaScript"
-        },
-        "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/increasing.js",
-        "projectPath": "js/src/increasing.js",
-        "targetPath": "increasing",
-        "pageTitle": "increasing",
-        "title": "increasing"
-      },
-      "depth": 1,
-      "outline": []
     }, {
       "type": "folder",
       "data": {
@@ -160,45 +194,55 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "depth": 2,
           "outline": []
         }, {
-          "type": "file",
+          "type": "folder",
           "data": {
-            "language": {
-              "nameMatchers": [".js"],
-              "pygmentsLexer": "javascript",
-              "multiLineComment": ["/*", "*", "*/"],
-              "singleLineComment": ["//"],
-              "ignorePrefix": "}",
-              "foldPrefix": "^",
-              "name": "JavaScript"
-            },
-            "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/lexicographical/fixedcolexicographical.js",
-            "projectPath": "js/src/lexicographical/fixedcolexicographical.js",
-            "targetPath": "lexicographical/fixedcolexicographical",
-            "pageTitle": "lexicographical/fixedcolexicographical",
-            "title": "fixedcolexicographical"
+            "path": "lexicographical/fixed",
+            "title": "fixed"
           },
           "depth": 2,
-          "outline": []
-        }, {
-          "type": "file",
-          "data": {
-            "language": {
-              "nameMatchers": [".js"],
-              "pygmentsLexer": "javascript",
-              "multiLineComment": ["/*", "*", "*/"],
-              "singleLineComment": ["//"],
-              "ignorePrefix": "}",
-              "foldPrefix": "^",
-              "name": "JavaScript"
-            },
-            "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/lexicographical/fixedlexicographical.js",
-            "projectPath": "js/src/lexicographical/fixedlexicographical.js",
-            "targetPath": "lexicographical/fixedlexicographical",
-            "pageTitle": "lexicographical/fixedlexicographical",
-            "title": "fixedlexicographical"
-          },
-          "depth": 2,
-          "outline": []
+          "children": [
+            {
+              "type": "file",
+              "data": {
+                "language": {
+                  "nameMatchers": [".js"],
+                  "pygmentsLexer": "javascript",
+                  "multiLineComment": ["/*", "*", "*/"],
+                  "singleLineComment": ["//"],
+                  "ignorePrefix": "}",
+                  "foldPrefix": "^",
+                  "name": "JavaScript"
+                },
+                "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/lexicographical/fixed/fixedcolexicographical.js",
+                "projectPath": "js/src/lexicographical/fixed/fixedcolexicographical.js",
+                "targetPath": "lexicographical/fixed/fixedcolexicographical",
+                "pageTitle": "lexicographical/fixed/fixedcolexicographical",
+                "title": "fixedcolexicographical"
+              },
+              "depth": 3,
+              "outline": []
+            }, {
+              "type": "file",
+              "data": {
+                "language": {
+                  "nameMatchers": [".js"],
+                  "pygmentsLexer": "javascript",
+                  "multiLineComment": ["/*", "*", "*/"],
+                  "singleLineComment": ["//"],
+                  "ignorePrefix": "}",
+                  "foldPrefix": "^",
+                  "name": "JavaScript"
+                },
+                "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/lexicographical/fixed/fixedlexicographical.js",
+                "projectPath": "js/src/lexicographical/fixed/fixedlexicographical.js",
+                "targetPath": "lexicographical/fixed/fixedlexicographical",
+                "pageTitle": "lexicographical/fixed/fixedlexicographical",
+                "title": "fixedlexicographical"
+              },
+              "depth": 3,
+              "outline": []
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -220,6 +264,116 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "depth": 2,
           "outline": []
         }, {
+          "type": "folder",
+          "data": {
+            "path": "lexicographical/quasi",
+            "title": "quasi"
+          },
+          "depth": 2,
+          "children": [
+            {
+              "type": "file",
+              "data": {
+                "language": {
+                  "nameMatchers": [".js"],
+                  "pygmentsLexer": "javascript",
+                  "multiLineComment": ["/*", "*", "*/"],
+                  "singleLineComment": ["//"],
+                  "ignorePrefix": "}",
+                  "foldPrefix": "^",
+                  "name": "JavaScript"
+                },
+                "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/lexicographical/quasi/quasicolexicographical.js",
+                "projectPath": "js/src/lexicographical/quasi/quasicolexicographical.js",
+                "targetPath": "lexicographical/quasi/quasicolexicographical",
+                "pageTitle": "lexicographical/quasi/quasicolexicographical",
+                "title": "quasicolexicographical"
+              },
+              "depth": 3,
+              "outline": []
+            }, {
+              "type": "file",
+              "data": {
+                "language": {
+                  "nameMatchers": [".js"],
+                  "pygmentsLexer": "javascript",
+                  "multiLineComment": ["/*", "*", "*/"],
+                  "singleLineComment": ["//"],
+                  "ignorePrefix": "}",
+                  "foldPrefix": "^",
+                  "name": "JavaScript"
+                },
+                "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/lexicographical/quasi/quasilexicographical.js",
+                "projectPath": "js/src/lexicographical/quasi/quasilexicographical.js",
+                "targetPath": "lexicographical/quasi/quasilexicographical",
+                "pageTitle": "lexicographical/quasi/quasilexicographical",
+                "title": "quasilexicographical"
+              },
+              "depth": 3,
+              "outline": []
+            }
+          ]
+        }, {
+          "type": "folder",
+          "data": {
+            "path": "lexicographical/ranged",
+            "title": "ranged"
+          },
+          "depth": 2,
+          "children": [
+            {
+              "type": "file",
+              "data": {
+                "language": {
+                  "nameMatchers": [".js"],
+                  "pygmentsLexer": "javascript",
+                  "multiLineComment": ["/*", "*", "*/"],
+                  "singleLineComment": ["//"],
+                  "ignorePrefix": "}",
+                  "foldPrefix": "^",
+                  "name": "JavaScript"
+                },
+                "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/lexicographical/ranged/rangedcolexicographical.js",
+                "projectPath": "js/src/lexicographical/ranged/rangedcolexicographical.js",
+                "targetPath": "lexicographical/ranged/rangedcolexicographical",
+                "pageTitle": "lexicographical/ranged/rangedcolexicographical",
+                "title": "rangedcolexicographical"
+              },
+              "depth": 3,
+              "outline": []
+            }, {
+              "type": "file",
+              "data": {
+                "language": {
+                  "nameMatchers": [".js"],
+                  "pygmentsLexer": "javascript",
+                  "multiLineComment": ["/*", "*", "*/"],
+                  "singleLineComment": ["//"],
+                  "ignorePrefix": "}",
+                  "foldPrefix": "^",
+                  "name": "JavaScript"
+                },
+                "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/lexicographical/ranged/rangedlexicographical.js",
+                "projectPath": "js/src/lexicographical/ranged/rangedlexicographical.js",
+                "targetPath": "lexicographical/ranged/rangedlexicographical",
+                "pageTitle": "lexicographical/ranged/rangedlexicographical",
+                "title": "rangedlexicographical"
+              },
+              "depth": 3,
+              "outline": []
+            }
+          ]
+        }
+      ]
+    }, {
+      "type": "folder",
+      "data": {
+        "path": "native",
+        "title": "native"
+      },
+      "depth": 1,
+      "children": [
+        {
           "type": "file",
           "data": {
             "language": {
@@ -231,11 +385,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "JavaScript"
             },
-            "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/lexicographical/quasicolexicographical.js",
-            "projectPath": "js/src/lexicographical/quasicolexicographical.js",
-            "targetPath": "lexicographical/quasicolexicographical",
-            "pageTitle": "lexicographical/quasicolexicographical",
-            "title": "quasicolexicographical"
+            "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/native/decreasing.js",
+            "projectPath": "js/src/native/decreasing.js",
+            "targetPath": "native/decreasing",
+            "pageTitle": "native/decreasing",
+            "title": "decreasing"
           },
           "depth": 2,
           "outline": []
@@ -251,96 +405,146 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "JavaScript"
             },
-            "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/lexicographical/quasilexicographical.js",
-            "projectPath": "js/src/lexicographical/quasilexicographical.js",
-            "targetPath": "lexicographical/quasilexicographical",
-            "pageTitle": "lexicographical/quasilexicographical",
-            "title": "quasilexicographical"
-          },
-          "depth": 2,
-          "outline": []
-        }, {
-          "type": "file",
-          "data": {
-            "language": {
-              "nameMatchers": [".js"],
-              "pygmentsLexer": "javascript",
-              "multiLineComment": ["/*", "*", "*/"],
-              "singleLineComment": ["//"],
-              "ignorePrefix": "}",
-              "foldPrefix": "^",
-              "name": "JavaScript"
-            },
-            "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/lexicographical/rangedcolexicographical.js",
-            "projectPath": "js/src/lexicographical/rangedcolexicographical.js",
-            "targetPath": "lexicographical/rangedcolexicographical",
-            "pageTitle": "lexicographical/rangedcolexicographical",
-            "title": "rangedcolexicographical"
-          },
-          "depth": 2,
-          "outline": []
-        }, {
-          "type": "file",
-          "data": {
-            "language": {
-              "nameMatchers": [".js"],
-              "pygmentsLexer": "javascript",
-              "multiLineComment": ["/*", "*", "*/"],
-              "singleLineComment": ["//"],
-              "ignorePrefix": "}",
-              "foldPrefix": "^",
-              "name": "JavaScript"
-            },
-            "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/lexicographical/rangedlexicographical.js",
-            "projectPath": "js/src/lexicographical/rangedlexicographical.js",
-            "targetPath": "lexicographical/rangedlexicographical",
-            "pageTitle": "lexicographical/rangedlexicographical",
-            "title": "rangedlexicographical"
+            "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/native/increasing.js",
+            "projectPath": "js/src/native/increasing.js",
+            "targetPath": "native/increasing",
+            "pageTitle": "native/increasing",
+            "title": "increasing"
           },
           "depth": 2,
           "outline": []
         }
       ]
     }, {
-      "type": "file",
+      "type": "folder",
       "data": {
-        "language": {
-          "nameMatchers": [".js"],
-          "pygmentsLexer": "javascript",
-          "multiLineComment": ["/*", "*", "*/"],
-          "singleLineComment": ["//"],
-          "ignorePrefix": "}",
-          "foldPrefix": "^",
-          "name": "JavaScript"
-        },
-        "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/reverse.js",
-        "projectPath": "js/src/reverse.js",
-        "targetPath": "reverse",
-        "pageTitle": "reverse",
-        "title": "reverse"
+        "path": "proxy",
+        "title": "proxy"
       },
       "depth": 1,
-      "outline": []
+      "children": [
+        {
+          "type": "folder",
+          "data": {
+            "path": "proxy/attr",
+            "title": "attr"
+          },
+          "depth": 2,
+          "children": [
+            {
+              "type": "file",
+              "data": {
+                "language": {
+                  "nameMatchers": [".js"],
+                  "pygmentsLexer": "javascript",
+                  "multiLineComment": ["/*", "*", "*/"],
+                  "singleLineComment": ["//"],
+                  "ignorePrefix": "}",
+                  "foldPrefix": "^",
+                  "name": "JavaScript"
+                },
+                "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/proxy/attr/attr.js",
+                "projectPath": "js/src/proxy/attr/attr.js",
+                "targetPath": "proxy/attr/attr",
+                "pageTitle": "proxy/attr/attr",
+                "title": "attr"
+              },
+              "depth": 3,
+              "outline": []
+            }, {
+              "type": "file",
+              "data": {
+                "language": {
+                  "nameMatchers": [".js"],
+                  "pygmentsLexer": "javascript",
+                  "multiLineComment": ["/*", "*", "*/"],
+                  "singleLineComment": ["//"],
+                  "ignorePrefix": "}",
+                  "foldPrefix": "^",
+                  "name": "JavaScript"
+                },
+                "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/proxy/attr/len.js",
+                "projectPath": "js/src/proxy/attr/len.js",
+                "targetPath": "proxy/attr/len",
+                "pageTitle": "proxy/attr/len",
+                "title": "len"
+              },
+              "depth": 3,
+              "outline": []
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".js"],
+              "pygmentsLexer": "javascript",
+              "multiLineComment": ["/*", "*", "*/"],
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "JavaScript"
+            },
+            "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/proxy/fn.js",
+            "projectPath": "js/src/proxy/fn.js",
+            "targetPath": "proxy/fn",
+            "pageTitle": "proxy/fn",
+            "title": "fn"
+          },
+          "depth": 2,
+          "outline": []
+        }
+      ]
     }, {
-      "type": "file",
+      "type": "folder",
       "data": {
-        "language": {
-          "nameMatchers": [".js"],
-          "pygmentsLexer": "javascript",
-          "multiLineComment": ["/*", "*", "*/"],
-          "singleLineComment": ["//"],
-          "ignorePrefix": "}",
-          "foldPrefix": "^",
-          "name": "JavaScript"
-        },
-        "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/sign.js",
-        "projectPath": "js/src/sign.js",
-        "targetPath": "sign",
-        "pageTitle": "sign",
-        "title": "sign"
+        "path": "tools",
+        "title": "tools"
       },
       "depth": 1,
-      "outline": []
+      "children": [
+        {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".js"],
+              "pygmentsLexer": "javascript",
+              "multiLineComment": ["/*", "*", "*/"],
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "JavaScript"
+            },
+            "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/tools/reverse.js",
+            "projectPath": "js/src/tools/reverse.js",
+            "targetPath": "tools/reverse",
+            "pageTitle": "tools/reverse",
+            "title": "reverse"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".js"],
+              "pygmentsLexer": "javascript",
+              "multiLineComment": ["/*", "*", "*/"],
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "JavaScript"
+            },
+            "sourcePath": "/home/aureooms/dev/js/js-compare/js/src/tools/sign.js",
+            "projectPath": "js/src/tools/sign.js",
+            "targetPath": "tools/sign",
+            "pageTitle": "tools/sign",
+            "title": "sign"
+          },
+          "depth": 2,
+          "outline": []
+        }
+      ]
     }
   ];
 
