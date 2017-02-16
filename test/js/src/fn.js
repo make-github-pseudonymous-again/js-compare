@@ -3,7 +3,7 @@
 var util, increasing, decreasing, operator, t;
 
 util = require( "util" );
-operator = require( "aureooms-js-operator" ) ;
+operator = require( "@aureooms/js-operator" ) ;
 
 increasing = compare.fn( compare.increasing , operator.len ) ;
 decreasing = compare.fn( compare.decreasing , operator.len ) ;
