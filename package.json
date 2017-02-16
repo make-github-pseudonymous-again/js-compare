@@ -1,6 +1,6 @@
 {
 	"version": "1.4.5",
-	"name": "aureooms-js-compare",
+	"name": "@aureooms/js-compare",
 	"bugs": {
 		"url": "https://github.com/aureooms/js-compare/issues"
 	},
@@ -12,7 +12,7 @@
 	},
 	"devDependencies": {
 		"aureooms-node-package": "^5.0.2",
-		"aureooms-js-operator": "^1.0.2"
+		"@aureooms/js-operator": "^1.0.2"
 	},
 	"author": "aureooms",
 	"main": "js/dist/compare.js",
