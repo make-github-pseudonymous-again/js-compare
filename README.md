@@ -8,15 +8,15 @@ let compare = reverse( lexicographical( increasing ) ) ;
 compare( [ 1 , 1 ] , [ 1 , 2 ] )  >  0 ; // true
 ```
 
-[![NPM license](http://img.shields.io/npm/l/aureooms-js-compare.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-compare/master/LICENSE)
-[![NPM version](http://img.shields.io/npm/v/aureooms-js-compare.svg?style=flat)](https://www.npmjs.org/package/aureooms-js-compare)
-[![Bower version](http://img.shields.io/bower/v/aureooms-js-compare.svg?style=flat)](http://bower.io/search/?q=aureooms-js-compare)
+[![NPM license](http://img.shields.io/npm/l/@aureooms/js-compare.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-compare/master/LICENSE)
+[![NPM version](http://img.shields.io/npm/v/@aureooms/js-compare.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-compare)
+[![Bower version](http://img.shields.io/bower/v/@aureooms/js-compare.svg?style=flat)](http://bower.io/search/?q=@aureooms/js-compare)
 [![Build Status](http://img.shields.io/travis/aureooms/js-compare.svg?style=flat)](https://travis-ci.org/aureooms/js-compare)
 [![Coverage Status](http://img.shields.io/coveralls/aureooms/js-compare.svg?style=flat)](https://coveralls.io/r/aureooms/js-compare)
 [![Dependencies Status](http://img.shields.io/david/aureooms/js-compare.svg?style=flat)](https://david-dm.org/aureooms/js-compare#info=dependencies)
 [![devDependencies Status](http://img.shields.io/david/dev/aureooms/js-compare.svg?style=flat)](https://david-dm.org/aureooms/js-compare#info=devDependencies)
 [![Code Climate](http://img.shields.io/codeclimate/github/aureooms/js-compare.svg?style=flat)](https://codeclimate.com/github/aureooms/js-compare)
-[![NPM downloads per month](http://img.shields.io/npm/dm/aureooms-js-compare.svg?style=flat)](https://www.npmjs.org/package/aureooms-js-compare)
+[![NPM downloads per month](http://img.shields.io/npm/dm/@aureooms/js-compare.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-compare)
 [![GitHub issues](http://img.shields.io/github/issues/aureooms/js-compare.svg?style=flat)](https://github.com/aureooms/js-compare/issues)
 [![Inline docs](http://inch-ci.org/github/aureooms/js-compare.svg?branch=master&style=shields)](http://inch-ci.org/github/aureooms/js-compare)
 
@@ -35,7 +35,7 @@ and [npm](https://github.com/npm/npm).
 ```terminal
 jspm install github:aureooms/js-compare
 # or
-jspm install npm:aureooms-js-compare
+jspm install npm:@aureooms/js-compare
 ```
 ### duo
 No install step needed for duo!
@@ -47,27 +47,27 @@ component install aureooms/js-compare
 
 ### bower
 ```terminal
-bower install aureooms-js-compare
+bower install @aureooms/js-compare
 ```
 
 ### ender
 ```terminal
-ender add aureooms-js-compare
+ender add @aureooms/js-compare
 ```
 
 ### jam
 ```terminal
-jam install aureooms-js-compare
+jam install @aureooms/js-compare
 ```
 
 ### spm
 ```terminal
-spm install aureooms-js-compare --save
+spm install @aureooms/js-compare --save
 ```
 
 ### npm
 ```terminal
-npm install aureooms-js-compare --save
+npm install @aureooms/js-compare --save
 ```
 
 ## Require
@@ -75,7 +75,7 @@ npm install aureooms-js-compare --save
 ```js
 let compare = require( "github:aureooms/js-compare" ) ;
 // or
-import compare from 'aureooms-js-compare' ;
+import compare from '@aureooms/js-compare' ;
 ```
 ### duo
 ```js
@@ -84,19 +84,19 @@ let compare = require( "aureooms/js-compare" ) ;
 
 ### component, ender, spm, npm
 ```js
-let compare = require( "aureooms-js-compare" ) ;
+let compare = require( "@aureooms/js-compare" ) ;
 ```
 
 ### bower
 The script tag exposes the global variable `compare`.
 ```html
-<script src="bower_components/aureooms-js-compare/js/dist/compare.min.js"></script>
+<script src="bower_components/@aureooms/js-compare/js/dist/compare.min.js"></script>
 ```
 Alternatively, you can use any tool mentioned [here](http://bower.io/docs/tools/).
 
 ### jam
 ```js
-require( [ "aureooms-js-compare" ] , function ( compare ) { ... } ) ;
+require( [ "@aureooms/js-compare" ] , function ( compare ) { ... } ) ;
 ```
 
 ## Use
@@ -152,7 +152,7 @@ let increasing = compare.rangedlexicographical( compare.increasing , 1 , 4 ) ;
 let increasing = compare.rangedcolexicographical( compare.increasing , 1 , 4 ) ;
 
 // Also includes comparison function creation tools. Hereunder, all versions are equivalent.
-let operator = require( "aureooms-js-operator" ) ;
+let operator = require( "@aureooms/js-operator" ) ;
 let increasing = compare.fn( compare.increasing , operator.len ) ;
 let increasing = compare.attr( compare.increasing , "length" ) ;
 let increasing = compare.len( compare.increasing ) ;
