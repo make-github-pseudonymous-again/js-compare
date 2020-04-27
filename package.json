@@ -9,7 +9,8 @@
     "build": "rm -rf lib && babel src -d lib",
     "test": "ava",
     "esdoc": "esdoc",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "release": "np"
   },
   "devDependencies": {
     "aureooms-node-package": "^5.0.2",
