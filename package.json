@@ -1,17 +1,35 @@
 {
-  "version": "1.4.5",
   "name": "@aureooms/js-compare",
+  "description": "comparison code bricks for JavaScript",
+  "version": "1.4.5",
+  "author": "aureooms",
+  "ava": {
+    "files": [
+      "test/src/**/*"
+    ],
+    "require": [
+      "@babel/polyfill",
+      "@babel/register"
+    ],
+    "timeout": "1m"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-async-generator-functions"
+    ],
+    "env": {
+      "development": {
+        "sourceMaps": "inline"
+      }
+    }
+  },
   "bugs": {
     "url": "https://github.com/aureooms/js-compare/issues"
   },
-  "license": "AGPL-3.0",
-  "scripts": {
-    "build": "rm -rf lib && babel src -d lib",
-    "test": "ava",
-    "esdoc": "esdoc",
-    "prepare": "npm run build",
-    "release": "np"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@aureooms/js-operator": "^1.0.2",
     "@babel/cli": "7.8.4",
@@ -28,48 +46,30 @@
     "np": "6.2.2",
     "nyc": "15.0.1"
   },
-  "author": "aureooms",
+  "files": [
+    "lib"
+  ],
+  "homepage": "http://aureooms.github.io/js-compare/",
+  "keywords": [
+    "bricks",
+    "compare",
+    "ender",
+    "javascript",
+    "js",
+    "order",
+    "sort"
+  ],
+  "license": "AGPL-3.0",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/aureooms/js-compare.git"
   },
-  "keywords": [
-    "bricks",
-    "compare",
-    "javascript",
-    "js",
-    "order",
-    "sort",
-    "ender"
-  ],
-  "homepage": "http://aureooms.github.io/js-compare/",
-  "description": "comparison code bricks for JavaScript",
-  "dependencies": {},
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-async-generator-functions"
-    ],
-    "env": {
-      "development": {
-        "sourceMaps": "inline"
-      }
-    }
-  },
-  "ava": {
-    "files": [
-      "test/src/**/*"
-    ],
-    "require": [
-      "@babel/polyfill",
-      "@babel/register"
-    ],
-    "timeout": "1m"
-  },
-  "files": [
-    "lib"
-  ]
+  "scripts": {
+    "build": "rm -rf lib && babel src -d lib",
+    "esdoc": "esdoc",
+    "prepare": "npm run build",
+    "release": "np",
+    "test": "ava"
+  }
 }
