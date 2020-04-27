@@ -1,0 +1,1360 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "export * from './lexicographical' ;\nexport * from './native' ;\nexport * from './proxy' ;\nexport * from './tools' ;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "file",
+    "name": "src/lexicographical/colexicographical.js",
+    "content": "\n/**\n * Generates a binary colexicographical comparator\n * from a binary comparator.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n *\n * compare( a, b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n * compare should express an increasing ordering\n */\n\nexport function colexicographical ( compare ) {\n\n\t/**\n\t * Compares 2 arrays a and b colexicographically.\n\t */\n\n\treturn function ( a , b ) {\n\n\t\tconst m = a.length ;\n\t\tconst n = b.length ;\n\n\t\tconst len = Math.min( m , n ) ;\n\n\t\tfor ( let i = 1 ; i <= len ; ++i ) {\n\n\t\t\tconst d = compare( a[m-i], b[n-i] ) ;\n\n\t\t\tif ( d !== 0 ) return d ;\n\n\t\t}\n\n\t\treturn m - n ;\n\n\t} ;\n\n}\n\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/colexicographical.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 50,
+    "kind": "function",
+    "name": "colexicographical",
+    "memberof": "src/lexicographical/colexicographical.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/lexicographical/colexicographical.js~colexicographical",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-compare/src/lexicographical/colexicographical.js",
+    "importStyle": "{colexicographical}",
+    "description": "Generates a binary colexicographical comparator\nfrom a binary comparator.\n\nhttps://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n\ncompare( a, b ) should always return\n  - a negative value if a < b\n  - a positive value if a > b\n  - zero if a === b\n\ncompare should express an increasing ordering",
+    "lineNumber": 16,
+    "params": [
+      {
+        "name": "compare",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 51,
+    "kind": "file",
+    "name": "src/lexicographical/fixed/fixedcolexicographical.js",
+    "content": "\n/**\n * Generates a binary colexicographical comparator for fixed size arrays.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n *\n * compare( a , b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n */\n\nexport function fixedcolexicographical ( compare , len ) {\n\n\t/**\n\t * Compares 2 fixed size arrays a and b of size len colexicographically.\n\t */\n\n\treturn function ( a , b ) {\n\n\t\tfor ( let i = len ; i-- ; ) {\n\n\t\t\tconst d = compare( a[i] , b[i] ) ;\n\n\t\t\tif ( d !== 0 ) return d ;\n\n\t\t}\n\n\t\treturn 0 ;\n\n\t} ;\n\n}\n\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/fixed/fixedcolexicographical.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 52,
+    "kind": "function",
+    "name": "fixedcolexicographical",
+    "memberof": "src/lexicographical/fixed/fixedcolexicographical.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/lexicographical/fixed/fixedcolexicographical.js~fixedcolexicographical",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-compare/src/lexicographical/fixed/fixedcolexicographical.js",
+    "importStyle": "{fixedcolexicographical}",
+    "description": "Generates a binary colexicographical comparator for fixed size arrays.\n\nhttps://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n\ncompare( a , b ) should always return\n  - a negative value if a < b\n  - a positive value if a > b\n  - zero if a === b",
+    "lineNumber": 14,
+    "params": [
+      {
+        "name": "compare",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "len",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 53,
+    "kind": "file",
+    "name": "src/lexicographical/fixed/fixedlexicographical.js",
+    "content": "\n/**\n * Generates a binary lexicographical comparator for fixed size arrays.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order\n *\n * compare( a , b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n */\n\nexport function fixedlexicographical ( compare , len ) {\n\n\t/**\n\t * Compares 2 fixed size arrays a and b of size len lexicographically.\n\t */\n\n\treturn function ( a , b ) {\n\n\t\tfor ( let i = 0 ; i < len ; ++i ) {\n\n\t\t\tconst d = compare( a[i] , b[i] ) ;\n\n\t\t\tif ( d !== 0 ) return d ;\n\n\t\t}\n\n\t\treturn 0 ;\n\n\t} ;\n\n}\n\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/fixed/fixedlexicographical.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 54,
+    "kind": "function",
+    "name": "fixedlexicographical",
+    "memberof": "src/lexicographical/fixed/fixedlexicographical.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/lexicographical/fixed/fixedlexicographical.js~fixedlexicographical",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-compare/src/lexicographical/fixed/fixedlexicographical.js",
+    "importStyle": "{fixedlexicographical}",
+    "description": "Generates a binary lexicographical comparator for fixed size arrays.\n\nhttps://en.wikipedia.org/wiki/Lexicographical_order\n\ncompare( a , b ) should always return\n  - a negative value if a < b\n  - a positive value if a > b\n  - zero if a === b",
+    "lineNumber": 14,
+    "params": [
+      {
+        "name": "compare",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "len",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 55,
+    "kind": "file",
+    "name": "src/lexicographical/fixed/index.js",
+    "content": "export * from './fixedcolexicographical' ;\nexport * from './fixedlexicographical' ;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/fixed/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 56,
+    "kind": "file",
+    "name": "src/lexicographical/index.js",
+    "content": "export * from './colexicographical' ;\nexport * from './fixed' ;\nexport * from './lexicographical' ;\nexport * from './quasi' ;\nexport * from './ranged' ;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 57,
+    "kind": "file",
+    "name": "src/lexicographical/lexicographical.js",
+    "content": "\n/**\n * Generates a binary lexicographical comparator\n * from a binary comparator.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order\n *\n * compare( a, b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n * compare should express an increasing ordering\n */\n\nexport function lexicographical ( compare ) {\n\n\t/**\n\t * Compares 2 arrays a and b lexicographically.\n\t */\n\n\treturn function ( a , b ) {\n\n\t\tconst m = a.length ;\n\t\tconst n = b.length ;\n\n\t\tconst len = Math.min( m , n ) ;\n\n\t\tfor ( let i = 0 ; i < len ; ++i ) {\n\n\t\t\tconst d = compare( a[i] , b[i] ) ;\n\n\t\t\tif ( d !== 0 ) return d ;\n\n\t\t}\n\n\t\treturn m - n ;\n\n\t} ;\n\n}\n\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/lexicographical.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 58,
+    "kind": "function",
+    "name": "lexicographical",
+    "memberof": "src/lexicographical/lexicographical.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/lexicographical/lexicographical.js~lexicographical",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-compare/src/lexicographical/lexicographical.js",
+    "importStyle": "{lexicographical}",
+    "description": "Generates a binary lexicographical comparator\nfrom a binary comparator.\n\nhttps://en.wikipedia.org/wiki/Lexicographical_order\n\ncompare( a, b ) should always return\n  - a negative value if a < b\n  - a positive value if a > b\n  - zero if a === b\n\ncompare should express an increasing ordering",
+    "lineNumber": 16,
+    "params": [
+      {
+        "name": "compare",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "file",
+    "name": "src/lexicographical/quasi/index.js",
+    "content": "export * from './quasicolexicographical' ;\nexport * from './quasilexicographical' ;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/quasi/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 60,
+    "kind": "file",
+    "name": "src/lexicographical/quasi/quasicolexicographical.js",
+    "content": "\n/**\n * Generates a binary quasicolexicographical comparator\n * from a binary comparator.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order#Quasi-lexicographic_order\n * https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n *\n * compare( a, b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n * compare should express an increasing ordering\n */\n\nexport function quasicolexicographical ( compare ) {\n\n\t/**\n\t * Compares 2 arrays a and b quasicolexicographically.\n\t */\n\n\treturn function ( a , b ) {\n\n\t\tconst m = a.length ;\n\t\tconst n = b.length ;\n\n\t\tif ( m !== n ) return m - n ;\n\n\t\tconst len = Math.min( m , n ) ;\n\n\t\tfor ( let i = 1 ; i <= len ; ++i ) {\n\n\t\t\tconst d = compare( a[m-i] , b[n-i] ) ;\n\n\t\t\tif ( d !== 0 ) return d ;\n\n\t\t}\n\n\t\treturn 0 ;\n\n\t} ;\n\n}\n\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/quasi/quasicolexicographical.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 61,
+    "kind": "function",
+    "name": "quasicolexicographical",
+    "memberof": "src/lexicographical/quasi/quasicolexicographical.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/lexicographical/quasi/quasicolexicographical.js~quasicolexicographical",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-compare/src/lexicographical/quasi/quasicolexicographical.js",
+    "importStyle": "{quasicolexicographical}",
+    "description": "Generates a binary quasicolexicographical comparator\nfrom a binary comparator.\n\nhttps://en.wikipedia.org/wiki/Lexicographical_order#Quasi-lexicographic_order\nhttps://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n\ncompare( a, b ) should always return\n  - a negative value if a < b\n  - a positive value if a > b\n  - zero if a === b\n\ncompare should express an increasing ordering",
+    "lineNumber": 17,
+    "params": [
+      {
+        "name": "compare",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 62,
+    "kind": "file",
+    "name": "src/lexicographical/quasi/quasilexicographical.js",
+    "content": "\n/**\n * Generates a binary quasilexicographical comparator\n * from a binary comparator.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order#Quasi-lexicographic_order\n *\n * compare( a, b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n * compare should express an increasing ordering\n */\n\nexport function quasilexicographical ( compare ) {\n\n\t/**\n\t * Compares 2 arrays a and b quasilexicographically.\n\t */\n\n\treturn function ( a , b ) {\n\n\t\tconst m = a.length ;\n\t\tconst n = b.length ;\n\n\t\tif ( m !== n ) return m - n ;\n\n\t\tconst len = Math.min( m , n ) ;\n\n\t\tfor ( let i = 0 ; i < len ; ++i ) {\n\n\t\t\tconst d = compare( a[i] , b[i] ) ;\n\n\t\t\tif ( d !== 0 ) return d ;\n\n\t\t}\n\n\t\treturn 0 ;\n\n\t} ;\n\n}\n\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/quasi/quasilexicographical.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 63,
+    "kind": "function",
+    "name": "quasilexicographical",
+    "memberof": "src/lexicographical/quasi/quasilexicographical.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/lexicographical/quasi/quasilexicographical.js~quasilexicographical",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-compare/src/lexicographical/quasi/quasilexicographical.js",
+    "importStyle": "{quasilexicographical}",
+    "description": "Generates a binary quasilexicographical comparator\nfrom a binary comparator.\n\nhttps://en.wikipedia.org/wiki/Lexicographical_order#Quasi-lexicographic_order\n\ncompare( a, b ) should always return\n  - a negative value if a < b\n  - a positive value if a > b\n  - zero if a === b\n\ncompare should express an increasing ordering",
+    "lineNumber": 16,
+    "params": [
+      {
+        "name": "compare",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "file",
+    "name": "src/lexicographical/ranged/index.js",
+    "content": "export * from './rangedcolexicographical' ;\nexport * from './rangedlexicographical' ;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/ranged/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 65,
+    "kind": "file",
+    "name": "src/lexicographical/ranged/rangedcolexicographical.js",
+    "content": "\n/**\n * Generates a binary colexicographical comparator for ranges of arrays.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n *\n * compare( a , b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n */\n\nexport function rangedcolexicographical ( compare , begin , end ) {\n\n\t/**\n\t * Compares the range [begin, end[ of 2 arrays a and b colexicographically.\n\t */\n\n\treturn function ( a , b ) {\n\n\t\tfor ( let i = end ; i --> begin ; ) {\n\n\t\t\tconst d = compare( a[i] , b[i] ) ;\n\n\t\t\tif ( d !== 0 ) return d ;\n\n\t\t}\n\n\t\treturn 0 ;\n\n\t} ;\n\n}\n\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/ranged/rangedcolexicographical.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 66,
+    "kind": "function",
+    "name": "rangedcolexicographical",
+    "memberof": "src/lexicographical/ranged/rangedcolexicographical.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/lexicographical/ranged/rangedcolexicographical.js~rangedcolexicographical",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-compare/src/lexicographical/ranged/rangedcolexicographical.js",
+    "importStyle": "{rangedcolexicographical}",
+    "description": "Generates a binary colexicographical comparator for ranges of arrays.\n\nhttps://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n\ncompare( a , b ) should always return\n  - a negative value if a < b\n  - a positive value if a > b\n  - zero if a === b",
+    "lineNumber": 14,
+    "params": [
+      {
+        "name": "compare",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "begin",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "end",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "file",
+    "name": "src/lexicographical/ranged/rangedlexicographical.js",
+    "content": "\n/**\n * Generates a binary lexicographical comparator for ranges of arrays.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order\n *\n * compare( a , b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n */\n\nexport function rangedlexicographical ( compare , begin , end ) {\n\n\t/**\n\t * Compares the range [begin, end[ of 2 arrays a and b lexicographically.\n\t */\n\n\treturn function ( a , b ) {\n\n\t\tfor ( let i = begin ; i < end ; ++i ) {\n\n\t\t\tconst d = compare( a[i] , b[i] );\n\n\t\t\tif ( d !== 0 ) return d ;\n\n\t\t}\n\n\t\treturn 0 ;\n\n\t} ;\n\n}\n\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/ranged/rangedlexicographical.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 68,
+    "kind": "function",
+    "name": "rangedlexicographical",
+    "memberof": "src/lexicographical/ranged/rangedlexicographical.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/lexicographical/ranged/rangedlexicographical.js~rangedlexicographical",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-compare/src/lexicographical/ranged/rangedlexicographical.js",
+    "importStyle": "{rangedlexicographical}",
+    "description": "Generates a binary lexicographical comparator for ranges of arrays.\n\nhttps://en.wikipedia.org/wiki/Lexicographical_order\n\ncompare( a , b ) should always return\n  - a negative value if a < b\n  - a positive value if a > b\n  - zero if a === b",
+    "lineNumber": 14,
+    "params": [
+      {
+        "name": "compare",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "begin",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "end",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 69,
+    "kind": "file",
+    "name": "src/native/decreasing.js",
+    "content": "\nexport const decreasing = ( a , b ) => ( a > b ) ? -1 : ( a === b ) ? 0 : 1 ;\n\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/native/decreasing.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 70,
+    "kind": "function",
+    "name": "decreasing",
+    "memberof": "src/native/decreasing.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/native/decreasing.js~decreasing",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-compare/src/native/decreasing.js",
+    "importStyle": "{decreasing}",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "params": [
+      {
+        "name": "a",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "b",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 71,
+    "kind": "file",
+    "name": "src/native/increasing.js",
+    "content": "\nexport const increasing = ( a , b ) => ( a < b ) ? -1 : ( a === b ) ? 0 : 1 ;\n\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/native/increasing.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 72,
+    "kind": "function",
+    "name": "increasing",
+    "memberof": "src/native/increasing.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/native/increasing.js~increasing",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-compare/src/native/increasing.js",
+    "importStyle": "{increasing}",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "params": [
+      {
+        "name": "a",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "b",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 73,
+    "kind": "file",
+    "name": "src/native/index.js",
+    "content": "export * from './decreasing' ;\nexport * from './increasing' ;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/native/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 74,
+    "kind": "file",
+    "name": "src/proxy/attr/attr.js",
+    "content": "\nexport const attr = ( compare , key ) => ( a , b ) => compare( a[key] , b[key] ) ;\n\n\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/proxy/attr/attr.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 75,
+    "kind": "function",
+    "name": "attr",
+    "memberof": "src/proxy/attr/attr.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/proxy/attr/attr.js~attr",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-compare/src/proxy/attr/attr.js",
+    "importStyle": "{attr}",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "params": [
+      {
+        "name": "compare",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "key",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 76,
+    "kind": "file",
+    "name": "src/proxy/attr/index.js",
+    "content": "export * from './attr' ;\nexport * from './len' ;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/proxy/attr/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 77,
+    "kind": "file",
+    "name": "src/proxy/attr/len.js",
+    "content": "\nexport const len = compare => ( a , b ) => compare( a.length , b.length ) ;\n\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/proxy/attr/len.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 78,
+    "kind": "function",
+    "name": "len",
+    "memberof": "src/proxy/attr/len.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/proxy/attr/len.js~len",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-compare/src/proxy/attr/len.js",
+    "importStyle": "{len}",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "params": [
+      {
+        "name": "compare",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 79,
+    "kind": "file",
+    "name": "src/proxy/fn.js",
+    "content": "\nexport const fn = ( compare , callable ) => ( a , b ) => compare( callable( a ) , callable( b ) ) ;\n\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/proxy/fn.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 80,
+    "kind": "function",
+    "name": "fn",
+    "memberof": "src/proxy/fn.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/proxy/fn.js~fn",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-compare/src/proxy/fn.js",
+    "importStyle": "{fn}",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "params": [
+      {
+        "name": "compare",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "callable",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 81,
+    "kind": "file",
+    "name": "src/proxy/index.js",
+    "content": "export * from './attr' ;\nexport * from './fn' ;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/proxy/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 82,
+    "kind": "file",
+    "name": "src/tools/index.js",
+    "content": "export * from './reverse' ;\nexport * from './sign' ;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/tools/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 83,
+    "kind": "file",
+    "name": "src/tools/reverse.js",
+    "content": "\nexport const reverse = compare => ( a , b ) => compare( b , a ) ;\n\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/tools/reverse.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 84,
+    "kind": "function",
+    "name": "reverse",
+    "memberof": "src/tools/reverse.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/tools/reverse.js~reverse",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-compare/src/tools/reverse.js",
+    "importStyle": "{reverse}",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "params": [
+      {
+        "name": "compare",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 85,
+    "kind": "file",
+    "name": "src/tools/sign.js",
+    "content": "\nexport const sign = v => v < 0 ? -1 : v > 0 ? 1 : 0 ;\n\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-compare/src/tools/sign.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 86,
+    "kind": "function",
+    "name": "sign",
+    "memberof": "src/tools/sign.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/tools/sign.js~sign",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-compare/src/tools/sign.js",
+    "importStyle": "{sign}",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "params": [
+      {
+        "name": "v",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "kind": "index",
+    "content": "[@aureooms/js-compare](http://aureooms.github.io/js-compare)\n==\n\nComparison library for JavaScript.\nSee [docs](https://aureooms.github.io/js-compare/index.html).\n\n```js\nlet compare = reverse( lexicographical( increasing ) ) ;\ncompare( [ 1 , 1 ] , [ 1 , 2 ] )  >  0 ; // true\n```\n\n[![License](https://img.shields.io/github/license/aureooms/js-compare.svg)](https://raw.githubusercontent.com/aureooms/js-compare/master/LICENSE)\n[![Version](https://img.shields.io/npm/v/@aureooms/js-compare.svg)](https://www.npmjs.org/package/@aureooms/js-compare)\n[![Build](https://img.shields.io/travis/aureooms/js-compare/master.svg)](https://travis-ci.org/aureooms/js-compare/branches)\n[![Dependencies](https://img.shields.io/david/aureooms/js-compare.svg)](https://david-dm.org/aureooms/js-compare)\n[![Dev dependencies](https://img.shields.io/david/dev/aureooms/js-compare.svg)](https://david-dm.org/aureooms/js-compare?type=dev)\n[![GitHub issues](https://img.shields.io/github/issues/aureooms/js-compare.svg)](https://github.com/aureooms/js-compare/issues)\n[![Downloads](https://img.shields.io/npm/dm/@aureooms/js-compare.svg)](https://www.npmjs.org/package/@aureooms/js-compare)\n\n[![Code issues](https://img.shields.io/codeclimate/issues/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/issues)\n[![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/trends/churn)\n[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-compare/master.svg)](https://codecov.io/gh/aureooms/js-compare)\n[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/trends/technical_debt)\n[![Documentation](http://aureooms.github.io/js-compare//badge.svg)](http://aureooms.github.io/js-compare//source.html)\n[![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-compare)](https://bundlephobia.com/result?p=@aureooms/js-compare)\n\n## References\n\n  - https://en.wikipedia.org/wiki/Lexicographical_order\n",
+    "longname": "/home/aureooms/dev/js/js-compare/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"@aureooms/js-compare\",\n  \"description\": \"comparison code bricks for JavaScript\",\n  \"version\": \"1.4.5\",\n  \"author\": \"aureooms\",\n  \"ava\": {\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"require\": [\n      \"@babel/polyfill\",\n      \"@babel/register\"\n    ],\n    \"timeout\": \"1m\"\n  },\n  \"babel\": {\n    \"presets\": [\n      \"@babel/preset-env\"\n    ],\n    \"plugins\": [\n      \"@babel/plugin-proposal-async-generator-functions\"\n    ],\n    \"env\": {\n      \"development\": {\n        \"sourceMaps\": \"inline\"\n      }\n    }\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/aureooms/js-compare/issues\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@aureooms/js-operator\": \"^1.0.2\",\n    \"@babel/cli\": \"7.8.4\",\n    \"@babel/core\": \"7.9.0\",\n    \"@babel/polyfill\": \"7.8.7\",\n    \"@babel/preset-env\": \"7.9.5\",\n    \"@babel/register\": \"7.9.0\",\n    \"ava\": \"3.8.1\",\n    \"coveralls\": \"3.1.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"np\": \"6.2.2\",\n    \"nyc\": \"15.0.1\"\n  },\n  \"files\": [\n    \"lib\"\n  ],\n  \"homepage\": \"http://aureooms.github.io/js-compare/\",\n  \"keywords\": [\n    \"bricks\",\n    \"compare\",\n    \"ender\",\n    \"javascript\",\n    \"js\",\n    \"order\",\n    \"sort\"\n  ],\n  \"license\": \"AGPL-3.0\",\n  \"main\": \"lib/index.js\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/aureooms/js-compare.git\"\n  },\n  \"scripts\": {\n    \"build\": \"rm -rf lib && babel src -d lib\",\n    \"esdoc\": \"esdoc\",\n    \"prepare\": \"npm run build\",\n    \"release\": \"np\",\n    \"test\": \"ava\"\n  }\n}\n",
+    "longname": "/home/aureooms/dev/js/js-compare/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manualIndex",
+    "globalIndex": false,
+    "content": null,
+    "longname": "",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/aureooms/dev/js/js-compare/doc/manual/overview.md",
+    "name": "./doc/manual/overview.md",
+    "content": "# Overview\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/aureooms/dev/js/js-compare/doc/manual/installation.md",
+    "name": "./doc/manual/installation.md",
+    "content": "# Installation\n\nCan be managed using\n[yarn](https://yarnpkg.com/en/docs),\n[npm](https://docs.npmjs.com),\nor [jspm](https://jspm.org/docs).\n\n\n### yarn\n```terminal\nyarn add @aureooms/js-compare\n```\n\n### npm\n```terminal\nnpm install @aureooms/js-compare --save\n```\n\n### jspm\n```terminal\njspm install npm:@aureooms/js-compare\n```\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/aureooms/dev/js/js-compare/doc/manual/usage.md",
+    "name": "./doc/manual/usage.md",
+    "content": "# Usage\n\n> :warning: The code needs a ES2015+ polyfill to run (`regeneratorRuntime`),\n> for instance [@babel/polyfill](https://babeljs.io/docs/usage/polyfill).\n\nFirst, require the polyfill at the entry point of your application\n```js\nrequire( '@babel/polyfill' ) ;\n// or\nimport '@babel/polyfill' ;\n```\n\nThen, import the library where needed\n```js\nconst compare = require( '@aureooms/js-compare' ) ;\n// or\nimport * as compare from '@aureooms/js-compare' ;\n```\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/aureooms/dev/js/js-compare/doc/manual/example.md",
+    "name": "./doc/manual/example.md",
+    "content": "# Examples\n\n> More examples in [the test files](https://github.com/aureooms/js-compare/tree/master/test/src).\n\n```js\nlet increasing = compare.increasing ;\nlet decreasing = compare.decreasing ;\n\nincreasing( 1 , 1 ) === 0 ; // true\nincreasing( 1 , 2 )  <  0 ; // true\nincreasing( 2 , 1 )  >  0 ; // true\ndecreasing( 1 , 1 ) === 0 ; // true\ndecreasing( 1 , 2 )  >  0 ; // true\ndecreasing( 2 , 1 )  <  0 ; // true\n\nlet lexicographical = compare.lexicographical( increasing ) ;\n\nlexicographical( [ 1 , 1 ] , [ 1 , 1 ] ) === 0 ; // true\nlexicographical( [ 1 , 1 ] , [ 1 , 2 ] )  <  0 ; // true\nlexicographical( [ 1 , 2 ] , [ 1 , 1 ] )  >  0 ; // true\n\nlexicographical( [ 1 , 1 ] , [ 1 , 1 , 1 ] ) < 0 ; // true\nlexicographical( [ 1 , 1 , 1 ] , [ 1 , 1 ] ) > 0 ; // true\nlexicographical( [ 2 , 1 ] , [ 1 , 1 , 1 ] ) > 0 ; // true\nlexicographical( [ 1 , 1 , 1 ] , [ 2 , 1 ] ) < 0 ; // true\n\nlet reverselexicographical = compare.reverse( lexicographical ) ;\n\nreverselexicographical( [ 1 , 1 ] , [ 1 , 1 ] ) === 0 ; // true\nreverselexicographical( [ 1 , 1 ] , [ 1 , 2 ] )  >  0 ; // true\nreverselexicographical( [ 1 , 2 ] , [ 1 , 1 ] )  <  0 ; // true\n\nreverselexicographical( [ 1 , 1 ] , [ 1 , 1 , 1 ] ) > 0 ; // true\nreverselexicographical( [ 1 , 1 , 1 ] , [ 1 , 1 ] ) < 0 ; // true\nreverselexicographical( [ 2 , 1 ] , [ 1 , 1 , 1 ] ) < 0 ; // true\nreverselexicographical( [ 1 , 1 , 1 ] , [ 2 , 1 ] ) > 0 ; // true\n\n// ... and many more variants.\n\n/** compare backwards, if identical compare length */\nlet increasing = compare.colexicographical( compare.increasing ) ;\n/** compare length first, if identical compare forwards */\nlet increasing = compare.quasilexicographical( compare.increasing ) ;\n/** compare length first, if identical compare backwards */\nlet increasing = compare.quasicolexicographical( compare.increasing ) ;\n/** compare components in range [0, 3[, forwards */\nlet increasing = compare.fixedlexicographical( compare.increasing , 3 ) ;\n/** compare components in range [0, 3[, backwards */\nlet increasing = compare.fixedcolexicographical( compare.increasing , 3 ) ;\n/** compare components in range [1, 4[, forwards */\nlet increasing = compare.rangedlexicographical( compare.increasing , 1 , 4 ) ;\n/** compare components in range [1, 4[, backwards */\nlet increasing = compare.rangedcolexicographical( compare.increasing , 1 , 4 ) ;\n\n// Also includes comparison function creation tools. Hereunder, all versions are equivalent.\nlet operator = require( \"@aureooms/js-operator\" ) ;\nlet increasing = compare.fn( compare.increasing , operator.len ) ;\nlet increasing = compare.attr( compare.increasing , \"length\" ) ;\nlet increasing = compare.len( compare.increasing ) ;\n\n// Plus an additional useful tool.\ncompare.sign( -2378 ) === -1 ; // true\ncompare.sign(     0 ) ===  0 ; // true\ncompare.sign(  2378 ) ===  1 ; // true\n```\n",
+    "static": true,
+    "access": "public"
+  }
+]

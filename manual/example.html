@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual | @aureooms/js-compare</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<link rel="stylesheet" href="./inject/css/0-style.css"><script src="./inject/script/0-header.js"></script><meta name="description" content="comparison code bricks for JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@aureooms/js-compare"><meta property="twitter:description" content="comparison code bricks for JavaScript"></head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/aureooms/js-compare.git"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/overview.html"><a href="manual/overview.html" data-ice="link">Overview</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/installation.html"><a href="manual/installation.html" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/installation.html"><a href="manual/installation.html#yarn" data-ice="link">yarn</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/installation.html"><a href="manual/installation.html#npm" data-ice="link">npm</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/installation.html"><a href="manual/installation.html#jspm" data-ice="link">jspm</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/usage.html"><a href="manual/usage.html" data-ice="link">Usage</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/example.html"><a href="manual/example.html" data-ice="link">Examples</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="examples">Examples</h1><blockquote>
+<p>More examples in <a href="https://github.com/aureooms/js-compare/tree/master/test/src">the test files</a>.</p>
+</blockquote>
+<pre><code class="lang-js"><code class="source-code prettyprint">let increasing = compare.increasing ;
+let decreasing = compare.decreasing ;
+
+increasing( 1 , 1 ) === 0 ; // true
+increasing( 1 , 2 )  &lt;  0 ; // true
+increasing( 2 , 1 )  &gt;  0 ; // true
+decreasing( 1 , 1 ) === 0 ; // true
+decreasing( 1 , 2 )  &gt;  0 ; // true
+decreasing( 2 , 1 )  &lt;  0 ; // true
+
+let lexicographical = compare.lexicographical( increasing ) ;
+
+lexicographical( [ 1 , 1 ] , [ 1 , 1 ] ) === 0 ; // true
+lexicographical( [ 1 , 1 ] , [ 1 , 2 ] )  &lt;  0 ; // true
+lexicographical( [ 1 , 2 ] , [ 1 , 1 ] )  &gt;  0 ; // true
+
+lexicographical( [ 1 , 1 ] , [ 1 , 1 , 1 ] ) &lt; 0 ; // true
+lexicographical( [ 1 , 1 , 1 ] , [ 1 , 1 ] ) &gt; 0 ; // true
+lexicographical( [ 2 , 1 ] , [ 1 , 1 , 1 ] ) &gt; 0 ; // true
+lexicographical( [ 1 , 1 , 1 ] , [ 2 , 1 ] ) &lt; 0 ; // true
+
+let reverselexicographical = compare.reverse( lexicographical ) ;
+
+reverselexicographical( [ 1 , 1 ] , [ 1 , 1 ] ) === 0 ; // true
+reverselexicographical( [ 1 , 1 ] , [ 1 , 2 ] )  &gt;  0 ; // true
+reverselexicographical( [ 1 , 2 ] , [ 1 , 1 ] )  &lt;  0 ; // true
+
+reverselexicographical( [ 1 , 1 ] , [ 1 , 1 , 1 ] ) &gt; 0 ; // true
+reverselexicographical( [ 1 , 1 , 1 ] , [ 1 , 1 ] ) &lt; 0 ; // true
+reverselexicographical( [ 2 , 1 ] , [ 1 , 1 , 1 ] ) &lt; 0 ; // true
+reverselexicographical( [ 1 , 1 , 1 ] , [ 2 , 1 ] ) &gt; 0 ; // true
+
+// ... and many more variants.
+
+/** compare backwards, if identical compare length */
+let increasing = compare.colexicographical( compare.increasing ) ;
+/** compare length first, if identical compare forwards */
+let increasing = compare.quasilexicographical( compare.increasing ) ;
+/** compare length first, if identical compare backwards */
+let increasing = compare.quasicolexicographical( compare.increasing ) ;
+/** compare components in range [0, 3[, forwards */
+let increasing = compare.fixedlexicographical( compare.increasing , 3 ) ;
+/** compare components in range [0, 3[, backwards */
+let increasing = compare.fixedcolexicographical( compare.increasing , 3 ) ;
+/** compare components in range [1, 4[, forwards */
+let increasing = compare.rangedlexicographical( compare.increasing , 1 , 4 ) ;
+/** compare components in range [1, 4[, backwards */
+let increasing = compare.rangedcolexicographical( compare.increasing , 1 , 4 ) ;
+
+// Also includes comparison function creation tools. Hereunder, all versions are equivalent.
+let operator = require( &quot;@aureooms/js-operator&quot; ) ;
+let increasing = compare.fn( compare.increasing , operator.len ) ;
+let increasing = compare.attr( compare.increasing , &quot;length&quot; ) ;
+let increasing = compare.len( compare.increasing ) ;
+
+// Plus an additional useful tool.
+compare.sign( -2378 ) === -1 ; // true
+compare.sign(     0 ) ===  0 ; // true
+compare.sign(  2378 ) ===  1 ; // true</code>
+</code></pre>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
