@@ -14,7 +14,7 @@
  * compare should express an increasing ordering
  */
 
-const quasicolexicographical = function ( compare ) {
+export function quasicolexicographical ( compare ) {
 
 	/**
 	 * Compares 2 arrays a and b quasicolexicographically.
@@ -41,6 +41,5 @@ const quasicolexicographical = function ( compare ) {
 
 	} ;
 
-} ;
+}
 
-exports.quasicolexicographical = quasicolexicographical ;

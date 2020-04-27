@@ -1,4 +1,3 @@
 
-const reverse = compare => ( a , b ) => compare( b , a ) ;
+export const reverse = compare => ( a , b ) => compare( b , a ) ;
 
-exports.reverse = reverse ;

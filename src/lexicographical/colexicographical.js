@@ -13,7 +13,7 @@
  * compare should express an increasing ordering
  */
 
-const colexicographical = function ( compare ) {
+export function colexicographical ( compare ) {
 
 	/**
 	 * Compares 2 arrays a and b colexicographically.
@@ -38,6 +38,5 @@ const colexicographical = function ( compare ) {
 
 	} ;
 
-} ;
+}
 
-exports.colexicographical = colexicographical ;

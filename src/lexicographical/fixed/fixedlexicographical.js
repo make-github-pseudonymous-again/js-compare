@@ -11,7 +11,7 @@
  *
  */
 
-const fixedlexicographical = function ( compare , len ) {
+export function fixedlexicographical ( compare , len ) {
 
 	/**
 	 * Compares 2 fixed size arrays a and b of size len lexicographically.
@@ -31,6 +31,5 @@ const fixedlexicographical = function ( compare , len ) {
 
 	} ;
 
-} ;
+}
 
-exports.fixedlexicographical = fixedlexicographical ;

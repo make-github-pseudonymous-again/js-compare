@@ -11,7 +11,7 @@
  *
  */
 
-const rangedlexicographical = function ( compare , begin , end ) {
+export function rangedlexicographical ( compare , begin , end ) {
 
 	/**
 	 * Compares the range [begin, end[ of 2 arrays a and b lexicographically.
@@ -31,6 +31,5 @@ const rangedlexicographical = function ( compare , begin , end ) {
 
 	} ;
 
-} ;
+}
 
-exports.rangedlexicographical = rangedlexicographical ;
