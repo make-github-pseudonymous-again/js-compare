@@ -6,7 +6,7 @@
   },
   "license": "AGPL-3.0",
   "scripts": {
-    "build": "./node_modules/.bin/aureooms-node-package-build",
+    "build": "rm -rf lib && babel src -d lib",
     "test": "ava",
     "esdoc": "esdoc"
   },
@@ -28,7 +28,7 @@
     "nyc": "15.0.1"
   },
   "author": "aureooms",
-  "main": "js/dist/compare.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/aureooms/js-compare.git"
