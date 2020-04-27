@@ -6,9 +6,9 @@
   },
   "license": "AGPL-3.0",
   "scripts": {
-    "doc": "./node_modules/.bin/groc",
     "build": "./node_modules/.bin/aureooms-node-package-build",
-    "test": "./node_modules/.bin/aureooms-node-package-test"
+    "test": "./node_modules/.bin/aureooms-node-package-test",
+    "esdoc": "esdoc"
   },
   "devDependencies": {
     "aureooms-node-package": "^5.0.2",
