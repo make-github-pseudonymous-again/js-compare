@@ -46,9 +46,6 @@
   "homepage": "http://aureooms.github.io/js-compare/",
   "description": "comparison code bricks for JavaScript",
   "dependencies": {},
-  "spm": {
-    "main": "js/dist/compare.js"
-  },
   "babel": {
     "presets": [
       "@babel/preset-env"
