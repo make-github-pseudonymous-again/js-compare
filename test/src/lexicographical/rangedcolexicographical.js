@@ -5,11 +5,11 @@ import * as compare from '../../../src';
 
 import util from "util" ;
 
-increasing = compare.rangedcolexicographical( compare.increasing , 1 , 6 ) ;
-decreasing = compare.rangedcolexicographical( compare.decreasing , 1 , 6 ) ;
+const increasing = compare.rangedcolexicographical( compare.increasing , 1 , 6 ) ;
+const decreasing = compare.rangedcolexicographical( compare.decreasing , 1 , 6 ) ;
 
 
-function t ( a, b, z ) {
+function one( t , a, b, z ) {
 
 	a = [ Math.random( ) ].concat( a ) ;
 	b = [ Math.random( ) ].concat( b ) ;
@@ -22,7 +22,7 @@ function t ( a, b, z ) {
 
 	t.deepEqual(
 		compare.sign( decreasing( a, b ) ),
-		-z,
+		z === 0 ? 0 : -z,
 		util.format( "d %s %s", JSON.stringify( a ), JSON.stringify( b ) )
 	);
 
@@ -37,7 +37,7 @@ function t ( a, b, z ) {
 
 	t.deepEqual(
 		compare.sign( decreasing( a, b ) ),
-		-z,
+		z === 0 ? 0 : -z,
 		util.format( "d %s %s", JSON.stringify( a ), JSON.stringify( b ) )
 	);
 
@@ -46,18 +46,18 @@ function t ( a, b, z ) {
 
 test( "rangedcolexicographical", t => {
 
-	t( [1, 6, 7, 8, 9], [1, 6, 7, 8, 9], 0 );
+	one( t , [1, 6, 7, 8, 9], [1, 6, 7, 8, 9], 0 );
 
-	t( [0, 6, 7, 8, 9], [1, 6, 7, 8, 9], -1 );
-	t( [1, 6, 7, 8, 9], [0, 6, 7, 8, 9], 1 );
+	one( t , [0, 6, 7, 8, 9], [1, 6, 7, 8, 9], -1 );
+	one( t , [1, 6, 7, 8, 9], [0, 6, 7, 8, 9], 1 );
 
-	t( [9, 8, 7, 6, 0], [9, 8, 7, 6, 1], -1 );
-	t( [9, 8, 7, 6, 1], [9, 8, 7, 6, 0], 1 );
+	one( t , [9, 8, 7, 6, 0], [9, 8, 7, 6, 1], -1 );
+	one( t , [9, 8, 7, 6, 1], [9, 8, 7, 6, 0], 1 );
 
-	t( [0, 6, 6, 6, 6], [1, 7, 7, 7, 7], -1 );
-	t( [1, 6, 6, 6, 6], [0, 7, 7, 7, 7], -1 );
+	one( t , [0, 6, 6, 6, 6], [1, 7, 7, 7, 7], -1 );
+	one( t , [1, 6, 6, 6, 6], [0, 7, 7, 7, 7], -1 );
 
-	t( [6, 6, 6, 6, 0], [7, 7, 7, 7, 1], -1 );
-	t( [6, 6, 6, 6, 1], [7, 7, 7, 7, 0], 1 );
+	one( t , [6, 6, 6, 6, 0], [7, 7, 7, 7, 1], -1 );
+	one( t , [6, 6, 6, 6, 1], [7, 7, 7, 7, 0], 1 );
 
 });

@@ -5,12 +5,12 @@ import * as compare from '../../src';
 
 import util from "util" ;
 
-increasing = compare.increasing;
-decreasing = compare.decreasing;
-increasing2 = compare.reverse( decreasing );
-decreasing2 = compare.reverse( increasing );
+const increasing = compare.increasing;
+const decreasing = compare.decreasing;
+const increasing2 = compare.reverse( decreasing );
+const decreasing2 = compare.reverse( increasing );
 
-function one ( a, b ) {
+function one( t , a, b ) {
 
 	var i, d, i2, d2, ri, rd, ri2, rd2;
 
@@ -41,7 +41,7 @@ test( "reverse", t => {
 	n = 100;
 
 	while ( n-- ) {
-		one( Math.random(), Math.random() );
+		one( t , Math.random(), Math.random() );
 	}
 
 });
