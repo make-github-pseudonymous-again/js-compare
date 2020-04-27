@@ -1,25 +1,26 @@
+import test from 'ava';
+import * as compare from '../../../src';
 
 
-var util, increasing, decreasing, t;
 
-util = require( "util" );
+import util from "util" ;
 
 increasing = compare.rangedlexicographical( compare.increasing , 1 , 6 ) ;
 decreasing = compare.rangedlexicographical( compare.decreasing , 1 , 6 ) ;
 
 
-t = function ( a, b, z ) {
+function t ( a, b, z ) {
 
 	a = [ Math.random( ) ].concat( a ) ;
 	b = [ Math.random( ) ].concat( b ) ;
 
-	deepEqual(
+	t.deepEqual(
 		compare.sign( increasing( a, b ) ),
 		z,
 		util.format( "i %s %s", JSON.stringify( a ), JSON.stringify( b ) )
 	);
 
-	deepEqual(
+	t.deepEqual(
 		compare.sign( decreasing( a, b ) ),
 		-z,
 		util.format( "d %s %s", JSON.stringify( a ), JSON.stringify( b ) )
@@ -28,13 +29,13 @@ t = function ( a, b, z ) {
 	a = a.concat( Math.random( ) ) ;
 	b = b.concat( Math.random( ) ) ;
 
-	deepEqual(
+	t.deepEqual(
 		compare.sign( increasing( a, b ) ),
 		z,
 		util.format( "i %s %s", JSON.stringify( a ), JSON.stringify( b ) )
 	);
 
-	deepEqual(
+	t.deepEqual(
 		compare.sign( decreasing( a, b ) ),
 		-z,
 		util.format( "d %s %s", JSON.stringify( a ), JSON.stringify( b ) )
@@ -43,7 +44,7 @@ t = function ( a, b, z ) {
 };
 
 
-test( "rangedlexicographical", function () {
+test( "rangedlexicographical", t => {
 
 	t( [1, 6, 7, 8, 9], [1, 6, 7, 8, 9], 0 );
 

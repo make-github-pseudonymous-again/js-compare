@@ -1,15 +1,17 @@
+import test from 'ava';
+import * as compare from '../../src';
 
 
-test( "decreasing", function () {
+test( "decreasing", t => {
 
 
-	ok( compare.decreasing( Infinity,        0 )   < 0, "double <" );
-	ok( compare.decreasing( Infinity, Infinity ) === 0, "double =" );
-	ok( compare.decreasing(        0, Infinity )   > 0, "double >" );
+	t.truthy( compare.decreasing( Infinity,        0 )   < 0, "double <" );
+	t.truthy( compare.decreasing( Infinity, Infinity ) === 0, "double =" );
+	t.truthy( compare.decreasing(        0, Infinity )   > 0, "double >" );
 
-	ok( compare.decreasing( "abc",  "ab" )   < 0, "string <" );
-	ok( compare.decreasing( "abc", "abc" ) === 0, "string =" );
-	ok( compare.decreasing(  "ab", "abc" )   > 0, "string >" );
+	t.truthy( compare.decreasing( "abc",  "ab" )   < 0, "string <" );
+	t.truthy( compare.decreasing( "abc", "abc" ) === 0, "string =" );
+	t.truthy( compare.decreasing(  "ab", "abc" )   > 0, "string >" );
 
 
 });

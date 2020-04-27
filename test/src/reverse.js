@@ -1,15 +1,16 @@
+import test from 'ava';
+import * as compare from '../../src';
 
 
-var util, increasing, decreasing, increasing2, decreasing2, one;
 
-util = require( "util" );
+import util from "util" ;
 
 increasing = compare.increasing;
 decreasing = compare.decreasing;
 increasing2 = compare.reverse( decreasing );
 decreasing2 = compare.reverse( increasing );
 
-one = function ( a, b ) {
+function one ( a, b ) {
 
 	var i, d, i2, d2, ri, rd, ri2, rd2;
 
@@ -22,18 +23,18 @@ one = function ( a, b ) {
 	ri2 = increasing2( b, a );
 	rd2 = decreasing2( b, a );
 
-	deepEqual( i, i2, util.format( "i i2 ( %f, %f)", a, b ) );
-	deepEqual( -i, ri, util.format( "-i ri ( %f, %f)", a, b ) );
-	deepEqual( -i, ri2, util.format( "-i ri2 ( %f, %f)", a, b ) );
-	deepEqual( -i, d, util.format( "-i d ( %f, %f)", a, b ) );
-	deepEqual( -i, d2, util.format( "-i d2 ( %f, %f)", a, b ) );
-	deepEqual( i, rd, util.format( "i rd ( %f, %f)", a, b ) );
-	deepEqual( i, rd2, util.format( "i rd2 ( %f, %f)", a, b ) );
+	t.deepEqual( i, i2, util.format( "i i2 ( %f, %f)", a, b ) );
+	t.deepEqual( -i, ri, util.format( "-i ri ( %f, %f)", a, b ) );
+	t.deepEqual( -i, ri2, util.format( "-i ri2 ( %f, %f)", a, b ) );
+	t.deepEqual( -i, d, util.format( "-i d ( %f, %f)", a, b ) );
+	t.deepEqual( -i, d2, util.format( "-i d2 ( %f, %f)", a, b ) );
+	t.deepEqual( i, rd, util.format( "i rd ( %f, %f)", a, b ) );
+	t.deepEqual( i, rd2, util.format( "i rd2 ( %f, %f)", a, b ) );
 
 };
 
 
-test( "reverse", function () {
+test( "reverse", t => {
 
 	var n;
 

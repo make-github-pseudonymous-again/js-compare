@@ -1,22 +1,23 @@
+import test from 'ava';
+import * as compare from '../../../src';
 
 
-var util, increasing, decreasing, t;
 
-util = require( "util" );
+import util from "util" ;
 
 increasing = compare.fixedlexicographical( compare.increasing , 5 );
 decreasing = compare.fixedlexicographical( compare.decreasing , 5 );
 
 
-t = function ( a, b, z ) {
+function t ( a, b, z ) {
 
-	deepEqual(
+	t.deepEqual(
 		compare.sign( increasing( a, b ) ),
 		z,
 		util.format( "i %s %s", JSON.stringify( a ), JSON.stringify( b ) )
 	);
 
-	deepEqual(
+	t.deepEqual(
 		compare.sign( decreasing( a, b ) ),
 		-z,
 		util.format( "d %s %s", JSON.stringify( a ), JSON.stringify( b ) )
@@ -25,13 +26,13 @@ t = function ( a, b, z ) {
 	a = a.concat( Math.random( ) ) ;
 	b = b.concat( Math.random( ) ) ;
 
-	deepEqual(
+	t.deepEqual(
 		compare.sign( increasing( a, b ) ),
 		z,
 		util.format( "i %s %s", JSON.stringify( a ), JSON.stringify( b ) )
 	);
 
-	deepEqual(
+	t.deepEqual(
 		compare.sign( decreasing( a, b ) ),
 		-z,
 		util.format( "d %s %s", JSON.stringify( a ), JSON.stringify( b ) )
@@ -40,7 +41,7 @@ t = function ( a, b, z ) {
 };
 
 
-test( "fixedlexicographical", function () {
+test( "fixedlexicographical", t => {
 
 	t( [1, 6, 7, 8, 9], [1, 6, 7, 8, 9], 0 );
 

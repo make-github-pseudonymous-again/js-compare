@@ -1,22 +1,23 @@
+import test from 'ava';
+import * as compare from '../../../src';
 
 
-var util, increasing, decreasing, one;
 
-util = require( "util" );
+import util from "util" ;
 
 increasing = compare.lexicographical( compare.increasing );
 decreasing = compare.reverse( increasing );
 
 
-one = function ( a, b, z ) {
+function one ( a, b, z ) {
 
-	deepEqual(
+	t.deepEqual(
 		compare.sign( increasing( a, b ) ),
 		z,
 		util.format( "i %s %s", JSON.stringify( a ), JSON.stringify( b ) )
 	);
 
-	deepEqual(
+	t.deepEqual(
 		compare.sign( decreasing( a, b ) ),
 		-z,
 		util.format( "d %s %s", JSON.stringify( a ), JSON.stringify( b ) )
@@ -25,7 +26,7 @@ one = function ( a, b, z ) {
 };
 
 
-test( "lexicographical", function () {
+test( "lexicographical", t => {
 
 	one( [], [], 0 );
 	one( [], [0], -1 );

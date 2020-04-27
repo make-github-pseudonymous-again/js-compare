@@ -1,23 +1,24 @@
+import test from 'ava';
+import * as compare from '../../src';
 
 
-var util, increasing, decreasing, operator, t;
 
-util = require( "util" );
-operator = require( "@aureooms/js-operator" ) ;
+import util from "util" ;
+import operator from "@aureooms/js-operator" ;
 
 increasing = compare.fn( compare.increasing , operator.len ) ;
 decreasing = compare.fn( compare.decreasing , operator.len ) ;
 
 
-t = function ( a, b, z ) {
+function t ( a, b, z ) {
 
-	deepEqual(
+	t.deepEqual(
 		compare.sign( increasing( a, b ) ),
 		z,
 		util.format( "i %s %s", JSON.stringify( a ), JSON.stringify( b ) )
 	);
 
-	deepEqual(
+	t.deepEqual(
 		compare.sign( decreasing( a, b ) ),
 		-z,
 		util.format( "d %s %s", JSON.stringify( a ), JSON.stringify( b ) )
@@ -26,7 +27,7 @@ t = function ( a, b, z ) {
 };
 
 
-test( "attr" , function ( ) {
+test( "attr" , t => {
 
 	t( [], [], 0 );
 	t( [], [0], -1 );

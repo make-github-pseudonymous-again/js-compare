@@ -1,22 +1,23 @@
+import test from 'ava';
+import * as compare from '../../../src';
 
 
-var util, increasing, decreasing, t;
 
-util = require( "util" );
+import util from "util" ;
 
 increasing = compare.attr( compare.increasing , "length" ) ;
 decreasing = compare.attr( compare.decreasing , "length" ) ;
 
 
-t = function ( a, b, z ) {
+function t ( a, b, z ) {
 
-	deepEqual(
+	t.deepEqual(
 		compare.sign( increasing( a, b ) ),
 		z,
 		util.format( "i %s %s", JSON.stringify( a ), JSON.stringify( b ) )
 	);
 
-	deepEqual(
+	t.deepEqual(
 		compare.sign( decreasing( a, b ) ),
 		-z,
 		util.format( "d %s %s", JSON.stringify( a ), JSON.stringify( b ) )
@@ -25,7 +26,7 @@ t = function ( a, b, z ) {
 };
 
 
-test( "attr" , function ( ) {
+test( "attr" , t => {
 
 	t( [], [], 0 );
 	t( [], [0], -1 );
