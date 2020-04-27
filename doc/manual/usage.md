@@ -12,7 +12,7 @@ import '@babel/polyfill' ;
 
 Then, import the library where needed
 ```js
-const {var} = require( '{fullname}' ) ;
+const compare = require( '@aureooms/js-compare' ) ;
 // or
-import * as {var} from '{fullname}' ;
+import * as compare from '@aureooms/js-compare' ;
 ```

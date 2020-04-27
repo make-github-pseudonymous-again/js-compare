@@ -8,15 +8,15 @@ or [jspm](https://jspm.org/docs).
 
 ### yarn
 ```terminal
-yarn add {fullname}
+yarn add @aureooms/js-compare
 ```
 
 ### npm
 ```terminal
-npm install {fullname} --save
+npm install @aureooms/js-compare --save
 ```
 
 ### jspm
 ```terminal
-jspm install npm:{fullname}
+jspm install npm:@aureooms/js-compare
 ```
