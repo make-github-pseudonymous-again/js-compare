@@ -1,7 +1,7 @@
 [@aureooms/js-compare](http://aureooms.github.io/js-compare)
 ==
 
-Comparison library for JavaScript.
+Comparison functions for JavaScript.
 See [docs](https://aureooms.github.io/js-compare/index.html).
 
 ```js
