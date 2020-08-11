@@ -978,7 +978,7 @@
     "__docId__": 69,
     "kind": "file",
     "name": "src/native/decreasing.js",
-    "content": "\nexport const decreasing = ( a , b ) => ( a > b ) ? -1 : ( a === b ) ? 0 : 1 ;\n\n",
+    "content": "/**\n * Compare two objects in decreasing order using the native comparison and\n * equality operators.\n *\n * @param {Object} a - The first parameter.\n * @param {Object} b - The second parameter.\n * @return {Number} -1 if a > b, 0 if a === b, and 1 otherwise.\n */\nexport const decreasing = ( a , b ) => ( a > b ) ? -1 : ( a === b ) ? 0 : 1 ;\n",
     "static": true,
     "longname": "/home/aureooms/dev/js/js-compare/src/native/decreasing.js",
     "access": "public",
@@ -998,30 +998,44 @@
     "export": true,
     "importPath": "@aureooms/js-compare/src/native/decreasing.js",
     "importStyle": "{decreasing}",
-    "description": null,
-    "lineNumber": 2,
-    "undocument": true,
+    "description": "Compare two objects in decreasing order using the native comparison and\nequality operators.",
+    "lineNumber": 9,
     "params": [
       {
-        "name": "a",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "a",
+        "description": "The first parameter."
       },
       {
-        "name": "b",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "b",
+        "description": "The second parameter."
       }
     ],
-    "return": null
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "1 if a > b, 0 if a === b, and 1 otherwise."
+    }
   },
   {
     "__docId__": 71,
     "kind": "file",
     "name": "src/native/increasing.js",
-    "content": "\nexport const increasing = ( a , b ) => ( a < b ) ? -1 : ( a === b ) ? 0 : 1 ;\n\n",
+    "content": "/**\n * Compare two objects in increasing order using the native comparison and\n * equality operators.\n *\n * @param {Object} a - The first parameter.\n * @param {Object} b - The second parameter.\n * @return {Number} -1 if a < b, 0 if a === b, and 1 otherwise.\n */\nexport const increasing = ( a , b ) => ( a < b ) ? -1 : ( a === b ) ? 0 : 1 ;\n",
     "static": true,
     "longname": "/home/aureooms/dev/js/js-compare/src/native/increasing.js",
     "access": "public",
@@ -1041,24 +1055,38 @@
     "export": true,
     "importPath": "@aureooms/js-compare/src/native/increasing.js",
     "importStyle": "{increasing}",
-    "description": null,
-    "lineNumber": 2,
-    "undocument": true,
+    "description": "Compare two objects in increasing order using the native comparison and\nequality operators.",
+    "lineNumber": 9,
     "params": [
       {
-        "name": "a",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "a",
+        "description": "The first parameter."
       },
       {
-        "name": "b",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "b",
+        "description": "The second parameter."
       }
     ],
-    "return": null
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "1 if a < b, 0 if a === b, and 1 otherwise."
+    }
   },
   {
     "__docId__": 73,
@@ -1075,7 +1103,7 @@
     "__docId__": 74,
     "kind": "file",
     "name": "src/proxy/attr/attr.js",
-    "content": "\nexport const attr = ( compare , key ) => ( a , b ) => compare( a[key] , b[key] ) ;\n\n\n",
+    "content": "/**\n * Generates a binary attribute comparator\n * from a binary comparator and an attribute key.\n *\n * @param {Function} compare - The function used to order attributes.\n * @param {Object} key - The key of the attribute used in the comparison.\n * @return {Function} The function that orders objects by attribute.\n */\nexport const attr = ( compare , key ) => ( a , b ) => compare( a[key] , b[key] ) ;\n",
     "static": true,
     "longname": "/home/aureooms/dev/js/js-compare/src/proxy/attr/attr.js",
     "access": "public",
@@ -1095,24 +1123,38 @@
     "export": true,
     "importPath": "@aureooms/js-compare/src/proxy/attr/attr.js",
     "importStyle": "{attr}",
-    "description": null,
-    "lineNumber": 2,
-    "undocument": true,
+    "description": "Generates a binary attribute comparator\nfrom a binary comparator and an attribute key.",
+    "lineNumber": 9,
     "params": [
       {
-        "name": "compare",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "compare",
+        "description": "The function used to order attributes."
       },
       {
-        "name": "key",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "key",
+        "description": "The key of the attribute used in the comparison."
       }
     ],
-    "return": null
+    "return": {
+      "nullable": null,
+      "types": [
+        "Function"
+      ],
+      "spread": false,
+      "description": "The function that orders objects by attribute."
+    }
   },
   {
     "__docId__": 76,
@@ -1129,7 +1171,7 @@
     "__docId__": 77,
     "kind": "file",
     "name": "src/proxy/attr/len.js",
-    "content": "\nexport const len = compare => ( a , b ) => compare( a.length , b.length ) ;\n\n",
+    "content": "/**\n * Generates a binary length comparator\n * from a binary comparator.\n *\n * @param {Function} compare - The function used to order lengths.\n * @return {Function} The function that orders objects by length.\n */\nexport const len = compare => ( a , b ) => compare( a.length , b.length ) ;\n",
     "static": true,
     "longname": "/home/aureooms/dev/js/js-compare/src/proxy/attr/len.js",
     "access": "public",
@@ -1149,24 +1191,34 @@
     "export": true,
     "importPath": "@aureooms/js-compare/src/proxy/attr/len.js",
     "importStyle": "{len}",
-    "description": null,
-    "lineNumber": 2,
-    "undocument": true,
+    "description": "Generates a binary length comparator\nfrom a binary comparator.",
+    "lineNumber": 8,
     "params": [
       {
-        "name": "compare",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "compare",
+        "description": "The function used to order lengths."
       }
     ],
-    "return": null
+    "return": {
+      "nullable": null,
+      "types": [
+        "Function"
+      ],
+      "spread": false,
+      "description": "The function that orders objects by length."
+    }
   },
   {
     "__docId__": 79,
     "kind": "file",
     "name": "src/proxy/fn.js",
-    "content": "\nexport const fn = ( compare , callable ) => ( a , b ) => compare( callable( a ) , callable( b ) ) ;\n\n",
+    "content": "/**\n * Generates a binary comparator\n * from a binary comparator and a function.\n *\n * @param {Function} compare - The function used to order values.\n * @param {Function} callable - The function that generates values used in the comparison.\n * @return {Function} The function that orders objects by value.\n */\nexport const fn = ( compare , callable ) => ( a , b ) => compare( callable( a ) , callable( b ) ) ;\n",
     "static": true,
     "longname": "/home/aureooms/dev/js/js-compare/src/proxy/fn.js",
     "access": "public",
@@ -1186,24 +1238,38 @@
     "export": true,
     "importPath": "@aureooms/js-compare/src/proxy/fn.js",
     "importStyle": "{fn}",
-    "description": null,
-    "lineNumber": 2,
-    "undocument": true,
+    "description": "Generates a binary comparator\nfrom a binary comparator and a function.",
+    "lineNumber": 9,
     "params": [
       {
-        "name": "compare",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "compare",
+        "description": "The function used to order values."
       },
       {
-        "name": "callable",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "callable",
+        "description": "The function that generates values used in the comparison."
       }
     ],
-    "return": null
+    "return": {
+      "nullable": null,
+      "types": [
+        "Function"
+      ],
+      "spread": false,
+      "description": "The function that orders objects by value."
+    }
   },
   {
     "__docId__": 81,
@@ -1231,7 +1297,7 @@
     "__docId__": 83,
     "kind": "file",
     "name": "src/tools/reverse.js",
-    "content": "\nexport const reverse = compare => ( a , b ) => compare( b , a ) ;\n\n",
+    "content": "/**\n * Reverse the order of a comparator.\n *\n * @param {Function} compare - The comparator to reverse.\n * @return {Function} A function f such that compare(a,b) === f(b,a) for all a,b.\n */\nexport const reverse = compare => ( a , b ) => compare( b , a ) ;\n",
     "static": true,
     "longname": "/home/aureooms/dev/js/js-compare/src/tools/reverse.js",
     "access": "public",
@@ -1251,24 +1317,34 @@
     "export": true,
     "importPath": "@aureooms/js-compare/src/tools/reverse.js",
     "importStyle": "{reverse}",
-    "description": null,
-    "lineNumber": 2,
-    "undocument": true,
+    "description": "Reverse the order of a comparator.",
+    "lineNumber": 7,
     "params": [
       {
-        "name": "compare",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "compare",
+        "description": "The comparator to reverse."
       }
     ],
-    "return": null
+    "return": {
+      "nullable": null,
+      "types": [
+        "Function"
+      ],
+      "spread": false,
+      "description": "A function f such that compare(a,b) === f(b,a) for all a,b."
+    }
   },
   {
     "__docId__": 85,
     "kind": "file",
     "name": "src/tools/sign.js",
-    "content": "\nexport const sign = v => v < 0 ? -1 : v > 0 ? 1 : 0 ;\n\n",
+    "content": "/**\n * Computes the sign of the input number.\n *\n * @param {Number} v - The number to compute the sign of.\n * @return {Number} -1 if v < 0, 1 if v > 0, 0 otherwise.\n */\nexport const sign = v => v < 0 ? -1 : v > 0 ? 1 : 0 ;\n",
     "static": true,
     "longname": "/home/aureooms/dev/js/js-compare/src/tools/sign.js",
     "access": "public",
@@ -1288,22 +1364,32 @@
     "export": true,
     "importPath": "@aureooms/js-compare/src/tools/sign.js",
     "importStyle": "{sign}",
-    "description": null,
-    "lineNumber": 2,
-    "undocument": true,
+    "description": "Computes the sign of the input number.",
+    "lineNumber": 7,
     "params": [
       {
-        "name": "v",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "v",
+        "description": "The number to compute the sign of."
       }
     ],
-    "return": null
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "1 if v < 0, 1 if v > 0, 0 otherwise."
+    }
   },
   {
     "kind": "index",
-    "content": "[@aureooms/js-compare](http://aureooms.github.io/js-compare)\n==\n\nComparison library for JavaScript.\nSee [docs](https://aureooms.github.io/js-compare/index.html).\n\n```js\nlet compare = reverse( lexicographical( increasing ) ) ;\ncompare( [ 1 , 1 ] , [ 1 , 2 ] )  >  0 ; // true\n```\n\n[![License](https://img.shields.io/github/license/aureooms/js-compare.svg)](https://raw.githubusercontent.com/aureooms/js-compare/master/LICENSE)\n[![Version](https://img.shields.io/npm/v/@aureooms/js-compare.svg)](https://www.npmjs.org/package/@aureooms/js-compare)\n[![Build](https://img.shields.io/travis/aureooms/js-compare/master.svg)](https://travis-ci.org/aureooms/js-compare/branches)\n[![Dependencies](https://img.shields.io/david/aureooms/js-compare.svg)](https://david-dm.org/aureooms/js-compare)\n[![Dev dependencies](https://img.shields.io/david/dev/aureooms/js-compare.svg)](https://david-dm.org/aureooms/js-compare?type=dev)\n[![GitHub issues](https://img.shields.io/github/issues/aureooms/js-compare.svg)](https://github.com/aureooms/js-compare/issues)\n[![Downloads](https://img.shields.io/npm/dm/@aureooms/js-compare.svg)](https://www.npmjs.org/package/@aureooms/js-compare)\n\n[![Code issues](https://img.shields.io/codeclimate/issues/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/issues)\n[![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/trends/churn)\n[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-compare/master.svg)](https://codecov.io/gh/aureooms/js-compare)\n[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/trends/technical_debt)\n[![Documentation](http://aureooms.github.io/js-compare//badge.svg)](http://aureooms.github.io/js-compare//source.html)\n[![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-compare)](https://bundlephobia.com/result?p=@aureooms/js-compare)\n\n## References\n\n  - https://en.wikipedia.org/wiki/Lexicographical_order\n",
+    "content": "[@aureooms/js-compare](http://aureooms.github.io/js-compare)\n==\n\nComparison functions for JavaScript.\nSee [docs](https://aureooms.github.io/js-compare/index.html).\n\n```js\nlet compare = reverse( lexicographical( increasing ) ) ;\ncompare( [ 1 , 1 ] , [ 1 , 2 ] )  >  0 ; // true\n```\n\n[![License](https://img.shields.io/github/license/aureooms/js-compare.svg)](https://raw.githubusercontent.com/aureooms/js-compare/master/LICENSE)\n[![Version](https://img.shields.io/npm/v/@aureooms/js-compare.svg)](https://www.npmjs.org/package/@aureooms/js-compare)\n[![Build](https://img.shields.io/travis/aureooms/js-compare/master.svg)](https://travis-ci.org/aureooms/js-compare/branches)\n[![Dependencies](https://img.shields.io/david/aureooms/js-compare.svg)](https://david-dm.org/aureooms/js-compare)\n[![Dev dependencies](https://img.shields.io/david/dev/aureooms/js-compare.svg)](https://david-dm.org/aureooms/js-compare?type=dev)\n[![GitHub issues](https://img.shields.io/github/issues/aureooms/js-compare.svg)](https://github.com/aureooms/js-compare/issues)\n[![Downloads](https://img.shields.io/npm/dm/@aureooms/js-compare.svg)](https://www.npmjs.org/package/@aureooms/js-compare)\n\n[![Code issues](https://img.shields.io/codeclimate/issues/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/issues)\n[![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/trends/churn)\n[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-compare/master.svg)](https://codecov.io/gh/aureooms/js-compare)\n[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/trends/technical_debt)\n[![Documentation](http://aureooms.github.io/js-compare//badge.svg)](http://aureooms.github.io/js-compare//source.html)\n[![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-compare)](https://bundlephobia.com/result?p=@aureooms/js-compare)\n\n## References\n\n  - https://en.wikipedia.org/wiki/Lexicographical_order\n",
     "longname": "/home/aureooms/dev/js/js-compare/README.md",
     "name": "./README.md",
     "static": true,
@@ -1311,7 +1397,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"@aureooms/js-compare\",\n  \"description\": \"comparison code bricks for JavaScript\",\n  \"version\": \"1.4.5\",\n  \"author\": \"aureooms\",\n  \"ava\": {\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"require\": [\n      \"@babel/polyfill\",\n      \"@babel/register\"\n    ],\n    \"timeout\": \"1m\"\n  },\n  \"babel\": {\n    \"presets\": [\n      \"@babel/preset-env\"\n    ],\n    \"plugins\": [\n      \"@babel/plugin-proposal-async-generator-functions\"\n    ],\n    \"env\": {\n      \"development\": {\n        \"sourceMaps\": \"inline\"\n      }\n    }\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/aureooms/js-compare/issues\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@aureooms/js-operator\": \"^1.0.2\",\n    \"@babel/cli\": \"7.8.4\",\n    \"@babel/core\": \"7.9.0\",\n    \"@babel/polyfill\": \"7.8.7\",\n    \"@babel/preset-env\": \"7.9.5\",\n    \"@babel/register\": \"7.9.0\",\n    \"ava\": \"3.8.1\",\n    \"coveralls\": \"3.1.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"np\": \"6.2.2\",\n    \"nyc\": \"15.0.1\"\n  },\n  \"files\": [\n    \"lib\"\n  ],\n  \"homepage\": \"http://aureooms.github.io/js-compare/\",\n  \"keywords\": [\n    \"bricks\",\n    \"compare\",\n    \"ender\",\n    \"javascript\",\n    \"js\",\n    \"order\",\n    \"sort\"\n  ],\n  \"license\": \"AGPL-3.0\",\n  \"main\": \"lib/index.js\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/aureooms/js-compare.git\"\n  },\n  \"scripts\": {\n    \"build\": \"rm -rf lib && babel src -d lib\",\n    \"esdoc\": \"esdoc\",\n    \"prepare\": \"npm run build\",\n    \"release\": \"np\",\n    \"test\": \"ava\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"@aureooms/js-compare\",\n  \"description\": \"Comparison functions for JavaScript\",\n  \"version\": \"1.4.5\",\n  \"author\": \"aureooms\",\n  \"ava\": {\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"require\": [\n      \"@babel/register\"\n    ],\n    \"timeout\": \"1m\"\n  },\n  \"babel\": {\n    \"presets\": [\n      \"@babel/preset-env\"\n    ],\n    \"env\": {\n      \"development\": {\n        \"sourceMaps\": \"inline\"\n      }\n    }\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/aureooms/js-compare/issues\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@aureooms/js-operator\": \"1.0.2\",\n    \"@babel/cli\": \"7.10.5\",\n    \"@babel/core\": \"7.11.1\",\n    \"@babel/preset-env\": \"7.11.0\",\n    \"@babel/register\": \"7.10.5\",\n    \"ava\": \"3.11.1\",\n    \"coveralls\": \"3.1.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"np\": \"6.4.0\",\n    \"nyc\": \"15.1.0\"\n  },\n  \"files\": [\n    \"lib\"\n  ],\n  \"homepage\": \"http://aureooms.github.io/js-compare/\",\n  \"keywords\": [\n    \"bricks\",\n    \"compare\",\n    \"ender\",\n    \"javascript\",\n    \"js\",\n    \"order\",\n    \"sort\"\n  ],\n  \"license\": \"AGPL-3.0\",\n  \"main\": \"lib/index.js\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/aureooms/js-compare.git\"\n  },\n  \"scripts\": {\n    \"build\": \"rm -rf lib && babel src -d lib\",\n    \"cover\": \"nyc --reporter=lcov npm test\",\n    \"esdoc\": \"esdoc\",\n    \"prepare\": \"npm run build\",\n    \"release\": \"np\",\n    \"test\": \"ava\"\n  },\n  \"sideEffects\": false\n}\n",
     "longname": "/home/aureooms/dev/js/js-compare/package.json",
     "name": "package.json",
     "static": true,
@@ -1345,7 +1431,7 @@
     "kind": "manual",
     "longname": "/home/aureooms/dev/js/js-compare/doc/manual/usage.md",
     "name": "./doc/manual/usage.md",
-    "content": "# Usage\n\n> :warning: The code needs a ES2015+ polyfill to run (`regeneratorRuntime`),\n> for instance [@babel/polyfill](https://babeljs.io/docs/usage/polyfill).\n\nFirst, require the polyfill at the entry point of your application\n```js\nrequire( '@babel/polyfill' ) ;\n// or\nimport '@babel/polyfill' ;\n```\n\nThen, import the library where needed\n```js\nconst compare = require( '@aureooms/js-compare' ) ;\n// or\nimport * as compare from '@aureooms/js-compare' ;\n```\n",
+    "content": "# Usage\n\nImport the library where needed\n```js\nconst compare = require( '@aureooms/js-compare' ) ;\n// or\nimport * as compare from '@aureooms/js-compare' ;\n```\n",
     "static": true,
     "access": "public"
   },

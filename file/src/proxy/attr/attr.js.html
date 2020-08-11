@@ -8,7 +8,7 @@
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<link rel="stylesheet" href="./inject/css/0-style.css"><script src="./inject/script/0-header.js"></script><meta name="description" content="comparison code bricks for JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@aureooms/js-compare"><meta property="twitter:description" content="comparison code bricks for JavaScript"></head>
+<link rel="stylesheet" href="./inject/css/0-style.css"><script src="./inject/script/0-header.js"></script><meta name="description" content="Comparison functions for JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@aureooms/js-compare"><meta property="twitter:description" content="Comparison functions for JavaScript"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -49,10 +49,15 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/proxy/attr/attr.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * Generates a binary attribute comparator
+ * from a binary comparator and an attribute key.
+ *
+ * @param {Function} compare - The function used to order attributes.
+ * @param {Object} key - The key of the attribute used in the comparison.
+ * @return {Function} The function that orders objects by attribute.
+ */
 export const attr = ( compare , key ) =&gt; ( a , b ) =&gt; compare( a[key] , b[key] ) ;
-
-
 </code></pre>
 
 </div>

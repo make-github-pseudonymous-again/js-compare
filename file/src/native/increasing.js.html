@@ -8,7 +8,7 @@
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<link rel="stylesheet" href="./inject/css/0-style.css"><script src="./inject/script/0-header.js"></script><meta name="description" content="comparison code bricks for JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@aureooms/js-compare"><meta property="twitter:description" content="comparison code bricks for JavaScript"></head>
+<link rel="stylesheet" href="./inject/css/0-style.css"><script src="./inject/script/0-header.js"></script><meta name="description" content="Comparison functions for JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@aureooms/js-compare"><meta property="twitter:description" content="Comparison functions for JavaScript"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -49,9 +49,15 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/native/increasing.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * Compare two objects in increasing order using the native comparison and
+ * equality operators.
+ *
+ * @param {Object} a - The first parameter.
+ * @param {Object} b - The second parameter.
+ * @return {Number} -1 if a &lt; b, 0 if a === b, and 1 otherwise.
+ */
 export const increasing = ( a , b ) =&gt; ( a &lt; b ) ? -1 : ( a === b ) ? 0 : 1 ;
-
 </code></pre>
 
 </div>
