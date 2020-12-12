@@ -1,6 +1,6 @@
 # Examples
 
-> More examples in [the test files](https://github.com/aureooms/js-compare/tree/master/test/src).
+> More examples in [the test files](https://github.com/aureooms/js-compare/tree/main/test/src).
 
 ```js
 let increasing = compare.increasing ;
