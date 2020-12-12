@@ -121,7 +121,8 @@
     "prepare": "npm run build",
     "release": "np",
     "test": "ava",
-    "travis": "npm run cover"
+    "travis": "npm run cover",
+    "lint": "true"
   },
   "sideEffects": false
 }
