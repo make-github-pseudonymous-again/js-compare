@@ -396,27 +396,9 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "src/lexicographical/fixed/index.js",
-    "file/src/lexicographical/fixed/index.js.html",
-    "src/lexicographical/fixed/index.js",
-    "file"
-  ],
-  [
-    "src/lexicographical/index.js",
-    "file/src/lexicographical/index.js.html",
-    "src/lexicographical/index.js",
-    "file"
-  ],
-  [
     "src/lexicographical/lexicographical.js",
     "file/src/lexicographical/lexicographical.js.html",
     "src/lexicographical/lexicographical.js",
-    "file"
-  ],
-  [
-    "src/lexicographical/quasi/index.js",
-    "file/src/lexicographical/quasi/index.js.html",
-    "src/lexicographical/quasi/index.js",
     "file"
   ],
   [
@@ -429,12 +411,6 @@ window.esdocSearchIndex = [
     "src/lexicographical/quasi/quasilexicographical.js",
     "file/src/lexicographical/quasi/quasilexicographical.js.html",
     "src/lexicographical/quasi/quasilexicographical.js",
-    "file"
-  ],
-  [
-    "src/lexicographical/ranged/index.js",
-    "file/src/lexicographical/ranged/index.js.html",
-    "src/lexicographical/ranged/index.js",
     "file"
   ],
   [
@@ -462,21 +438,9 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "src/native/index.js",
-    "file/src/native/index.js.html",
-    "src/native/index.js",
-    "file"
-  ],
-  [
     "src/proxy/attr/attr.js",
     "file/src/proxy/attr/attr.js.html",
     "src/proxy/attr/attr.js",
-    "file"
-  ],
-  [
-    "src/proxy/attr/index.js",
-    "file/src/proxy/attr/index.js.html",
-    "src/proxy/attr/index.js",
     "file"
   ],
   [
@@ -489,18 +453,6 @@ window.esdocSearchIndex = [
     "src/proxy/fn.js",
     "file/src/proxy/fn.js.html",
     "src/proxy/fn.js",
-    "file"
-  ],
-  [
-    "src/proxy/index.js",
-    "file/src/proxy/index.js.html",
-    "src/proxy/index.js",
-    "file"
-  ],
-  [
-    "src/tools/index.js",
-    "file/src/tools/index.js.html",
-    "src/tools/index.js",
     "file"
   ],
   [

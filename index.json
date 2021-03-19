@@ -567,9 +567,9 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/index.js",
-    "content": "export * from './lexicographical' ;\nexport * from './native' ;\nexport * from './proxy' ;\nexport * from './tools' ;\n",
+    "content": "export {default as fixedcolexicographical} from './lexicographical/fixed/fixedcolexicographical.js';\nexport {default as fixedlexicographical} from './lexicographical/fixed/fixedlexicographical.js';\nexport {default as quasicolexicographical} from './lexicographical/quasi/quasicolexicographical.js';\nexport {default as quasilexicographical} from './lexicographical/quasi/quasilexicographical.js';\nexport {default as rangedcolexicographical} from './lexicographical/ranged/rangedcolexicographical.js';\nexport {default as rangedlexicographical} from './lexicographical/ranged/rangedlexicographical.js';\nexport {default as colexicographical} from './lexicographical/colexicographical.js';\nexport {default as lexicographical} from './lexicographical/lexicographical.js';\nexport {default as decreasing} from './native/decreasing.js';\nexport {default as increasing} from './native/increasing.js';\nexport {default as attr} from './proxy/attr/attr.js';\nexport {default as len} from './proxy/attr/len.js';\nexport {default as fn} from './proxy/fn.js';\nexport {default as reverse} from './tools/reverse.js';\nexport {default as sign} from './tools/sign.js';\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/index.js",
+    "longname": "/home/runner/work/js-compare/js-compare/src/index.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -578,9 +578,9 @@
     "__docId__": 49,
     "kind": "file",
     "name": "src/lexicographical/colexicographical.js",
-    "content": "\n/**\n * Generates a binary colexicographical comparator\n * from a binary comparator.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n *\n * compare( a, b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n * compare should express an increasing ordering\n */\n\nexport function colexicographical ( compare ) {\n\n\t/**\n\t * Compares 2 arrays a and b colexicographically.\n\t */\n\n\treturn function ( a , b ) {\n\n\t\tconst m = a.length ;\n\t\tconst n = b.length ;\n\n\t\tconst len = Math.min( m , n ) ;\n\n\t\tfor ( let i = 1 ; i <= len ; ++i ) {\n\n\t\t\tconst d = compare( a[m-i], b[n-i] ) ;\n\n\t\t\tif ( d !== 0 ) return d ;\n\n\t\t}\n\n\t\treturn m - n ;\n\n\t} ;\n\n}\n\n",
+    "content": "/**\n * Generates a binary colexicographical comparator\n * from a binary comparator.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n *\n * compare( a, b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n * compare should express an increasing ordering\n */\n\nexport default function colexicographical(compare) {\n\t/**\n\t * Compares 2 arrays a and b colexicographically.\n\t */\n\n\treturn function (a, b) {\n\t\tconst m = a.length;\n\t\tconst n = b.length;\n\n\t\tconst length = Math.min(m, n);\n\n\t\tfor (let i = 1; i <= length; ++i) {\n\t\t\tconst d = compare(a[m - i], b[n - i]);\n\n\t\t\tif (d !== 0) return d;\n\t\t}\n\n\t\treturn m - n;\n\t};\n}\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/colexicographical.js",
+    "longname": "/home/runner/work/js-compare/js-compare/src/lexicographical/colexicographical.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -597,9 +597,9 @@
     "access": "public",
     "export": true,
     "importPath": "@aureooms/js-compare/src/lexicographical/colexicographical.js",
-    "importStyle": "{colexicographical}",
+    "importStyle": "colexicographical",
     "description": "Generates a binary colexicographical comparator\nfrom a binary comparator.\n\nhttps://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n\ncompare( a, b ) should always return\n  - a negative value if a < b\n  - a positive value if a > b\n  - zero if a === b\n\ncompare should express an increasing ordering",
-    "lineNumber": 16,
+    "lineNumber": 15,
     "params": [
       {
         "name": "compare",
@@ -618,9 +618,9 @@
     "__docId__": 51,
     "kind": "file",
     "name": "src/lexicographical/fixed/fixedcolexicographical.js",
-    "content": "\n/**\n * Generates a binary colexicographical comparator for fixed size arrays.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n *\n * compare( a , b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n */\n\nexport function fixedcolexicographical ( compare , len ) {\n\n\t/**\n\t * Compares 2 fixed size arrays a and b of size len colexicographically.\n\t */\n\n\treturn function ( a , b ) {\n\n\t\tfor ( let i = len ; i-- ; ) {\n\n\t\t\tconst d = compare( a[i] , b[i] ) ;\n\n\t\t\tif ( d !== 0 ) return d ;\n\n\t\t}\n\n\t\treturn 0 ;\n\n\t} ;\n\n}\n\n",
+    "content": "/**\n * Generates a binary colexicographical comparator for fixed size arrays.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n *\n * compare( a , b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n */\n\nexport default function fixedcolexicographical(compare, length) {\n\t/**\n\t * Compares 2 fixed size arrays a and b of size len colexicographically.\n\t */\n\n\treturn function (a, b) {\n\t\tfor (let i = length; i--; ) {\n\t\t\tconst d = compare(a[i], b[i]);\n\n\t\t\tif (d !== 0) return d;\n\t\t}\n\n\t\treturn 0;\n\t};\n}\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/fixed/fixedcolexicographical.js",
+    "longname": "/home/runner/work/js-compare/js-compare/src/lexicographical/fixed/fixedcolexicographical.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -637,9 +637,9 @@
     "access": "public",
     "export": true,
     "importPath": "@aureooms/js-compare/src/lexicographical/fixed/fixedcolexicographical.js",
-    "importStyle": "{fixedcolexicographical}",
+    "importStyle": "fixedcolexicographical",
     "description": "Generates a binary colexicographical comparator for fixed size arrays.\n\nhttps://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n\ncompare( a , b ) should always return\n  - a negative value if a < b\n  - a positive value if a > b\n  - zero if a === b",
-    "lineNumber": 14,
+    "lineNumber": 13,
     "params": [
       {
         "name": "compare",
@@ -648,7 +648,7 @@
         ]
       },
       {
-        "name": "len",
+        "name": "length",
         "types": [
           "*"
         ]
@@ -664,9 +664,9 @@
     "__docId__": 53,
     "kind": "file",
     "name": "src/lexicographical/fixed/fixedlexicographical.js",
-    "content": "\n/**\n * Generates a binary lexicographical comparator for fixed size arrays.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order\n *\n * compare( a , b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n */\n\nexport function fixedlexicographical ( compare , len ) {\n\n\t/**\n\t * Compares 2 fixed size arrays a and b of size len lexicographically.\n\t */\n\n\treturn function ( a , b ) {\n\n\t\tfor ( let i = 0 ; i < len ; ++i ) {\n\n\t\t\tconst d = compare( a[i] , b[i] ) ;\n\n\t\t\tif ( d !== 0 ) return d ;\n\n\t\t}\n\n\t\treturn 0 ;\n\n\t} ;\n\n}\n\n",
+    "content": "/**\n * Generates a binary lexicographical comparator for fixed size arrays.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order\n *\n * compare( a , b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n */\n\nexport default function fixedlexicographical(compare, length) {\n\t/**\n\t * Compares 2 fixed size arrays a and b of size len lexicographically.\n\t */\n\n\treturn function (a, b) {\n\t\tfor (let i = 0; i < length; ++i) {\n\t\t\tconst d = compare(a[i], b[i]);\n\n\t\t\tif (d !== 0) return d;\n\t\t}\n\n\t\treturn 0;\n\t};\n}\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/fixed/fixedlexicographical.js",
+    "longname": "/home/runner/work/js-compare/js-compare/src/lexicographical/fixed/fixedlexicographical.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -683,9 +683,9 @@
     "access": "public",
     "export": true,
     "importPath": "@aureooms/js-compare/src/lexicographical/fixed/fixedlexicographical.js",
-    "importStyle": "{fixedlexicographical}",
+    "importStyle": "fixedlexicographical",
     "description": "Generates a binary lexicographical comparator for fixed size arrays.\n\nhttps://en.wikipedia.org/wiki/Lexicographical_order\n\ncompare( a , b ) should always return\n  - a negative value if a < b\n  - a positive value if a > b\n  - zero if a === b",
-    "lineNumber": 14,
+    "lineNumber": 13,
     "params": [
       {
         "name": "compare",
@@ -694,7 +694,7 @@
         ]
       },
       {
-        "name": "len",
+        "name": "length",
         "types": [
           "*"
         ]
@@ -709,38 +709,16 @@
   {
     "__docId__": 55,
     "kind": "file",
-    "name": "src/lexicographical/fixed/index.js",
-    "content": "export * from './fixedcolexicographical' ;\nexport * from './fixedlexicographical' ;\n",
+    "name": "src/lexicographical/lexicographical.js",
+    "content": "/**\n * Generates a binary lexicographical comparator\n * from a binary comparator.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order\n *\n * compare( a, b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n * compare should express an increasing ordering\n */\n\nexport default function lexicographical(compare) {\n\t/**\n\t * Compares 2 arrays a and b lexicographically.\n\t */\n\n\treturn function (a, b) {\n\t\tconst m = a.length;\n\t\tconst n = b.length;\n\n\t\tconst length = Math.min(m, n);\n\n\t\tfor (let i = 0; i < length; ++i) {\n\t\t\tconst d = compare(a[i], b[i]);\n\n\t\t\tif (d !== 0) return d;\n\t\t}\n\n\t\treturn m - n;\n\t};\n}\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/fixed/index.js",
+    "longname": "/home/runner/work/js-compare/js-compare/src/lexicographical/lexicographical.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
     "__docId__": 56,
-    "kind": "file",
-    "name": "src/lexicographical/index.js",
-    "content": "export * from './colexicographical' ;\nexport * from './fixed' ;\nexport * from './lexicographical' ;\nexport * from './quasi' ;\nexport * from './ranged' ;\n",
-    "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/index.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 57,
-    "kind": "file",
-    "name": "src/lexicographical/lexicographical.js",
-    "content": "\n/**\n * Generates a binary lexicographical comparator\n * from a binary comparator.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order\n *\n * compare( a, b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n * compare should express an increasing ordering\n */\n\nexport function lexicographical ( compare ) {\n\n\t/**\n\t * Compares 2 arrays a and b lexicographically.\n\t */\n\n\treturn function ( a , b ) {\n\n\t\tconst m = a.length ;\n\t\tconst n = b.length ;\n\n\t\tconst len = Math.min( m , n ) ;\n\n\t\tfor ( let i = 0 ; i < len ; ++i ) {\n\n\t\t\tconst d = compare( a[i] , b[i] ) ;\n\n\t\t\tif ( d !== 0 ) return d ;\n\n\t\t}\n\n\t\treturn m - n ;\n\n\t} ;\n\n}\n\n",
-    "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/lexicographical.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 58,
     "kind": "function",
     "name": "lexicographical",
     "memberof": "src/lexicographical/lexicographical.js",
@@ -751,8 +729,48 @@
     "access": "public",
     "export": true,
     "importPath": "@aureooms/js-compare/src/lexicographical/lexicographical.js",
-    "importStyle": "{lexicographical}",
+    "importStyle": "lexicographical",
     "description": "Generates a binary lexicographical comparator\nfrom a binary comparator.\n\nhttps://en.wikipedia.org/wiki/Lexicographical_order\n\ncompare( a, b ) should always return\n  - a negative value if a < b\n  - a positive value if a > b\n  - zero if a === b\n\ncompare should express an increasing ordering",
+    "lineNumber": 15,
+    "params": [
+      {
+        "name": "compare",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "file",
+    "name": "src/lexicographical/quasi/quasicolexicographical.js",
+    "content": "/**\n * Generates a binary quasicolexicographical comparator\n * from a binary comparator.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order#Quasi-lexicographic_order\n * https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n *\n * compare( a, b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n * compare should express an increasing ordering\n */\n\nexport default function quasicolexicographical(compare) {\n\t/**\n\t * Compares 2 arrays a and b quasicolexicographically.\n\t */\n\n\treturn function (a, b) {\n\t\tconst m = a.length;\n\t\tconst n = b.length;\n\n\t\tif (m !== n) return m - n;\n\n\t\tconst length = Math.min(m, n);\n\n\t\tfor (let i = 1; i <= length; ++i) {\n\t\t\tconst d = compare(a[m - i], b[n - i]);\n\n\t\t\tif (d !== 0) return d;\n\t\t}\n\n\t\treturn 0;\n\t};\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/js-compare/js-compare/src/lexicographical/quasi/quasicolexicographical.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 58,
+    "kind": "function",
+    "name": "quasicolexicographical",
+    "memberof": "src/lexicographical/quasi/quasicolexicographical.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/lexicographical/quasi/quasicolexicographical.js~quasicolexicographical",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-compare/src/lexicographical/quasi/quasicolexicographical.js",
+    "importStyle": "quasicolexicographical",
+    "description": "Generates a binary quasicolexicographical comparator\nfrom a binary comparator.\n\nhttps://en.wikipedia.org/wiki/Lexicographical_order#Quasi-lexicographic_order\nhttps://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n\ncompare( a, b ) should always return\n  - a negative value if a < b\n  - a positive value if a > b\n  - zero if a === b\n\ncompare should express an increasing ordering",
     "lineNumber": 16,
     "params": [
       {
@@ -771,67 +789,16 @@
   {
     "__docId__": 59,
     "kind": "file",
-    "name": "src/lexicographical/quasi/index.js",
-    "content": "export * from './quasicolexicographical' ;\nexport * from './quasilexicographical' ;\n",
+    "name": "src/lexicographical/quasi/quasilexicographical.js",
+    "content": "/**\n * Generates a binary quasilexicographical comparator\n * from a binary comparator.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order#Quasi-lexicographic_order\n *\n * compare( a, b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n * compare should express an increasing ordering\n */\n\nexport default function quasilexicographical(compare) {\n\t/**\n\t * Compares 2 arrays a and b quasilexicographically.\n\t */\n\n\treturn function (a, b) {\n\t\tconst m = a.length;\n\t\tconst n = b.length;\n\n\t\tif (m !== n) return m - n;\n\n\t\tconst length = Math.min(m, n);\n\n\t\tfor (let i = 0; i < length; ++i) {\n\t\t\tconst d = compare(a[i], b[i]);\n\n\t\t\tif (d !== 0) return d;\n\t\t}\n\n\t\treturn 0;\n\t};\n}\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/quasi/index.js",
+    "longname": "/home/runner/work/js-compare/js-compare/src/lexicographical/quasi/quasilexicographical.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
     "__docId__": 60,
-    "kind": "file",
-    "name": "src/lexicographical/quasi/quasicolexicographical.js",
-    "content": "\n/**\n * Generates a binary quasicolexicographical comparator\n * from a binary comparator.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order#Quasi-lexicographic_order\n * https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n *\n * compare( a, b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n * compare should express an increasing ordering\n */\n\nexport function quasicolexicographical ( compare ) {\n\n\t/**\n\t * Compares 2 arrays a and b quasicolexicographically.\n\t */\n\n\treturn function ( a , b ) {\n\n\t\tconst m = a.length ;\n\t\tconst n = b.length ;\n\n\t\tif ( m !== n ) return m - n ;\n\n\t\tconst len = Math.min( m , n ) ;\n\n\t\tfor ( let i = 1 ; i <= len ; ++i ) {\n\n\t\t\tconst d = compare( a[m-i] , b[n-i] ) ;\n\n\t\t\tif ( d !== 0 ) return d ;\n\n\t\t}\n\n\t\treturn 0 ;\n\n\t} ;\n\n}\n\n",
-    "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/quasi/quasicolexicographical.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 61,
-    "kind": "function",
-    "name": "quasicolexicographical",
-    "memberof": "src/lexicographical/quasi/quasicolexicographical.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/lexicographical/quasi/quasicolexicographical.js~quasicolexicographical",
-    "access": "public",
-    "export": true,
-    "importPath": "@aureooms/js-compare/src/lexicographical/quasi/quasicolexicographical.js",
-    "importStyle": "{quasicolexicographical}",
-    "description": "Generates a binary quasicolexicographical comparator\nfrom a binary comparator.\n\nhttps://en.wikipedia.org/wiki/Lexicographical_order#Quasi-lexicographic_order\nhttps://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n\ncompare( a, b ) should always return\n  - a negative value if a < b\n  - a positive value if a > b\n  - zero if a === b\n\ncompare should express an increasing ordering",
-    "lineNumber": 17,
-    "params": [
-      {
-        "name": "compare",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 62,
-    "kind": "file",
-    "name": "src/lexicographical/quasi/quasilexicographical.js",
-    "content": "\n/**\n * Generates a binary quasilexicographical comparator\n * from a binary comparator.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order#Quasi-lexicographic_order\n *\n * compare( a, b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n * compare should express an increasing ordering\n */\n\nexport function quasilexicographical ( compare ) {\n\n\t/**\n\t * Compares 2 arrays a and b quasilexicographically.\n\t */\n\n\treturn function ( a , b ) {\n\n\t\tconst m = a.length ;\n\t\tconst n = b.length ;\n\n\t\tif ( m !== n ) return m - n ;\n\n\t\tconst len = Math.min( m , n ) ;\n\n\t\tfor ( let i = 0 ; i < len ; ++i ) {\n\n\t\t\tconst d = compare( a[i] , b[i] ) ;\n\n\t\t\tif ( d !== 0 ) return d ;\n\n\t\t}\n\n\t\treturn 0 ;\n\n\t} ;\n\n}\n\n",
-    "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/quasi/quasilexicographical.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 63,
     "kind": "function",
     "name": "quasilexicographical",
     "memberof": "src/lexicographical/quasi/quasilexicographical.js",
@@ -842,9 +809,9 @@
     "access": "public",
     "export": true,
     "importPath": "@aureooms/js-compare/src/lexicographical/quasi/quasilexicographical.js",
-    "importStyle": "{quasilexicographical}",
+    "importStyle": "quasilexicographical",
     "description": "Generates a binary quasilexicographical comparator\nfrom a binary comparator.\n\nhttps://en.wikipedia.org/wiki/Lexicographical_order#Quasi-lexicographic_order\n\ncompare( a, b ) should always return\n  - a negative value if a < b\n  - a positive value if a > b\n  - zero if a === b\n\ncompare should express an increasing ordering",
-    "lineNumber": 16,
+    "lineNumber": 15,
     "params": [
       {
         "name": "compare",
@@ -860,29 +827,18 @@
     }
   },
   {
-    "__docId__": 64,
-    "kind": "file",
-    "name": "src/lexicographical/ranged/index.js",
-    "content": "export * from './rangedcolexicographical' ;\nexport * from './rangedlexicographical' ;\n",
-    "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/ranged/index.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 65,
+    "__docId__": 61,
     "kind": "file",
     "name": "src/lexicographical/ranged/rangedcolexicographical.js",
-    "content": "\n/**\n * Generates a binary colexicographical comparator for ranges of arrays.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n *\n * compare( a , b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n */\n\nexport function rangedcolexicographical ( compare , begin , end ) {\n\n\t/**\n\t * Compares the range [begin, end[ of 2 arrays a and b colexicographically.\n\t */\n\n\treturn function ( a , b ) {\n\n\t\tfor ( let i = end ; i --> begin ; ) {\n\n\t\t\tconst d = compare( a[i] , b[i] ) ;\n\n\t\t\tif ( d !== 0 ) return d ;\n\n\t\t}\n\n\t\treturn 0 ;\n\n\t} ;\n\n}\n\n",
+    "content": "/**\n * Generates a binary colexicographical comparator for ranges of arrays.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n *\n * compare( a , b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n */\n\nexport default function rangedcolexicographical(compare, begin, end) {\n\t/**\n\t * Compares the range [begin, end[ of 2 arrays a and b colexicographically.\n\t */\n\n\treturn function (a, b) {\n\t\tfor (let i = end; i-- > begin; ) {\n\t\t\tconst d = compare(a[i], b[i]);\n\n\t\t\tif (d !== 0) return d;\n\t\t}\n\n\t\treturn 0;\n\t};\n}\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/ranged/rangedcolexicographical.js",
+    "longname": "/home/runner/work/js-compare/js-compare/src/lexicographical/ranged/rangedcolexicographical.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 66,
+    "__docId__": 62,
     "kind": "function",
     "name": "rangedcolexicographical",
     "memberof": "src/lexicographical/ranged/rangedcolexicographical.js",
@@ -893,9 +849,9 @@
     "access": "public",
     "export": true,
     "importPath": "@aureooms/js-compare/src/lexicographical/ranged/rangedcolexicographical.js",
-    "importStyle": "{rangedcolexicographical}",
+    "importStyle": "rangedcolexicographical",
     "description": "Generates a binary colexicographical comparator for ranges of arrays.\n\nhttps://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order\n\ncompare( a , b ) should always return\n  - a negative value if a < b\n  - a positive value if a > b\n  - zero if a === b",
-    "lineNumber": 14,
+    "lineNumber": 13,
     "params": [
       {
         "name": "compare",
@@ -923,18 +879,18 @@
     }
   },
   {
-    "__docId__": 67,
+    "__docId__": 63,
     "kind": "file",
     "name": "src/lexicographical/ranged/rangedlexicographical.js",
-    "content": "\n/**\n * Generates a binary lexicographical comparator for ranges of arrays.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order\n *\n * compare( a , b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n */\n\nexport function rangedlexicographical ( compare , begin , end ) {\n\n\t/**\n\t * Compares the range [begin, end[ of 2 arrays a and b lexicographically.\n\t */\n\n\treturn function ( a , b ) {\n\n\t\tfor ( let i = begin ; i < end ; ++i ) {\n\n\t\t\tconst d = compare( a[i] , b[i] );\n\n\t\t\tif ( d !== 0 ) return d ;\n\n\t\t}\n\n\t\treturn 0 ;\n\n\t} ;\n\n}\n\n",
+    "content": "/**\n * Generates a binary lexicographical comparator for ranges of arrays.\n *\n * https://en.wikipedia.org/wiki/Lexicographical_order\n *\n * compare( a , b ) should always return\n *   - a negative value if a < b\n *   - a positive value if a > b\n *   - zero if a === b\n *\n */\n\nexport default function rangedlexicographical(compare, begin, end) {\n\t/**\n\t * Compares the range [begin, end[ of 2 arrays a and b lexicographically.\n\t */\n\n\treturn function (a, b) {\n\t\tfor (let i = begin; i < end; ++i) {\n\t\t\tconst d = compare(a[i], b[i]);\n\n\t\t\tif (d !== 0) return d;\n\t\t}\n\n\t\treturn 0;\n\t};\n}\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/lexicographical/ranged/rangedlexicographical.js",
+    "longname": "/home/runner/work/js-compare/js-compare/src/lexicographical/ranged/rangedlexicographical.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 68,
+    "__docId__": 64,
     "kind": "function",
     "name": "rangedlexicographical",
     "memberof": "src/lexicographical/ranged/rangedlexicographical.js",
@@ -945,9 +901,9 @@
     "access": "public",
     "export": true,
     "importPath": "@aureooms/js-compare/src/lexicographical/ranged/rangedlexicographical.js",
-    "importStyle": "{rangedlexicographical}",
+    "importStyle": "rangedlexicographical",
     "description": "Generates a binary lexicographical comparator for ranges of arrays.\n\nhttps://en.wikipedia.org/wiki/Lexicographical_order\n\ncompare( a , b ) should always return\n  - a negative value if a < b\n  - a positive value if a > b\n  - zero if a === b",
-    "lineNumber": 14,
+    "lineNumber": 13,
     "params": [
       {
         "name": "compare",
@@ -975,18 +931,18 @@
     }
   },
   {
-    "__docId__": 69,
+    "__docId__": 65,
     "kind": "file",
     "name": "src/native/decreasing.js",
-    "content": "/**\n * Compare two objects in decreasing order using the native comparison and\n * equality operators.\n *\n * @param {Object} a - The first parameter.\n * @param {Object} b - The second parameter.\n * @return {Number} -1 if a > b, 0 if a === b, and 1 otherwise.\n */\nexport const decreasing = ( a , b ) => ( a > b ) ? -1 : ( a === b ) ? 0 : 1 ;\n",
+    "content": "/**\n * Compare two objects in decreasing order using the native comparison and\n * equality operators.\n *\n * @param {Object} a - The first parameter.\n * @param {Object} b - The second parameter.\n * @return {Number} -1 if a > b, 0 if a === b, and 1 otherwise.\n */\nconst decreasing = (a, b) => (a > b ? -1 : a === b ? 0 : 1);\nexport default decreasing;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/native/decreasing.js",
+    "longname": "/home/runner/work/js-compare/js-compare/src/native/decreasing.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 70,
+    "__docId__": 66,
     "kind": "function",
     "name": "decreasing",
     "memberof": "src/native/decreasing.js",
@@ -997,7 +953,7 @@
     "access": "public",
     "export": true,
     "importPath": "@aureooms/js-compare/src/native/decreasing.js",
-    "importStyle": "{decreasing}",
+    "importStyle": "decreasing",
     "description": "Compare two objects in decreasing order using the native comparison and\nequality operators.",
     "lineNumber": 9,
     "params": [
@@ -1032,18 +988,18 @@
     }
   },
   {
-    "__docId__": 71,
+    "__docId__": 67,
     "kind": "file",
     "name": "src/native/increasing.js",
-    "content": "/**\n * Compare two objects in increasing order using the native comparison and\n * equality operators.\n *\n * @param {Object} a - The first parameter.\n * @param {Object} b - The second parameter.\n * @return {Number} -1 if a < b, 0 if a === b, and 1 otherwise.\n */\nexport const increasing = ( a , b ) => ( a < b ) ? -1 : ( a === b ) ? 0 : 1 ;\n",
+    "content": "/**\n * Compare two objects in increasing order using the native comparison and\n * equality operators.\n *\n * @param {Object} a - The first parameter.\n * @param {Object} b - The second parameter.\n * @return {Number} -1 if a < b, 0 if a === b, and 1 otherwise.\n */\nconst increasing = (a, b) => (a < b ? -1 : a === b ? 0 : 1);\nexport default increasing;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/native/increasing.js",
+    "longname": "/home/runner/work/js-compare/js-compare/src/native/increasing.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 72,
+    "__docId__": 68,
     "kind": "function",
     "name": "increasing",
     "memberof": "src/native/increasing.js",
@@ -1054,7 +1010,7 @@
     "access": "public",
     "export": true,
     "importPath": "@aureooms/js-compare/src/native/increasing.js",
-    "importStyle": "{increasing}",
+    "importStyle": "increasing",
     "description": "Compare two objects in increasing order using the native comparison and\nequality operators.",
     "lineNumber": 9,
     "params": [
@@ -1089,29 +1045,18 @@
     }
   },
   {
-    "__docId__": 73,
-    "kind": "file",
-    "name": "src/native/index.js",
-    "content": "export * from './decreasing' ;\nexport * from './increasing' ;\n",
-    "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/native/index.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 74,
+    "__docId__": 69,
     "kind": "file",
     "name": "src/proxy/attr/attr.js",
-    "content": "/**\n * Generates a binary attribute comparator\n * from a binary comparator and an attribute key.\n *\n * @param {Function} compare - The function used to order attributes.\n * @param {Object} key - The key of the attribute used in the comparison.\n * @return {Function} The function that orders objects by attribute.\n */\nexport const attr = ( compare , key ) => ( a , b ) => compare( a[key] , b[key] ) ;\n",
+    "content": "/**\n * Generates a binary attribute comparator\n * from a binary comparator and an attribute key.\n *\n * @param {Function} compare - The function used to order attributes.\n * @param {Object} key - The key of the attribute used in the comparison.\n * @return {Function} The function that orders objects by attribute.\n */\nconst attr = (compare, key) => (a, b) => compare(a[key], b[key]);\nexport default attr;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/proxy/attr/attr.js",
+    "longname": "/home/runner/work/js-compare/js-compare/src/proxy/attr/attr.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 75,
+    "__docId__": 70,
     "kind": "function",
     "name": "attr",
     "memberof": "src/proxy/attr/attr.js",
@@ -1122,7 +1067,7 @@
     "access": "public",
     "export": true,
     "importPath": "@aureooms/js-compare/src/proxy/attr/attr.js",
-    "importStyle": "{attr}",
+    "importStyle": "attr",
     "description": "Generates a binary attribute comparator\nfrom a binary comparator and an attribute key.",
     "lineNumber": 9,
     "params": [
@@ -1157,29 +1102,18 @@
     }
   },
   {
-    "__docId__": 76,
-    "kind": "file",
-    "name": "src/proxy/attr/index.js",
-    "content": "export * from './attr' ;\nexport * from './len' ;\n",
-    "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/proxy/attr/index.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 77,
+    "__docId__": 71,
     "kind": "file",
     "name": "src/proxy/attr/len.js",
-    "content": "/**\n * Generates a binary length comparator\n * from a binary comparator.\n *\n * @param {Function} compare - The function used to order lengths.\n * @return {Function} The function that orders objects by length.\n */\nexport const len = compare => ( a , b ) => compare( a.length , b.length ) ;\n",
+    "content": "/**\n * Generates a binary length comparator\n * from a binary comparator.\n *\n * @param {Function} compare - The function used to order lengths.\n * @return {Function} The function that orders objects by length.\n */\n// eslint-disable-next-line unicorn/prevent-abbreviations\nconst len = (compare) => (a, b) => compare(a.length, b.length);\nexport default len;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/proxy/attr/len.js",
+    "longname": "/home/runner/work/js-compare/js-compare/src/proxy/attr/len.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 78,
+    "__docId__": 72,
     "kind": "function",
     "name": "len",
     "memberof": "src/proxy/attr/len.js",
@@ -1190,9 +1124,9 @@
     "access": "public",
     "export": true,
     "importPath": "@aureooms/js-compare/src/proxy/attr/len.js",
-    "importStyle": "{len}",
+    "importStyle": "len",
     "description": "Generates a binary length comparator\nfrom a binary comparator.",
-    "lineNumber": 8,
+    "lineNumber": 9,
     "params": [
       {
         "nullable": null,
@@ -1215,18 +1149,18 @@
     }
   },
   {
-    "__docId__": 79,
+    "__docId__": 73,
     "kind": "file",
     "name": "src/proxy/fn.js",
-    "content": "/**\n * Generates a binary comparator\n * from a binary comparator and a function.\n *\n * @param {Function} compare - The function used to order values.\n * @param {Function} callable - The function that generates values used in the comparison.\n * @return {Function} The function that orders objects by value.\n */\nexport const fn = ( compare , callable ) => ( a , b ) => compare( callable( a ) , callable( b ) ) ;\n",
+    "content": "/**\n * Generates a binary comparator\n * from a binary comparator and a function.\n *\n * @param {Function} compare - The function used to order values.\n * @param {Function} callable - The function that generates values used in the comparison.\n * @return {Function} The function that orders objects by value.\n */\nconst fn = (compare, callable) => (a, b) => compare(callable(a), callable(b));\nexport default fn;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/proxy/fn.js",
+    "longname": "/home/runner/work/js-compare/js-compare/src/proxy/fn.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 80,
+    "__docId__": 74,
     "kind": "function",
     "name": "fn",
     "memberof": "src/proxy/fn.js",
@@ -1237,7 +1171,7 @@
     "access": "public",
     "export": true,
     "importPath": "@aureooms/js-compare/src/proxy/fn.js",
-    "importStyle": "{fn}",
+    "importStyle": "fn",
     "description": "Generates a binary comparator\nfrom a binary comparator and a function.",
     "lineNumber": 9,
     "params": [
@@ -1272,40 +1206,18 @@
     }
   },
   {
-    "__docId__": 81,
-    "kind": "file",
-    "name": "src/proxy/index.js",
-    "content": "export * from './attr' ;\nexport * from './fn' ;\n",
-    "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/proxy/index.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 82,
-    "kind": "file",
-    "name": "src/tools/index.js",
-    "content": "export * from './reverse' ;\nexport * from './sign' ;\n",
-    "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/tools/index.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 83,
+    "__docId__": 75,
     "kind": "file",
     "name": "src/tools/reverse.js",
-    "content": "/**\n * Reverse the order of a comparator.\n *\n * @param {Function} compare - The comparator to reverse.\n * @return {Function} A function f such that compare(a,b) === f(b,a) for all a,b.\n */\nexport const reverse = compare => ( a , b ) => compare( b , a ) ;\n",
+    "content": "/**\n * Reverse the order of a comparator.\n *\n * @param {Function} compare - The comparator to reverse.\n * @return {Function} A function f such that compare(a,b) === f(b,a) for all a,b.\n */\nconst reverse = (compare) => (a, b) => compare(b, a);\nexport default reverse;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/tools/reverse.js",
+    "longname": "/home/runner/work/js-compare/js-compare/src/tools/reverse.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 84,
+    "__docId__": 76,
     "kind": "function",
     "name": "reverse",
     "memberof": "src/tools/reverse.js",
@@ -1316,7 +1228,7 @@
     "access": "public",
     "export": true,
     "importPath": "@aureooms/js-compare/src/tools/reverse.js",
-    "importStyle": "{reverse}",
+    "importStyle": "reverse",
     "description": "Reverse the order of a comparator.",
     "lineNumber": 7,
     "params": [
@@ -1341,18 +1253,18 @@
     }
   },
   {
-    "__docId__": 85,
+    "__docId__": 77,
     "kind": "file",
     "name": "src/tools/sign.js",
-    "content": "/**\n * Computes the sign of the input number.\n *\n * @param {Number} v - The number to compute the sign of.\n * @return {Number} -1 if v < 0, 1 if v > 0, 0 otherwise.\n */\nexport const sign = v => v < 0 ? -1 : v > 0 ? 1 : 0 ;\n",
+    "content": "/**\n * Computes the sign of the input number.\n *\n * @param {Number} v - The number to compute the sign of.\n * @return {Number} -1 if v < 0, 1 if v > 0, 0 otherwise.\n */\nconst sign = (v) => (v < 0 ? -1 : v > 0 ? 1 : 0);\nexport default sign;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-compare/src/tools/sign.js",
+    "longname": "/home/runner/work/js-compare/js-compare/src/tools/sign.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 86,
+    "__docId__": 78,
     "kind": "function",
     "name": "sign",
     "memberof": "src/tools/sign.js",
@@ -1363,7 +1275,7 @@
     "access": "public",
     "export": true,
     "importPath": "@aureooms/js-compare/src/tools/sign.js",
-    "importStyle": "{sign}",
+    "importStyle": "sign",
     "description": "Computes the sign of the input number.",
     "lineNumber": 7,
     "params": [
@@ -1389,16 +1301,16 @@
   },
   {
     "kind": "index",
-    "content": "[@aureooms/js-compare](http://aureooms.github.io/js-compare)\n==\n\nComparison functions for JavaScript.\nSee [docs](https://aureooms.github.io/js-compare/index.html).\n\n```js\nlet compare = reverse( lexicographical( increasing ) ) ;\ncompare( [ 1 , 1 ] , [ 1 , 2 ] )  >  0 ; // true\n```\n\n[![License](https://img.shields.io/github/license/aureooms/js-compare.svg)](https://raw.githubusercontent.com/aureooms/js-compare/master/LICENSE)\n[![Version](https://img.shields.io/npm/v/@aureooms/js-compare.svg)](https://www.npmjs.org/package/@aureooms/js-compare)\n[![Build](https://img.shields.io/travis/aureooms/js-compare/master.svg)](https://travis-ci.org/aureooms/js-compare/branches)\n[![Dependencies](https://img.shields.io/david/aureooms/js-compare.svg)](https://david-dm.org/aureooms/js-compare)\n[![Dev dependencies](https://img.shields.io/david/dev/aureooms/js-compare.svg)](https://david-dm.org/aureooms/js-compare?type=dev)\n[![GitHub issues](https://img.shields.io/github/issues/aureooms/js-compare.svg)](https://github.com/aureooms/js-compare/issues)\n[![Downloads](https://img.shields.io/npm/dm/@aureooms/js-compare.svg)](https://www.npmjs.org/package/@aureooms/js-compare)\n\n[![Code issues](https://img.shields.io/codeclimate/issues/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/issues)\n[![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/trends/churn)\n[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-compare/master.svg)](https://codecov.io/gh/aureooms/js-compare)\n[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/trends/technical_debt)\n[![Documentation](http://aureooms.github.io/js-compare//badge.svg)](http://aureooms.github.io/js-compare//source.html)\n[![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-compare)](https://bundlephobia.com/result?p=@aureooms/js-compare)\n\n## References\n\n  - https://en.wikipedia.org/wiki/Lexicographical_order\n",
-    "longname": "/home/aureooms/dev/js/js-compare/README.md",
+    "content": "[@aureooms/js-compare](https://aureooms.github.io/js-compare)\n==\n\nComparison functions for JavaScript.\nSee [docs](https://aureooms.github.io/js-compare/index.html).\n\n```js\nlet compare = reverse( lexicographical( increasing ) ) ;\ncompare( [ 1 , 1 ] , [ 1 , 2 ] )  >  0 ; // true\n```\n\n[![License](https://img.shields.io/github/license/aureooms/js-compare.svg)](https://raw.githubusercontent.com/aureooms/js-compare/main/LICENSE)\n[![Version](https://img.shields.io/npm/v/@aureooms/js-compare.svg)](https://www.npmjs.org/package/@aureooms/js-compare)\n[![Build](https://img.shields.io/travis/aureooms/js-compare/main.svg)](https://travis-ci.com/aureooms/js-compare/branches)\n[![Dependencies](https://img.shields.io/david/aureooms/js-compare.svg)](https://david-dm.org/aureooms/js-compare)\n[![Dev dependencies](https://img.shields.io/david/dev/aureooms/js-compare.svg)](https://david-dm.org/aureooms/js-compare?type=dev)\n[![GitHub issues](https://img.shields.io/github/issues/aureooms/js-compare.svg)](https://github.com/aureooms/js-compare/issues)\n[![Downloads](https://img.shields.io/npm/dm/@aureooms/js-compare.svg)](https://www.npmjs.org/package/@aureooms/js-compare)\n\n[![Code issues](https://img.shields.io/codeclimate/issues/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/issues)\n[![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/trends/churn)\n[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-compare/main.svg)](https://codecov.io/gh/aureooms/js-compare)\n[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/trends/technical_debt)\n[![Documentation](https://aureooms.github.io/js-compare/badge.svg)](https://aureooms.github.io/js-compare/source.html)\n[![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-compare)](https://bundlephobia.com/result?p=@aureooms/js-compare)\n\n## References\n\n  - https://en.wikipedia.org/wiki/Lexicographical_order\n",
+    "longname": "/home/runner/work/js-compare/js-compare/README.md",
     "name": "./README.md",
     "static": true,
     "access": "public"
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"@aureooms/js-compare\",\n  \"description\": \"Comparison functions for JavaScript\",\n  \"version\": \"1.4.5\",\n  \"author\": \"aureooms\",\n  \"ava\": {\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"require\": [\n      \"@babel/register\"\n    ],\n    \"timeout\": \"1m\"\n  },\n  \"babel\": {\n    \"presets\": [\n      \"@babel/preset-env\"\n    ],\n    \"env\": {\n      \"development\": {\n        \"sourceMaps\": \"inline\"\n      }\n    }\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/aureooms/js-compare/issues\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@aureooms/js-operator\": \"1.0.2\",\n    \"@babel/cli\": \"7.10.5\",\n    \"@babel/core\": \"7.11.1\",\n    \"@babel/preset-env\": \"7.11.0\",\n    \"@babel/register\": \"7.10.5\",\n    \"ava\": \"3.11.1\",\n    \"coveralls\": \"3.1.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"np\": \"6.4.0\",\n    \"nyc\": \"15.1.0\"\n  },\n  \"files\": [\n    \"lib\"\n  ],\n  \"homepage\": \"http://aureooms.github.io/js-compare/\",\n  \"keywords\": [\n    \"bricks\",\n    \"compare\",\n    \"ender\",\n    \"javascript\",\n    \"js\",\n    \"order\",\n    \"sort\"\n  ],\n  \"license\": \"AGPL-3.0\",\n  \"main\": \"lib/index.js\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/aureooms/js-compare.git\"\n  },\n  \"scripts\": {\n    \"build\": \"rm -rf lib && babel src -d lib\",\n    \"cover\": \"nyc --reporter=lcov npm test\",\n    \"esdoc\": \"esdoc\",\n    \"prepare\": \"npm run build\",\n    \"release\": \"np\",\n    \"test\": \"ava\"\n  },\n  \"sideEffects\": false\n}\n",
-    "longname": "/home/aureooms/dev/js/js-compare/package.json",
+    "content": "{\n  \"name\": \"@aureooms/js-compare\",\n  \"description\": \"Comparison functions for JavaScript\",\n  \"version\": \"2.0.0\",\n  \"license\": \"AGPL-3.0\",\n  \"author\": \"aureooms\",\n  \"homepage\": \"https://aureooms.github.io/js-compare\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/aureooms/js-compare\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/aureooms/js-compare/issues\"\n  },\n  \"keywords\": [\n    \"bricks\",\n    \"compare\",\n    \"ender\",\n    \"javascript\",\n    \"js\",\n    \"order\",\n    \"sort\"\n  ],\n  \"sideEffects\": false,\n  \"source\": \"src/index.js\",\n  \"main\": \"dist/index.js\",\n  \"module\": \"dist/index.module.js\",\n  \"umd:main\": \"dist/index.umd.js\",\n  \"unpkg\": \"dist/index.umd.js\",\n  \"exports\": {\n    \".\": {\n      \"browser\": \"./dist/index.module.js\",\n      \"umd\": \"./dist/index.umd.js\",\n      \"require\": \"./dist/index.js\",\n      \"default\": \"./dist/index.modern.js\"\n    }\n  },\n  \"files\": [\n    \"dist\"\n  ],\n  \"scripts\": {\n    \"build\": \"NODE_ENV=production microbundle\",\n    \"build-docs\": \"esdoc\",\n    \"build-gh-pages\": \"npm run build-docs\",\n    \"commit-msg\": \"commitlint --edit\",\n    \"cover\": \"c8 --all --src src --reporter=lcov npm test\",\n    \"debug\": \"NODE_ENV=debug npm run test -- -st --fail-fast\",\n    \"dev\": \"npm run lint-config-and-fix && npm run lint-and-fix && npm run cover -- -- -st --fail-fast\",\n    \"install-hooks\": \"husky install\",\n    \"lint\": \"xo\",\n    \"lint-and-fix\": \"npm run lint -- --fix\",\n    \"lint-config\": \"fixpack --dryRun\",\n    \"lint-config-and-fix\": \"fixpack || fixpack\",\n    \"postinstall\": \"npm run install-hooks\",\n    \"postpublish\": \"pinst --enable\",\n    \"precommit\": \"lint-staged\",\n    \"prepare\": \"npm run build\",\n    \"prepublishOnly\": \"pinst --disable\",\n    \"release\": \"np --message ':hatching_chick: release: Bumping to v%s.'\",\n    \"test\": \"ava\",\n    \"travis\": \"npm run lint-config && npm run lint && npm run cover\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@aureooms/js-operator\": \"1.0.2\",\n    \"@babel/core\": \"7.13.10\",\n    \"@babel/preset-env\": \"7.13.10\",\n    \"@babel/register\": \"7.13.8\",\n    \"@commitlint/cli\": \"12.0.1\",\n    \"@js-library/commitlint-config\": \"0.0.4\",\n    \"ava\": \"3.15.0\",\n    \"babel-plugin-transform-remove-console\": \"6.9.4\",\n    \"babel-plugin-unassert\": \"3.0.1\",\n    \"babel-preset-power-assert\": \"3.0.0\",\n    \"c8\": \"7.6.0\",\n    \"coveralls\": \"3.1.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"fixpack\": \"4.0.0\",\n    \"husky\": \"5.1.3\",\n    \"lint-staged\": \"10.5.4\",\n    \"microbundle\": \"0.13.0\",\n    \"np\": \"7.4.0\",\n    \"pinst\": \"2.1.6\",\n    \"power-assert\": \"1.6.1\",\n    \"xo\": \"0.38.2\"\n  },\n  \"ava\": {\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"require\": [\n      \"@babel/register\"\n    ],\n    \"timeout\": \"1m\"\n  },\n  \"babel\": {\n    \"sourceMaps\": true,\n    \"presets\": [\n      [\n        \"@babel/preset-env\",\n        {\n          \"targets\": [\n            \"defaults\",\n            \"maintained node versions\"\n          ]\n        }\n      ]\n    ],\n    \"env\": {\n      \"debug\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": \"current node\"\n            }\n          ],\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"test\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": \"current node\"\n            }\n          ],\n          \"babel-preset-power-assert\"\n        ],\n        \"plugins\": [\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ]\n      },\n      \"development\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ],\n        \"plugins\": [\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ]\n      },\n      \"production\": {\n        \"plugins\": [\n          \"babel-plugin-unassert\",\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ]\n      }\n    }\n  },\n  \"lint-staged\": {\n    \"*.js\": [\n      \"npm run lint-and-fix\"\n    ],\n    \"package.json\": [\n      \"npm run lint-config-and-fix\"\n    ]\n  },\n  \"prettier\": {\n    \"trailingComma\": \"all\"\n  },\n  \"xo\": {\n    \"prettier\": true,\n    \"plugins\": [\n      \"unicorn\"\n    ],\n    \"rules\": {\n      \"unicorn/filename-case\": \"off\"\n    },\n    \"overrides\": [\n      {\n        \"files\": [\n          \"doc/**\"\n        ],\n        \"env\": \"browser\"\n      }\n    ]\n  }\n}\n",
+    "longname": "/home/runner/work/js-compare/js-compare/package.json",
     "name": "package.json",
     "static": true,
     "access": "public"
@@ -1413,7 +1325,7 @@
   },
   {
     "kind": "manual",
-    "longname": "/home/aureooms/dev/js/js-compare/doc/manual/overview.md",
+    "longname": "/home/runner/work/js-compare/js-compare/doc/manual/overview.md",
     "name": "./doc/manual/overview.md",
     "content": "# Overview\n",
     "static": true,
@@ -1421,7 +1333,7 @@
   },
   {
     "kind": "manual",
-    "longname": "/home/aureooms/dev/js/js-compare/doc/manual/installation.md",
+    "longname": "/home/runner/work/js-compare/js-compare/doc/manual/installation.md",
     "name": "./doc/manual/installation.md",
     "content": "# Installation\n\nCan be managed using\n[yarn](https://yarnpkg.com/en/docs),\n[npm](https://docs.npmjs.com),\nor [jspm](https://jspm.org/docs).\n\n\n### yarn\n```terminal\nyarn add @aureooms/js-compare\n```\n\n### npm\n```terminal\nnpm install @aureooms/js-compare --save\n```\n\n### jspm\n```terminal\njspm install npm:@aureooms/js-compare\n```\n",
     "static": true,
@@ -1429,7 +1341,7 @@
   },
   {
     "kind": "manual",
-    "longname": "/home/aureooms/dev/js/js-compare/doc/manual/usage.md",
+    "longname": "/home/runner/work/js-compare/js-compare/doc/manual/usage.md",
     "name": "./doc/manual/usage.md",
     "content": "# Usage\n\nImport the library where needed\n```js\nconst compare = require( '@aureooms/js-compare' ) ;\n// or\nimport * as compare from '@aureooms/js-compare' ;\n```\n",
     "static": true,
@@ -1437,9 +1349,9 @@
   },
   {
     "kind": "manual",
-    "longname": "/home/aureooms/dev/js/js-compare/doc/manual/example.md",
+    "longname": "/home/runner/work/js-compare/js-compare/doc/manual/example.md",
     "name": "./doc/manual/example.md",
-    "content": "# Examples\n\n> More examples in [the test files](https://github.com/aureooms/js-compare/tree/master/test/src).\n\n```js\nlet increasing = compare.increasing ;\nlet decreasing = compare.decreasing ;\n\nincreasing( 1 , 1 ) === 0 ; // true\nincreasing( 1 , 2 )  <  0 ; // true\nincreasing( 2 , 1 )  >  0 ; // true\ndecreasing( 1 , 1 ) === 0 ; // true\ndecreasing( 1 , 2 )  >  0 ; // true\ndecreasing( 2 , 1 )  <  0 ; // true\n\nlet lexicographical = compare.lexicographical( increasing ) ;\n\nlexicographical( [ 1 , 1 ] , [ 1 , 1 ] ) === 0 ; // true\nlexicographical( [ 1 , 1 ] , [ 1 , 2 ] )  <  0 ; // true\nlexicographical( [ 1 , 2 ] , [ 1 , 1 ] )  >  0 ; // true\n\nlexicographical( [ 1 , 1 ] , [ 1 , 1 , 1 ] ) < 0 ; // true\nlexicographical( [ 1 , 1 , 1 ] , [ 1 , 1 ] ) > 0 ; // true\nlexicographical( [ 2 , 1 ] , [ 1 , 1 , 1 ] ) > 0 ; // true\nlexicographical( [ 1 , 1 , 1 ] , [ 2 , 1 ] ) < 0 ; // true\n\nlet reverselexicographical = compare.reverse( lexicographical ) ;\n\nreverselexicographical( [ 1 , 1 ] , [ 1 , 1 ] ) === 0 ; // true\nreverselexicographical( [ 1 , 1 ] , [ 1 , 2 ] )  >  0 ; // true\nreverselexicographical( [ 1 , 2 ] , [ 1 , 1 ] )  <  0 ; // true\n\nreverselexicographical( [ 1 , 1 ] , [ 1 , 1 , 1 ] ) > 0 ; // true\nreverselexicographical( [ 1 , 1 , 1 ] , [ 1 , 1 ] ) < 0 ; // true\nreverselexicographical( [ 2 , 1 ] , [ 1 , 1 , 1 ] ) < 0 ; // true\nreverselexicographical( [ 1 , 1 , 1 ] , [ 2 , 1 ] ) > 0 ; // true\n\n// ... and many more variants.\n\n/** compare backwards, if identical compare length */\nlet increasing = compare.colexicographical( compare.increasing ) ;\n/** compare length first, if identical compare forwards */\nlet increasing = compare.quasilexicographical( compare.increasing ) ;\n/** compare length first, if identical compare backwards */\nlet increasing = compare.quasicolexicographical( compare.increasing ) ;\n/** compare components in range [0, 3[, forwards */\nlet increasing = compare.fixedlexicographical( compare.increasing , 3 ) ;\n/** compare components in range [0, 3[, backwards */\nlet increasing = compare.fixedcolexicographical( compare.increasing , 3 ) ;\n/** compare components in range [1, 4[, forwards */\nlet increasing = compare.rangedlexicographical( compare.increasing , 1 , 4 ) ;\n/** compare components in range [1, 4[, backwards */\nlet increasing = compare.rangedcolexicographical( compare.increasing , 1 , 4 ) ;\n\n// Also includes comparison function creation tools. Hereunder, all versions are equivalent.\nlet operator = require( \"@aureooms/js-operator\" ) ;\nlet increasing = compare.fn( compare.increasing , operator.len ) ;\nlet increasing = compare.attr( compare.increasing , \"length\" ) ;\nlet increasing = compare.len( compare.increasing ) ;\n\n// Plus an additional useful tool.\ncompare.sign( -2378 ) === -1 ; // true\ncompare.sign(     0 ) ===  0 ; // true\ncompare.sign(  2378 ) ===  1 ; // true\n```\n",
+    "content": "# Examples\n\n> More examples in [the test files](https://github.com/aureooms/js-compare/tree/main/test/src).\n\n```js\nlet increasing = compare.increasing ;\nlet decreasing = compare.decreasing ;\n\nincreasing( 1 , 1 ) === 0 ; // true\nincreasing( 1 , 2 )  <  0 ; // true\nincreasing( 2 , 1 )  >  0 ; // true\ndecreasing( 1 , 1 ) === 0 ; // true\ndecreasing( 1 , 2 )  >  0 ; // true\ndecreasing( 2 , 1 )  <  0 ; // true\n\nlet lexicographical = compare.lexicographical( increasing ) ;\n\nlexicographical( [ 1 , 1 ] , [ 1 , 1 ] ) === 0 ; // true\nlexicographical( [ 1 , 1 ] , [ 1 , 2 ] )  <  0 ; // true\nlexicographical( [ 1 , 2 ] , [ 1 , 1 ] )  >  0 ; // true\n\nlexicographical( [ 1 , 1 ] , [ 1 , 1 , 1 ] ) < 0 ; // true\nlexicographical( [ 1 , 1 , 1 ] , [ 1 , 1 ] ) > 0 ; // true\nlexicographical( [ 2 , 1 ] , [ 1 , 1 , 1 ] ) > 0 ; // true\nlexicographical( [ 1 , 1 , 1 ] , [ 2 , 1 ] ) < 0 ; // true\n\nlet reverselexicographical = compare.reverse( lexicographical ) ;\n\nreverselexicographical( [ 1 , 1 ] , [ 1 , 1 ] ) === 0 ; // true\nreverselexicographical( [ 1 , 1 ] , [ 1 , 2 ] )  >  0 ; // true\nreverselexicographical( [ 1 , 2 ] , [ 1 , 1 ] )  <  0 ; // true\n\nreverselexicographical( [ 1 , 1 ] , [ 1 , 1 , 1 ] ) > 0 ; // true\nreverselexicographical( [ 1 , 1 , 1 ] , [ 1 , 1 ] ) < 0 ; // true\nreverselexicographical( [ 2 , 1 ] , [ 1 , 1 , 1 ] ) < 0 ; // true\nreverselexicographical( [ 1 , 1 , 1 ] , [ 2 , 1 ] ) > 0 ; // true\n\n// ... and many more variants.\n\n/** compare backwards, if identical compare length */\nlet increasing = compare.colexicographical( compare.increasing ) ;\n/** compare length first, if identical compare forwards */\nlet increasing = compare.quasilexicographical( compare.increasing ) ;\n/** compare length first, if identical compare backwards */\nlet increasing = compare.quasicolexicographical( compare.increasing ) ;\n/** compare components in range [0, 3[, forwards */\nlet increasing = compare.fixedlexicographical( compare.increasing , 3 ) ;\n/** compare components in range [0, 3[, backwards */\nlet increasing = compare.fixedcolexicographical( compare.increasing , 3 ) ;\n/** compare components in range [1, 4[, forwards */\nlet increasing = compare.rangedlexicographical( compare.increasing , 1 , 4 ) ;\n/** compare components in range [1, 4[, backwards */\nlet increasing = compare.rangedcolexicographical( compare.increasing , 1 , 4 ) ;\n\n// Also includes comparison function creation tools. Hereunder, all versions are equivalent.\nlet operator = require( \"@aureooms/js-operator\" ) ;\nlet increasing = compare.fn( compare.increasing , operator.len ) ;\nlet increasing = compare.attr( compare.increasing , \"length\" ) ;\nlet increasing = compare.len( compare.increasing ) ;\n\n// Plus an additional useful tool.\ncompare.sign( -2378 ) === -1 ; // true\ncompare.sign(     0 ) ===  0 ; // true\ncompare.sign(  2378 ) ===  1 ; // true\n```\n",
     "static": true,
     "access": "public"
   }

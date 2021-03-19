@@ -24,7 +24,7 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-<a style="position:relative; top:3px;" href="https://github.com/aureooms/js-compare.git"><img width="20px" src="./image/github.png"></a></header>
+<a style="position:relative; top:3px;" href="https://github.com/aureooms/js-compare"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
@@ -49,10 +49,21 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/index.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export * from &apos;./lexicographical&apos; ;
-export * from &apos;./native&apos; ;
-export * from &apos;./proxy&apos; ;
-export * from &apos;./tools&apos; ;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export {default as fixedcolexicographical} from &apos;./lexicographical/fixed/fixedcolexicographical.js&apos;;
+export {default as fixedlexicographical} from &apos;./lexicographical/fixed/fixedlexicographical.js&apos;;
+export {default as quasicolexicographical} from &apos;./lexicographical/quasi/quasicolexicographical.js&apos;;
+export {default as quasilexicographical} from &apos;./lexicographical/quasi/quasilexicographical.js&apos;;
+export {default as rangedcolexicographical} from &apos;./lexicographical/ranged/rangedcolexicographical.js&apos;;
+export {default as rangedlexicographical} from &apos;./lexicographical/ranged/rangedlexicographical.js&apos;;
+export {default as colexicographical} from &apos;./lexicographical/colexicographical.js&apos;;
+export {default as lexicographical} from &apos;./lexicographical/lexicographical.js&apos;;
+export {default as decreasing} from &apos;./native/decreasing.js&apos;;
+export {default as increasing} from &apos;./native/increasing.js&apos;;
+export {default as attr} from &apos;./proxy/attr/attr.js&apos;;
+export {default as len} from &apos;./proxy/attr/len.js&apos;;
+export {default as fn} from &apos;./proxy/fn.js&apos;;
+export {default as reverse} from &apos;./tools/reverse.js&apos;;
+export {default as sign} from &apos;./tools/sign.js&apos;;
 </code></pre>
 
 </div>

@@ -24,7 +24,7 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-<a style="position:relative; top:3px;" href="https://github.com/aureooms/js-compare.git"><img width="20px" src="./image/github.png"></a></header>
+<a style="position:relative; top:3px;" href="https://github.com/aureooms/js-compare"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
@@ -55,7 +55,8 @@
  * @param {Function} compare - The comparator to reverse.
  * @return {Function} A function f such that compare(a,b) === f(b,a) for all a,b.
  */
-export const reverse = compare =&gt; ( a , b ) =&gt; compare( b , a ) ;
+const reverse = (compare) =&gt; (a, b) =&gt; compare(b, a);
+export default reverse;
 </code></pre>
 
 </div>

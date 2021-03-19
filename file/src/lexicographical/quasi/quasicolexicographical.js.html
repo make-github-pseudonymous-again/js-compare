@@ -24,7 +24,7 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-<a style="position:relative; top:3px;" href="https://github.com/aureooms/js-compare.git"><img width="20px" src="./image/github.png"></a></header>
+<a style="position:relative; top:3px;" href="https://github.com/aureooms/js-compare"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
@@ -49,8 +49,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/lexicographical/quasi/quasicolexicographical.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
-/**
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
  * Generates a binary quasicolexicographical comparator
  * from a binary comparator.
  *
@@ -65,35 +64,28 @@
  * compare should express an increasing ordering
  */
 
-export function quasicolexicographical ( compare ) {
-
+export default function quasicolexicographical(compare) {
 	/**
 	 * Compares 2 arrays a and b quasicolexicographically.
 	 */
 
-	return function ( a , b ) {
+	return function (a, b) {
+		const m = a.length;
+		const n = b.length;
 
-		const m = a.length ;
-		const n = b.length ;
+		if (m !== n) return m - n;
 
-		if ( m !== n ) return m - n ;
+		const length = Math.min(m, n);
 
-		const len = Math.min( m , n ) ;
+		for (let i = 1; i &lt;= length; ++i) {
+			const d = compare(a[m - i], b[n - i]);
 
-		for ( let i = 1 ; i &lt;= len ; ++i ) {
-
-			const d = compare( a[m-i] , b[n-i] ) ;
-
-			if ( d !== 0 ) return d ;
-
+			if (d !== 0) return d;
 		}
 
-		return 0 ;
-
-	} ;
-
+		return 0;
+	};
 }
-
 </code></pre>
 
 </div>

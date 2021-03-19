@@ -24,7 +24,7 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-<a style="position:relative; top:3px;" href="https://github.com/aureooms/js-compare.git"><img width="20px" src="./image/github.png"></a></header>
+<a style="position:relative; top:3px;" href="https://github.com/aureooms/js-compare"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
@@ -57,7 +57,8 @@
  * @param {Object} b - The second parameter.
  * @return {Number} -1 if a &gt; b, 0 if a === b, and 1 otherwise.
  */
-export const decreasing = ( a , b ) =&gt; ( a &gt; b ) ? -1 : ( a === b ) ? 0 : 1 ;
+const decreasing = (a, b) =&gt; (a &gt; b ? -1 : a === b ? 0 : 1);
+export default decreasing;
 </code></pre>
 
 </div>

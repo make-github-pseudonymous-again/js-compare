@@ -24,7 +24,7 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-<a style="position:relative; top:3px;" href="https://github.com/aureooms/js-compare.git"><img width="20px" src="./image/github.png"></a></header>
+<a style="position:relative; top:3px;" href="https://github.com/aureooms/js-compare"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
@@ -57,7 +57,8 @@
  * @param {Object} key - The key of the attribute used in the comparison.
  * @return {Function} The function that orders objects by attribute.
  */
-export const attr = ( compare , key ) =&gt; ( a , b ) =&gt; compare( a[key] , b[key] ) ;
+const attr = (compare, key) =&gt; (a, b) =&gt; compare(a[key], b[key]);
+export default attr;
 </code></pre>
 
 </div>
