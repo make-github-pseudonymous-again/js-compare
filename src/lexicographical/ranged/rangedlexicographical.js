@@ -11,7 +11,7 @@
  *
  */
 
-export function rangedlexicographical ( compare , begin , end ) {
+export default function rangedlexicographical ( compare , begin , end ) {
 
 	/**
 	 * Compares the range [begin, end[ of 2 arrays a and b lexicographically.

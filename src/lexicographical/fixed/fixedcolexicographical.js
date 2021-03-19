@@ -11,7 +11,7 @@
  *
  */
 
-export function fixedcolexicographical ( compare , len ) {
+export default function fixedcolexicographical ( compare , len ) {
 
 	/**
 	 * Compares 2 fixed size arrays a and b of size len colexicographically.

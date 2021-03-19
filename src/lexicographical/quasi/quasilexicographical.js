@@ -13,7 +13,7 @@
  * compare should express an increasing ordering
  */
 
-export function quasilexicographical ( compare ) {
+export default function quasilexicographical ( compare ) {
 
 	/**
 	 * Compares 2 arrays a and b quasilexicographically.

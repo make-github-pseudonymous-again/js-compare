@@ -6,4 +6,5 @@
  * @param {Function} callable - The function that generates values used in the comparison.
  * @return {Function} The function that orders objects by value.
  */
-export const fn = ( compare , callable ) => ( a , b ) => compare( callable( a ) , callable( b ) ) ;
+const fn = ( compare , callable ) => ( a , b ) => compare( callable( a ) , callable( b ) ) ;
+export default fn;

@@ -13,7 +13,7 @@
  * compare should express an increasing ordering
  */
 
-export function colexicographical ( compare ) {
+export default function colexicographical ( compare ) {
 
 	/**
 	 * Compares 2 arrays a and b colexicographically.
