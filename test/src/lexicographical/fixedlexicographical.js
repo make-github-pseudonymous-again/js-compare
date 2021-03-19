@@ -3,7 +3,7 @@ import * as compare from '../../../src';
 
 
 
-import util from "util" ;
+import {format} from "util";
 
 const increasing = compare.fixedlexicographical( compare.increasing , 5 );
 const decreasing = compare.fixedlexicographical( compare.decreasing , 5 );
@@ -14,13 +14,13 @@ function one( t , a, b, z ) {
 	t.deepEqual(
 		compare.sign( increasing( a, b ) ),
 		z,
-		util.format( "i %s %s", JSON.stringify( a ), JSON.stringify( b ) )
+		format( "i %s %s", JSON.stringify( a ), JSON.stringify( b ) )
 	);
 
 	t.deepEqual(
 		compare.sign( decreasing( a, b ) ),
 		z === 0 ? 0 : -z,
-		util.format( "d %s %s", JSON.stringify( a ), JSON.stringify( b ) )
+		format( "d %s %s", JSON.stringify( a ), JSON.stringify( b ) )
 	);
 
 	a = a.concat( Math.random( ) ) ;
@@ -29,13 +29,13 @@ function one( t , a, b, z ) {
 	t.deepEqual(
 		compare.sign( increasing( a, b ) ),
 		z,
-		util.format( "i %s %s", JSON.stringify( a ), JSON.stringify( b ) )
+		format( "i %s %s", JSON.stringify( a ), JSON.stringify( b ) )
 	);
 
 	t.deepEqual(
 		compare.sign( decreasing( a, b ) ),
 		z === 0 ? 0 : -z,
-		util.format( "d %s %s", JSON.stringify( a ), JSON.stringify( b ) )
+		format( "d %s %s", JSON.stringify( a ), JSON.stringify( b ) )
 	);
 
 };

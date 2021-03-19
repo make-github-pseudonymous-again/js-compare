@@ -3,7 +3,7 @@ import * as compare from '../../../src';
 
 
 
-import util from "util" ;
+import {format} from "util";
 
 const increasing = compare.len( compare.increasing ) ;
 const decreasing = compare.len( compare.decreasing ) ;
@@ -14,13 +14,13 @@ function one( t , a, b, z ) {
 	t.deepEqual(
 		compare.sign( increasing( a, b ) ),
 		z,
-		util.format( "i %s %s", JSON.stringify( a ), JSON.stringify( b ) )
+		format( "i %s %s", JSON.stringify( a ), JSON.stringify( b ) )
 	);
 
 	t.deepEqual(
 		compare.sign( decreasing( a, b ) ),
 		z === 0 ? 0 : -z,
-		util.format( "d %s %s", JSON.stringify( a ), JSON.stringify( b ) )
+		format( "d %s %s", JSON.stringify( a ), JSON.stringify( b ) )
 	);
 
 };
