@@ -1,5 +1,5 @@
 import test from 'ava';
-import * as compare from '../../../src';
+import * as compare from "../../../src/index.js";
 
 
 
