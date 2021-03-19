@@ -1,10 +1,11 @@
-[@aureooms/js-compare](https://aureooms.github.io/js-compare)
+:apple::orange: [@aureooms/js-compare](https://aureooms.github.io/js-compare)
 ==
 
 Comparison functions for JavaScript.
 See [docs](https://aureooms.github.io/js-compare/index.html).
 
 ```js
+import { reverse, lexicographical, increasing } from '@aureooms/js-compare' ;
 let compare = reverse( lexicographical( increasing ) ) ;
 compare( [ 1 , 1 ] , [ 1 , 2 ] )  >  0 ; // true
 ```
@@ -24,6 +25,6 @@ compare( [ 1 , 1 ] , [ 1 , 2 ] )  >  0 ; // true
 [![Documentation](https://aureooms.github.io/js-compare/badge.svg)](https://aureooms.github.io/js-compare/source.html)
 [![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-compare)](https://bundlephobia.com/result?p=@aureooms/js-compare)
 
-## References
+## :scroll: References
 
   - https://en.wikipedia.org/wiki/Lexicographical_order
