@@ -21,7 +21,7 @@ compare( [ 1 , 1 ] , [ 1 , 2 ] )  >  0 ; // true
 [![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/trends/churn)
 [![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-compare/main.svg)](https://codecov.io/gh/aureooms/js-compare)
 [![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/trends/technical_debt)
-[![Documentation](https://aureooms.github.io/js-compare//badge.svg)](https://aureooms.github.io/js-compare//source.html)
+[![Documentation](https://aureooms.github.io/js-compare/badge.svg)](https://aureooms.github.io/js-compare/source.html)
 [![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-compare)](https://bundlephobia.com/result?p=@aureooms/js-compare)
 
 ## References
