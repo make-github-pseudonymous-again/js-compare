@@ -1,4 +1,3 @@
-
 /**
  * Generates a binary colexicographical comparator for ranges of arrays.
  *
@@ -11,25 +10,18 @@
  *
  */
 
-export default function rangedcolexicographical ( compare , begin , end ) {
-
+export default function rangedcolexicographical(compare, begin, end) {
 	/**
 	 * Compares the range [begin, end[ of 2 arrays a and b colexicographically.
 	 */
 
-	return function ( a , b ) {
+	return function (a, b) {
+		for (let i = end; i-- > begin; ) {
+			const d = compare(a[i], b[i]);
 
-		for ( let i = end ; i --> begin ; ) {
-
-			const d = compare( a[i] , b[i] ) ;
-
-			if ( d !== 0 ) return d ;
-
+			if (d !== 0) return d;
 		}
 
-		return 0 ;
-
-	} ;
-
+		return 0;
+	};
 }
-

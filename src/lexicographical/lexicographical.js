@@ -1,4 +1,3 @@
-
 /**
  * Generates a binary lexicographical comparator
  * from a binary comparator.
@@ -13,30 +12,23 @@
  * compare should express an increasing ordering
  */
 
-export default function lexicographical ( compare ) {
-
+export default function lexicographical(compare) {
 	/**
 	 * Compares 2 arrays a and b lexicographically.
 	 */
 
-	return function ( a , b ) {
+	return function (a, b) {
+		const m = a.length;
+		const n = b.length;
 
-		const m = a.length ;
-		const n = b.length ;
+		const length = Math.min(m, n);
 
-		const len = Math.min( m , n ) ;
+		for (let i = 0; i < length; ++i) {
+			const d = compare(a[i], b[i]);
 
-		for ( let i = 0 ; i < len ; ++i ) {
-
-			const d = compare( a[i] , b[i] ) ;
-
-			if ( d !== 0 ) return d ;
-
+			if (d !== 0) return d;
 		}
 
-		return m - n ;
-
-	} ;
-
+		return m - n;
+	};
 }
-

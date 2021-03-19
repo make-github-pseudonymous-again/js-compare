@@ -1,4 +1,3 @@
-
 /**
  * Generates a binary colexicographical comparator for fixed size arrays.
  *
@@ -11,25 +10,18 @@
  *
  */
 
-export default function fixedcolexicographical ( compare , len ) {
-
+export default function fixedcolexicographical(compare, length) {
 	/**
 	 * Compares 2 fixed size arrays a and b of size len colexicographically.
 	 */
 
-	return function ( a , b ) {
+	return function (a, b) {
+		for (let i = length; i--; ) {
+			const d = compare(a[i], b[i]);
 
-		for ( let i = len ; i-- ; ) {
-
-			const d = compare( a[i] , b[i] ) ;
-
-			if ( d !== 0 ) return d ;
-
+			if (d !== 0) return d;
 		}
 
-		return 0 ;
-
-	} ;
-
+		return 0;
+	};
 }
-
