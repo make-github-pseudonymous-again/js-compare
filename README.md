@@ -12,7 +12,7 @@ compare( [ 1 , 1 ] , [ 1 , 2 ] )  >  0 ; // true
 
 [![License](https://img.shields.io/github/license/aureooms/js-compare.svg)](https://raw.githubusercontent.com/aureooms/js-compare/main/LICENSE)
 [![Version](https://img.shields.io/npm/v/@aureooms/js-compare.svg)](https://www.npmjs.org/package/@aureooms/js-compare)
-[![Build](https://img.shields.io/travis/aureooms/js-compare/main.svg)](https://travis-ci.com/aureooms/js-compare/branches)
+[![Tests](https://img.shields.io/github/workflow/status/aureooms/js-compare/ci:test?event=push&label=tests)](https://github.com/aureooms/js-compare/actions/workflows/ci:test.yml?query=branch:main)
 [![Dependencies](https://img.shields.io/david/aureooms/js-compare.svg)](https://david-dm.org/aureooms/js-compare)
 [![Dev dependencies](https://img.shields.io/david/dev/aureooms/js-compare.svg)](https://david-dm.org/aureooms/js-compare?type=dev)
 [![GitHub issues](https://img.shields.io/github/issues/aureooms/js-compare.svg)](https://github.com/aureooms/js-compare/issues)
