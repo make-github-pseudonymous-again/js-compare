@@ -1,4 +1,4 @@
-:apple::orange: [@aureooms/js-compare](https://aureooms.github.io/js-compare)
+:balance_scale: [@aureooms/js-compare](https://aureooms.github.io/js-compare)
 ==
 
 Comparison functions for JavaScript.
