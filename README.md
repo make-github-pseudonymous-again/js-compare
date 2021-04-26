@@ -1,8 +1,8 @@
-:balance_scale: [@aureooms/js-compare](https://aureooms.github.io/js-compare)
+:balance_scale: [@aureooms/js-compare](https://make-github-pseudonymous-again.github.io/js-compare)
 ==
 
 Comparison functions for JavaScript.
-See [docs](https://aureooms.github.io/js-compare/index.html).
+See [docs](https://make-github-pseudonymous-again.github.io/js-compare/index.html).
 
 ```js
 import { reverse, lexicographical, increasing } from '@aureooms/js-compare' ;
@@ -22,7 +22,7 @@ compare( [ 1 , 1 ] , [ 1 , 2 ] )  >  0 ; // true
 [![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/trends/churn)
 [![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-compare/main.svg)](https://codecov.io/gh/aureooms/js-compare)
 [![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-compare.svg)](https://codeclimate.com/github/aureooms/js-compare/trends/technical_debt)
-[![Documentation](https://aureooms.github.io/js-compare/badge.svg)](https://aureooms.github.io/js-compare/source.html)
+[![Documentation](https://make-github-pseudonymous-again.github.io/js-compare/badge.svg)](https://make-github-pseudonymous-again.github.io/js-compare/source.html)
 [![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-compare)](https://bundlephobia.com/result?p=@aureooms/js-compare)
 
 ## :scroll: References
