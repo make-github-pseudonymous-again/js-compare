@@ -1,30 +1,25 @@
-:balance_scale: [@aureooms/js-compare](https://make-github-pseudonymous-again.github.io/js-compare)
+:balance_scale:
+[js-compare](https://make-github-pseudonymous-again.github.io/js-compare)
 ==
 
-Comparison functions for JavaScript.
-See [docs](https://make-github-pseudonymous-again.github.io/js-compare/index.html).
+This package is deprecated. Please use a combination of
 
-```js
-import { reverse, lexicographical, increasing } from '@aureooms/js-compare' ;
-let compare = reverse( lexicographical( increasing ) ) ;
-compare( [ 1 , 1 ] , [ 1 , 2 ] )  >  0 ; // true
-```
+  - [`Math.sign`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sign):
+    For `sign`.
+  - [@total-order/primitive](https://github.com/total-order/primitive):
+    To compare numbers, strings, and bigints.
+  - [@total-order/lex](https://github.com/total-order/lex):
+    For all lexicographical ordering functions.
+  - [@total-order/key](https://github.com/total-order/key):
+    For `key` (was `fn`), `len`, and `prop` (was `attr`).
+  - [@total-order/reversed](https://github.com/total-order/reversed):
+    For `reversed` (was `reverse`).
 
-[![License](https://img.shields.io/github/license/make-github-pseudonymous-again/js-compare.svg)](https://raw.githubusercontent.com/make-github-pseudonymous-again/js-compare/main/LICENSE)
-[![Version](https://img.shields.io/npm/v/@aureooms/js-compare.svg)](https://www.npmjs.org/package/@aureooms/js-compare)
-[![Tests](https://img.shields.io/github/workflow/status/make-github-pseudonymous-again/js-compare/ci:test?event=push&label=tests)](https://github.com/make-github-pseudonymous-again/js-compare/actions/workflows/ci:test.yml?query=branch:main)
-[![Dependencies](https://img.shields.io/david/make-github-pseudonymous-again/js-compare.svg)](https://david-dm.org/make-github-pseudonymous-again/js-compare)
-[![Dev dependencies](https://img.shields.io/david/dev/make-github-pseudonymous-again/js-compare.svg)](https://david-dm.org/make-github-pseudonymous-again/js-compare?type=dev)
-[![GitHub issues](https://img.shields.io/github/issues/make-github-pseudonymous-again/js-compare.svg)](https://github.com/make-github-pseudonymous-again/js-compare/issues)
-[![Downloads](https://img.shields.io/npm/dm/@aureooms/js-compare.svg)](https://www.npmjs.org/package/@aureooms/js-compare)
+New functionality has been made available as well:
 
-[![Code issues](https://img.shields.io/codeclimate/issues/make-github-pseudonymous-again/js-compare.svg)](https://codeclimate.com/github/make-github-pseudonymous-again/js-compare/issues)
-[![Code maintainability](https://img.shields.io/codeclimate/maintainability/make-github-pseudonymous-again/js-compare.svg)](https://codeclimate.com/github/make-github-pseudonymous-again/js-compare/trends/churn)
-[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/make-github-pseudonymous-again/js-compare/main.svg)](https://codecov.io/gh/make-github-pseudonymous-again/js-compare)
-[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/make-github-pseudonymous-again/js-compare.svg)](https://codeclimate.com/github/make-github-pseudonymous-again/js-compare/trends/technical_debt)
-[![Documentation](https://make-github-pseudonymous-again.github.io/js-compare/badge.svg)](https://make-github-pseudonymous-again.github.io/js-compare/source.html)
-[![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-compare)](https://bundlephobia.com/result?p=@aureooms/js-compare)
-
-## :scroll: References
-
-  - https://en.wikipedia.org/wiki/Lexicographical_order
+  - [@total-order/date](https://github.com/total-order/date):
+    To compare `Date` objects.
+  - [@total-order/iter](https://github.com/total-order/iter):
+    To compare `Iterable` or `Iterator` objects lexicographically.
+  - [total-order](https://github.com/total-order/any):
+    To compare arbitrary JavaScript values.
