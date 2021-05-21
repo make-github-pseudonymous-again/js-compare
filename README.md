@@ -1,5 +1,4 @@
-:balance_scale:
-[js-compare](https://make-github-pseudonymous-again.github.io/js-compare)
+:balance_scale: js-compare
 ==
 
 This package is deprecated. Please use a combination of
